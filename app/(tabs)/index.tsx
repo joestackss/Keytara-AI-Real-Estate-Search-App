@@ -1,159 +1,217 @@
 import { PropertyCard } from "@/components/property/PropertyCard";
-import { SearchBar } from "@/components/search/SearchBar";
-import { PropertyCardSkeleton } from "@/components/ui/LoadingSkeleton";
-import { usePropertySearch, useSearchQueryParser } from "@/lib/hooks";
-import type { SearchParams } from "@/lib/types";
+import { usePropertySearch } from "@/lib/hooks";
+import { Ionicons } from "@expo/vector-icons";
+import { FlashList } from "@shopify/flash-list";
 import React, { useState } from "react";
-import { RefreshControl, ScrollView, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function SearchScreen() {
-  const [searchParams, setSearchParams] = useState<SearchParams | null>(null);
-  const searchQueryParser = useSearchQueryParser();
+type StatusFilter = "forSale" | "forRent" | "recentlySold";
 
+const STATUS_FILTERS: { label: string; value: StatusFilter }[] = [
+  { label: "For Sale", value: "forSale" },
+  { label: "For Rent", value: "forRent" },
+  { label: "Recently Sold", value: "recentlySold" },
+];
+
+export default function HomeScreen() {
+  const [selectedStatus, setSelectedStatus] = useState<StatusFilter>("forSale");
+
+  // Santa Monica properties with status filter
   const {
-    data: searchResults,
-    isPending: isLoading,
-    refetch,
-    isError,
-    error,
-  } = usePropertySearch(
-    searchParams || { location: "" },
-    Boolean(searchParams)
-  );
+    data: santaMonicaResults,
+    isLoading: santaMonicaLoading,
+    isError: santaMonicaError,
+  } = usePropertySearch({
+    location: "Santa Monica, CA",
+    status: selectedStatus,
+  });
 
-  console.log("Search Results", searchResults);
-
-  const handleSearch = async (query: string) => {
-    console.log("🎯 handleSearch called with query:", query);
-
-    try {
-      console.log("🤖 Calling AI to parse query...");
-      const result = await searchQueryParser.mutateAsync(query);
-
-      console.log("✅ AI parsing successful!");
-      console.log("📝 Parsed result:", result.parsedParams);
-
-      setSearchParams(result.parsedParams);
-      console.log("💾 Search params updated, React Query should trigger now");
-    } catch (error) {
-      console.error("❌ Error parsing query:", error);
-      // Fallback: treat as location search
-      console.log("🔄 Falling back to simple location search");
-      setSearchParams({ location: query });
-    }
-  };
+  // New York recommended properties (no filter)
+  const {
+    data: newYorkResults,
+    isLoading: newYorkLoading,
+    isError: newYorkError,
+  } = usePropertySearch({
+    location: "New York, NY",
+    status: "forSale",
+  });
 
   return (
     <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{ padding: 16 }}
-        refreshControl={
-          <RefreshControl
-            refreshing={false}
-            onRefresh={() => searchParams && refetch()}
-          />
-        }
-      >
+      <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
         {/* Header */}
-        <View className="mb-6">
-          <Text className="text-3xl font-bold text-gray-900 mb-2">
-            Find Your Dream Home
+        <View className="px-4 pt-4 pb-3">
+          <Text className="text-3xl font-bold text-gray-900 mb-1">
+            Discover Properties
           </Text>
           <Text className="text-base text-gray-600">
-            Search using natural language - tell us what you're looking for
+            Find your perfect home in top locations
           </Text>
         </View>
 
-        {/* Search Bar */}
-        <SearchBar
-          onSearch={handleSearch}
-          isLoading={searchQueryParser.isPending || isLoading}
-        />
-
-        {/* Search Info */}
-        {searchParams && (
-          <View className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
-            <Text className="text-sm font-semibold text-blue-900 mb-1">
-              Searching for:
+        {/* Section 1: Santa Monica with Filters */}
+        <View className="mb-8">
+          {/* Section Header */}
+          <View className="px-4 mb-3">
+            <Text className="text-xl font-bold text-gray-900 mb-1">
+              Santa Monica
             </Text>
-            <Text className="text-sm text-blue-700">
-              {searchParams.location}
-              {searchParams.bedrooms && ` • ${searchParams.bedrooms}+ beds`}
-              {searchParams.bathrooms && ` • ${searchParams.bathrooms}+ baths`}
-              {searchParams.minPrice &&
-                ` • From $${(searchParams.minPrice / 1000).toFixed(0)}K`}
-              {searchParams.maxPrice &&
-                ` • Up to $${(searchParams.maxPrice / 1000).toFixed(0)}K`}
-              {searchParams.propertyType && ` • ${searchParams.propertyType}`}
+            <Text className="text-sm text-gray-600">
+              {santaMonicaResults?.totalResultCount || 0} properties available
             </Text>
           </View>
-        )}
 
-        {/* Loading State */}
-        {isLoading && (
-          <View>
-            <PropertyCardSkeleton />
-            <PropertyCardSkeleton />
-            <PropertyCardSkeleton />
+          {/* Horizontal Status Filters */}
+          <View className="mb-4">
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ paddingHorizontal: 16, gap: 8 }}
+            >
+              {STATUS_FILTERS.map((filter) => (
+                <Pressable
+                  key={filter.value}
+                  onPress={() => setSelectedStatus(filter.value)}
+                  className={`px-4 py-2.5 rounded-full border ${
+                    selectedStatus === filter.value
+                      ? "bg-blue-600 border-blue-600"
+                      : "bg-white border-gray-300"
+                  }`}
+                >
+                  <Text
+                    className={`font-semibold ${
+                      selectedStatus === filter.value
+                        ? "text-white"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {filter.label}
+                  </Text>
+                </Pressable>
+              ))}
+            </ScrollView>
           </View>
-        )}
 
-        {/* Error State */}
-        {isError && (
-          <View className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
-            <Text className="text-red-800 font-semibold mb-1">Error</Text>
-            <Text className="text-red-700 text-sm">
-              {error?.message || "Failed to load properties. Please try again."}
-            </Text>
-          </View>
-        )}
-
-        {/* Results */}
-        {searchResults && searchResults.results && (
-          <>
-            <View className="flex-row justify-between items-center mb-4">
-              <Text className="text-lg font-semibold text-gray-900">
-                {searchResults.totalResultCount.toLocaleString()} Properties
-                Found
-              </Text>
-              <Text className="text-sm text-gray-600">
-                Page {searchResults.results.length > 0 ? 1 : 0} of{" "}
-                {searchResults.totalPages}
-              </Text>
-            </View>
-
-            {searchResults.results.length === 0 ? (
-              <View className="bg-gray-100 rounded-xl p-8 items-center">
-                <Text className="text-gray-600 text-center text-base mb-2">
-                  No properties found
-                </Text>
-                <Text className="text-gray-500 text-center text-sm">
-                  Try adjusting your search criteria
+          {/* Properties List */}
+          <View style={{ height: 400 }}>
+            {santaMonicaLoading ? (
+              <View className="flex-1 justify-center items-center">
+                <ActivityIndicator size="large" color="#3b82f6" />
+                <Text className="text-gray-600 mt-2">
+                  Loading properties...
                 </Text>
               </View>
+            ) : santaMonicaError ? (
+              <View className="flex-1 justify-center items-center px-4">
+                <Ionicons
+                  name="alert-circle-outline"
+                  size={48}
+                  color="#ef4444"
+                />
+                <Text className="text-gray-900 font-semibold mt-2">
+                  Error loading properties
+                </Text>
+                <Text className="text-gray-600 text-center mt-1">
+                  Please check your internet connection
+                </Text>
+              </View>
+            ) : santaMonicaResults?.results &&
+              santaMonicaResults.results.length > 0 ? (
+              <FlashList
+                data={santaMonicaResults.results}
+                renderItem={({ item }) => (
+                  <View style={{ width: 320, marginRight: 16 }}>
+                    <PropertyCard property={item} />
+                  </View>
+                )}
+                keyExtractor={(item) => item.zpid.toString()}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ paddingHorizontal: 16 }}
+              />
             ) : (
-              searchResults.results.map((property) => (
-                <PropertyCard key={property.zpid} property={property} />
-              ))
+              <View className="flex-1 justify-center items-center px-4">
+                <Ionicons name="home-outline" size={48} color="#9ca3af" />
+                <Text className="text-gray-600 mt-2 text-center">
+                  No properties found for{" "}
+                  {
+                    STATUS_FILTERS.find((f) => f.value === selectedStatus)
+                      ?.label
+                  }
+                </Text>
+              </View>
             )}
-          </>
-        )}
+          </View>
+        </View>
 
-        {/* Initial State */}
-        {!searchParams && !isLoading && (
-          <View className="bg-white rounded-2xl p-8 items-center shadow-sm">
-            <Text className="text-6xl mb-4">🏡</Text>
-            <Text className="text-xl font-semibold text-gray-900 mb-2 text-center">
-              Start Your Search
-            </Text>
-            <Text className="text-gray-600 text-center">
-              Use natural language to find your perfect home{"\n"}
-              Try: "Modern 2 bedroom condo in downtown"
+        {/* Section 2: Recommended (New York) */}
+        <View className="mb-6">
+          {/* Section Header */}
+          <View className="px-4 mb-3">
+            <View className="flex-row items-center mb-1">
+              <Ionicons name="star" size={20} color="#f59e0b" />
+              <Text className="text-xl font-bold text-gray-900 ml-2">
+                Recommended
+              </Text>
+            </View>
+            <Text className="text-sm text-gray-600">
+              Curated properties in New York
             </Text>
           </View>
-        )}
+
+          {/* Properties List */}
+          <View style={{ height: 400 }}>
+            {newYorkLoading ? (
+              <View className="flex-1 justify-center items-center">
+                <ActivityIndicator size="large" color="#3b82f6" />
+                <Text className="text-gray-600 mt-2">
+                  Loading properties...
+                </Text>
+              </View>
+            ) : newYorkError ? (
+              <View className="flex-1 justify-center items-center px-4">
+                <Ionicons
+                  name="alert-circle-outline"
+                  size={48}
+                  color="#ef4444"
+                />
+                <Text className="text-gray-900 font-semibold mt-2">
+                  Error loading properties
+                </Text>
+                <Text className="text-gray-600 text-center mt-1">
+                  Please check your internet connection
+                </Text>
+              </View>
+            ) : newYorkResults?.results && newYorkResults.results.length > 0 ? (
+              <FlashList
+                data={newYorkResults.results}
+                renderItem={({ item }) => (
+                  <View style={{ width: 320, marginRight: 16 }}>
+                    <PropertyCard property={item} />
+                  </View>
+                )}
+                keyExtractor={(item) => item.zpid.toString()}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ paddingHorizontal: 16 }}
+              />
+            ) : (
+              <View className="flex-1 justify-center items-center px-4">
+                <Ionicons name="home-outline" size={48} color="#9ca3af" />
+                <Text className="text-gray-600 mt-2">
+                  No recommended properties available
+                </Text>
+              </View>
+            )}
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

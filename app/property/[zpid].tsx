@@ -1,21 +1,31 @@
-import React from 'react';
-import { View, ScrollView, Text, Image, Pressable, Linking, Dimensions } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { usePropertyAllData } from '@/lib/hooks';
-import { useSavedPropertiesStore } from '@/lib/store/savedProperties';
-import { PropertyDetailsSkeleton } from '@/components/ui/LoadingSkeleton';
+import { PropertyDetailsSkeleton } from "@/components/ui/LoadingSkeleton";
+import { usePropertyAllData } from "@/lib/hooks";
+import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
+import { Ionicons } from "@expo/vector-icons";
+import { useLocalSearchParams, useRouter } from "expo-router";
+import React from "react";
+import {
+  Dimensions,
+  Image,
+  Linking,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get("window");
 
 export default function PropertyDetailsScreen() {
   const { zpid } = useLocalSearchParams();
   const router = useRouter();
-  const propertyId = typeof zpid === 'string' ? parseInt(zpid, 10) : null;
+  const propertyId = typeof zpid === "string" ? parseInt(zpid, 10) : null;
 
-  const { details, photos, schools, history, scores, isLoading, isError } = usePropertyAllData(propertyId);
-  const { isPropertySaved, addProperty, removeProperty } = useSavedPropertiesStore();
+  const { details, photos, schools, history, scores, isLoading, isError } =
+    usePropertyAllData(propertyId);
+  const { isPropertySaved, addProperty, removeProperty } =
+    useSavedPropertiesStore();
 
   if (isLoading) {
     return <PropertyDetailsSkeleton />;
@@ -24,11 +34,16 @@ export default function PropertyDetailsScreen() {
   if (isError || !details.data) {
     return (
       <SafeAreaView className="flex-1 bg-gray-50 justify-center items-center px-8">
-        <Text className="text-xl font-semibold text-gray-900 mb-2">Error Loading Property</Text>
+        <Text className="text-xl font-semibold text-gray-900 mb-2">
+          Error Loading Property
+        </Text>
         <Text className="text-gray-600 text-center mb-4">
           Unable to load property details. Please try again.
         </Text>
-        <Pressable onPress={() => router.back()} className="bg-blue-600 px-6 py-3 rounded-xl">
+        <Pressable
+          onPress={() => router.back()}
+          className="bg-blue-600 px-6 py-3 rounded-xl"
+        >
           <Text className="text-white font-semibold">Go Back</Text>
         </Pressable>
       </SafeAreaView>
@@ -49,7 +64,7 @@ export default function PropertyDetailsScreen() {
         bedrooms: property.bedrooms,
         bathrooms: property.bathrooms,
         livingArea: property.livingArea,
-        imgSrc: property.originalPhotos[0]?.mixedSources.jpeg[0]?.url || '',
+        imgSrc: property.originalPhotos[0]?.mixedSources.jpeg[0]?.url || "",
         city: property.city,
         state: property.state,
         zipcode: property.zipcode,
@@ -61,7 +76,7 @@ export default function PropertyDetailsScreen() {
   const propertyScores = scores.data?.data.property;
 
   return (
-    <SafeAreaView className="flex-1 bg-white" edges={['bottom']}>
+    <SafeAreaView className="flex-1 bg-white" edges={["bottom"]}>
       <ScrollView className="flex-1">
         {/* Image Gallery */}
         <ScrollView
@@ -100,9 +115,9 @@ export default function PropertyDetailsScreen() {
               className="bg-gray-100 rounded-full p-3"
             >
               <Ionicons
-                name={isSaved ? 'heart' : 'heart-outline'}
+                name={isSaved ? "heart" : "heart-outline"}
                 size={28}
-                color={isSaved ? '#ef4444' : '#374151'}
+                color={isSaved ? "#ef4444" : "#374151"}
               />
             </Pressable>
           </View>
@@ -177,7 +192,11 @@ export default function PropertyDetailsScreen() {
                 </View>
                 <View className="flex-row items-center justify-between">
                   <View className="flex-row items-center">
-                    <Ionicons name="bicycle-outline" size={20} color="#3b82f6" />
+                    <Ionicons
+                      name="bicycle-outline"
+                      size={20}
+                      color="#3b82f6"
+                    />
                     <Text className="ml-2 text-gray-700">Bike Score</Text>
                   </View>
                   <View className="flex-row items-center">
@@ -235,17 +254,6 @@ export default function PropertyDetailsScreen() {
             </View>
           )}
 
-          {/* AI Chat Button */}
-          <Pressable
-            onPress={() => router.push(`/chat/${property.zpid}`)}
-            className="bg-blue-600 rounded-2xl py-4 flex-row items-center justify-center mb-6"
-          >
-            <Ionicons name="sparkles" size={24} color="#ffffff" />
-            <Text className="text-white font-semibold text-lg ml-2">
-              Ask AI About This Property
-            </Text>
-          </Pressable>
-
           {/* Property Details */}
           <View className="bg-gray-50 rounded-2xl p-4 mb-6">
             <Text className="text-lg font-semibold text-gray-900 mb-3">
@@ -263,7 +271,9 @@ export default function PropertyDetailsScreen() {
               {property.homeType && (
                 <View className="flex-row justify-between py-2 border-b border-gray-200">
                   <Text className="text-gray-600">Type</Text>
-                  <Text className="font-semibold text-gray-900">{property.homeType}</Text>
+                  <Text className="font-semibold text-gray-900">
+                    {property.homeType}
+                  </Text>
                 </View>
               )}
               {property.monthlyHoaFee && (
@@ -289,4 +299,3 @@ export default function PropertyDetailsScreen() {
     </SafeAreaView>
   );
 }
-

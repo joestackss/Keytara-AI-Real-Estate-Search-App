@@ -42,6 +42,7 @@ export const zillowClient = {
 
     const requestParams = {
       location: params.location,
+      status: params.status || "forSale",
       home_type: params.propertyType || "Houses",
       ...(params.bedrooms && { beds_min: params.bedrooms }),
       ...(params.bathrooms && { baths_min: params.bathrooms }),
@@ -51,21 +52,15 @@ export const zillowClient = {
     };
 
     console.log("🌐 Making REAL API call to Zillow");
-    console.log("🔗 URL:", `${API.ZILLOW_BASE_URL}/propertyExtendedSearch`);
+    console.log("🔗 URL:", `${API.ZILLOW_BASE_URL}/search`);
     console.log("📋 Request params:", requestParams);
-    console.log("🔑 API Key present:", Boolean(ENV.RAPIDAPI_KEY));
-    console.log(
-      "🔑 API Key (first 10 chars):",
-      ENV.RAPIDAPI_KEY?.substring(0, 10) + "..."
-    );
 
-    const response = await zillowApi.get("/propertyExtendedSearch", {
+    const response = await zillowApi.get("/search", {
       params: requestParams,
     });
 
     console.log("✅ Zillow API response received");
     console.log("📦 Response status:", response.status);
-    console.log("📊 Response data keys:", Object.keys(response.data || {}));
 
     return response.data;
   },

@@ -30,14 +30,6 @@ export default function RootLayout() {
             headerBackTitle: "Back",
           }}
         />
-        <Stack.Screen
-          name="chat/[zpid]"
-          options={{
-            title: "AI Assistant",
-            headerBackTitle: "Back",
-            presentation: "modal",
-          }}
-        />
       </Stack>
     </QueryClientProvider>
   );

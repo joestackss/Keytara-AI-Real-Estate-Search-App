@@ -255,6 +255,7 @@ export interface PriceHistoryResponse {
 // Search Parameters
 export interface SearchParams {
   location: string;
+  status?: "forSale" | "forRent" | "recentlySold";
   bedrooms?: number;
   bathrooms?: number;
   minPrice?: number;
