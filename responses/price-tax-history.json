@@ -1,0 +1,31 @@
+{
+  "priceHistory": [
+    {
+      "attributeSource": {
+        "infoString1": "SR25187510",
+        "infoString2": "CRMLS",
+        "infoString3": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_logo_inf_11.jpg"
+      },
+      "buyerAgent": null,
+      "date": "2025-09-11",
+      "event": "Price change",
+      "postingIsRental": false,
+      "price": 799000,
+      "priceChangeRate": -0.04311377245508982,
+      "pricePerSquareFoot": 866,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "CRMLS",
+      "time": 1757548800000
+    }
+  ],
+  "taxHistory": [
+    {
+      "taxIncreaseRate": 0.016714202,
+      "taxPaid": 9934.67,
+      "time": 1727777315285,
+      "value": 810977,
+      "valueIncreaseRate": 0.019999346
+    }
+  ]
+}

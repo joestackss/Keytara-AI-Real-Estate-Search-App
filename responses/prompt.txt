@@ -1,0 +1,364 @@
+/search
+
+import axios from 'axios'; const options = { method: 'GET', url: 'https://zillow56.p.rapidapi.com/search', params: { location: 'houston, tx', output: 'json', status: 'forSale', sortSelection: 'priorityscore', listing_type: 'by_agent', doz: 'any' }, headers: { 'x-rapidapi-key': '9288c8ca29msh202e3f882223132p1ed9ebjsna02b8d7935f6', 'x-rapidapi-host': 'zillow56.p.rapidapi.com' } }; try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); }
+
+search response{
+  "results": [
+    {
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "city": "Santa Monica",
+      "country": "USA",
+      "currency": "USD",
+      "datePriceChanged": 1757574000000,
+      "daysOnZillow": -1,
+      "homeStatus": "FOR_SALE",
+      "homeStatusForHDP": "FOR_SALE",
+      "homeType": "CONDO",
+      "imgSrc": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_e.jpg",
+      "isFeatured": false,
+      "isNonOwnerOccupied": true,
+      "isPreforeclosureAuction": false,
+      "isPremierBuilder": false,
+      "isShowcaseListing": true,
+      "isUnmappable": false,
+      "isZillowOwned": false,
+      "latitude": 34.01438,
+      "listing_sub_type": {
+        "is_FSBA": true,
+        "is_openHouse": true
+      },
+      "livingArea": 923,
+      "longitude": -118.48042,
+      "lotAreaUnit": "sqft",
+      "lotAreaValue": 7513,
+      "openHouse": "Wed. 1-4pm",
+      "open_house_info": {
+        "open_house_showing": [
+          {
+            "open_house_end": 1759359600000,
+            "open_house_start": 1759348800000
+          },
+          {
+            "open_house_end": 1759525200000,
+            "open_house_start": 1759514400000
+          },
+          {
+            "open_house_end": 1759618800000,
+            "open_house_start": 1759608000000
+          },
+          {
+            "open_house_end": 1759708800000,
+            "open_house_start": 1759698000000
+          }
+        ]
+      },
+      "price": 799000,
+      "priceChange": -36000,
+      "priceForHDP": 799000,
+      "priceReduction": "$36,000 (Sep 11)",
+      "shouldHighlight": false,
+      "state": "CA",
+      "streetAddress": "1918 11th St APT D",
+      "taxAssessedValue": 810977,
+      "timeOnZillow": 3575582000,
+      "unit": "Apt D",
+      "zipcode": "90404",
+      "zpid": 51582406
+    },
+    {
+      "bathrooms": 3,
+      "bedrooms": 4,
+      "city": "Santa Monica",
+      "country": "USA",
+      "currency": "USD",
+      "daysOnZillow": -1,
+      "homeStatus": "FOR_SALE",
+      "homeStatusForHDP": "FOR_SALE",
+      "homeType": "SINGLE_FAMILY",
+      "imgSrc": "https://photos.zillowstatic.com/fp/9235bfe2dd26e870a9bb9af5c5cded5d-p_e.jpg",
+      "isFeatured": false,
+      "isNonOwnerOccupied": true,
+      "isPreforeclosureAuction": false,
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "isUnmappable": false,
+      "isZillowOwned": false,
+      "latitude": 34.038795,
+      "listing_sub_type": {
+        "is_FSBA": true
+      },
+      "livingArea": 3268,
+      "longitude": -118.504326,
+      "lotAreaUnit": "sqft",
+      "lotAreaValue": 9530.928,
+      "price": 4995000,
+      "priceForHDP": 4995000,
+      "rentZestimate": 18343,
+      "shouldHighlight": false,
+      "state": "CA",
+      "streetAddress": "1308 San Vicente Blvd",
+      "taxAssessedValue": 1325976,
+      "timeOnZillow": 748286000,
+      "zestimate": 5249400,
+      "zipcode": "90402",
+      "zpid": 20477443
+    }
+  ],
+  "resultsPerPage": 41,
+  "totalPages": 4,
+  "totalResultCount": 157
+}
+
+
+/propertyV2
+
+import axios from 'axios'; const options = { method: 'GET', url: 'https://zillow56.p.rapidapi.com/propertyV2', params: {zpid: '51582406'}, headers: { 'x-rapidapi-key': '9288c8ca29msh202e3f882223132p1ed9ebjsna02b8d7935f6', 'x-rapidapi-host': 'zillow56.p.rapidapi.com' } }; try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); }
+
+response is 
+
+{
+
+  "abbreviatedAddress": "1918 11th St APT D",
+
+  "address": {
+
+    "city": "Santa Monica",
+
+    "state": "CA",
+
+    "streetAddress": "1918 11th St APT D",
+
+    "zipcode": "90404"
+
+  },
+
+  "attributionInfo": {
+
+    "agentLicenseNumber": "DRE #01981773",
+
+    "agentName": "Elizabeth Kammen",
+
+    "agentPhoneNumber": "619-248-6434",
+
+    "brokerName": "Real Brokerage Technologies, Inc.",
+
+    "mlsId": "SR25187510",
+
+    "mlsName": "CRMLS"
+
+  },
+
+  "bathrooms": 2,
+
+  "bedrooms": 2,
+
+  "city": "Santa Monica",
+
+  "currency": "USD",
+
+  "datePostedString": "2025-08-21",
+
+  "daysOnZillow": 41,
+
+  "description": "Nestled in the beating heart of Santa Monica, on the border of Sunset Park and Pico, 1918 11th Street #D is a beautifully updated 2-bedroom, 2-bath residence just 10 blocks from the beach. Offering 923 sq ft of well-designed living space, the home welcomes you with hardwood floors, an updated kitchen with newer appliances and reverse osmosis system, and a bonus laundry room with newer washer/dryer. Both bedrooms are enhanced with blackout blinds, creating peaceful retreats in the heart of the city. Thoughtful updates include a modern electrical panel, newer water heater, and a roof recently completed by the HOA with no current assessments. Set within an intimate 7-residence community, this home provides two side-by-side parking spaces and a boutique sense of privacy. Positioned in a sought-after Santa Monica enclave, just moments from schools, shopping, dining, and the beach, this residence offers the perfect balance of coastal charm, modern comfort, and everyday convenience - an ideal opportunity to enjoy Santa Monica living at its finest.",
+
+  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_h.jpg",
+
+  "favoriteCount": 127,
+
+  "hdpUrl": "/homedetails/1918-11th-St-APT-D-Santa-Monica-CA-90404/51582406_zpid/",
+
+  "hiResImageLink": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_f.jpg",
+
+  "homeStatus": "FOR_SALE",
+
+  "homeType": "CONDO",
+
+  "lastSoldPrice": 727000,
+
+  "latitude": 34.01438,
+
+  "listing_agent": {
+
+    "badge_type": "Listing Agent",
+
+    "display_name": "Elizabeth Kammen",
+
+    "image_data": {
+
+      "url": "https://photos.zillowstatic.com/fp/b987da375171ed354658fa3bb4235326-h_n.jpg"
+
+    },
+
+    "phone": {
+
+      "areacode": "805",
+
+      "number": "0727",
+
+      "prefix": "279"
+
+    }
+
+  },
+
+  "livingArea": 923,
+
+  "livingAreaUnits": "Square Feet",
+
+  "livingAreaUnitsShort": "sqft",
+
+  "longitude": -118.48042,
+
+  "lotSize": 7513,
+
+  "monthlyHoaFee": 360,
+
+  "price": 869000,
+
+  "propertyTypeDimension": "Condo"
+
+}
+
+/photos
+
+import axios from 'axios'; const options = { method: 'GET', url: 'https://zillow56.p.rapidapi.com/photos', params: {zpid: '51582406'}, headers: { 'x-rapidapi-key': '9288c8ca29msh202e3f882223132p1ed9ebjsna02b8d7935f6', 'x-rapidapi-host': 'zillow56.p.rapidapi.com' } }; try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); }
+
+/photos response
+
+{
+  "photos": [
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-d_d.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-o_a.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1344_1008.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1536_1152.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-d_d.webp",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-o_a.webp",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1344_1008.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1536_1152.webp",
+            "width": 1536
+          }
+        ]
+      }
+    },
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-d_d.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-o_a.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1344_1008.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1536_1152.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-d_d.webp",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-o_a.webp",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1344_1008.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1536_1152.webp",
+            "width": 1536
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+/walk_transit_bike_score
+
+import axios from 'axios'; const options = { method: 'GET', url: 'https://zillow56.p.rapidapi.com/walk_transit_bike_score', params: {zpid: '51582406'}, headers: { 'x-rapidapi-key': '9288c8ca29msh202e3f882223132p1ed9ebjsna02b8d7935f6', 'x-rapidapi-host': 'zillow56.p.rapidapi.com' } }; try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); }
+
+response
+
+{ "data": { "property": { "bikeScore": { "bikescore": 87, "description": "Very Bikeable" }, "id": "UHJvcGVydHk6NTE1ODI0MDY=", "transitScore": { "description": "Excellent Transit", "transit_score": 71, "ws_link": "https://www.walkscore.com/score/loc/lat=34.0144/lng=-118.4804/?utm_source=zillow2.com&utm_medium=ts_api&utm_campaign=ts_api" }, "walkScore": { "description": "Walker's Paradise", "walkscore": 91, "ws_link": "https://www.walkscore.com/score/loc/lat=34.01438/lng=-118.48042/?utm_source=zillow2.com&utm_medium=ws_api&utm_campaign=ws_api" } } } }
+
+/price_tax_history
+
+import axios from 'axios'; const options = { method: 'GET', url: 'https://zillow56.p.rapidapi.com/price_tax_history', params: {zpid: '51582406'}, headers: { 'x-rapidapi-key': '9288c8ca29msh202e3f882223132p1ed9ebjsna02b8d7935f6', 'x-rapidapi-host': 'zillow56.p.rapidapi.com' } }; try { const response = await axios.request(options); console.log(response.data); } catch (error) { console.error(error); }
+
+response
+
+{
+  "priceHistory": [
+    {
+      "attributeSource": {
+        "infoString1": "SR25187510",
+        "infoString2": "CRMLS",
+        "infoString3": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_logo_inf_11.jpg"
+      },
+      "buyerAgent": null,
+      "date": "2025-09-11",
+      "event": "Price change",
+      "postingIsRental": false,
+      "price": 799000,
+      "priceChangeRate": -0.04311377245508982,
+      "pricePerSquareFoot": 866,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "CRMLS",
+      "time": 1757548800000
+    }
+  ],
+  "taxHistory": [
+    {
+      "taxIncreaseRate": 0.016714202,
+      "taxPaid": 9934.67,
+      "time": 1727777315285,
+      "value": 810977,
+      "valueIncreaseRate": 0.019999346
+    }
+  ]
+}
+
+

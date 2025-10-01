@@ -1,0 +1,18 @@
+{
+  "data": {
+    "property": {
+      "bikeScore": { "bikescore": 87, "description": "Very Bikeable" },
+      "id": "UHJvcGVydHk6NTE1ODI0MDY=",
+      "transitScore": {
+        "description": "Excellent Transit",
+        "transit_score": 71,
+        "ws_link": "https://www.walkscore.com/score/loc/lat=34.0144/lng=-118.4804/?utm_source=zillow2.com&utm_medium=ts_api&utm_campaign=ts_api"
+      },
+      "walkScore": {
+        "description": "Walker's Paradise",
+        "walkscore": 91,
+        "ws_link": "https://www.walkscore.com/score/loc/lat=34.01438/lng=-118.48042/?utm_source=zillow2.com&utm_medium=ws_api&utm_campaign=ws_api"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schools": [
+    {
+      "assigned": null,
+      "distance": 0.6,
+      "grades": "K-5",
+      "isAssigned": null,
+      "level": "Elementary",
+      "link": "https://www.greatschools.org/california/santa-monica/2930-Will-Rogers-Elementary-School/",
+      "name": "Will Rogers Elementary School",
+      "rating": 6,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    },
+    {
+      "assigned": null,
+      "distance": 0.6,
+      "grades": "6-8",
+      "isAssigned": null,
+      "level": "Middle",
+      "link": "https://www.greatschools.org/california/santa-monica/2919-John-Adams-Middle-School/",
+      "name": "John Adams Middle School",
+      "rating": 7,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    },
+    {
+      "assigned": null,
+      "distance": 0.3,
+      "grades": "9-12",
+      "isAssigned": null,
+      "level": "High",
+      "link": "https://www.greatschools.org/california/santa-monica/2932-Santa-Monica-High-School/",
+      "name": "Santa Monica High School",
+      "rating": 9,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    }
+  ]
+}

@@ -1,0 +1,2976 @@
+{
+  "abbreviatedAddress": "1918 11th St APT D",
+  "address": {
+    "city": "Santa Monica",
+    "community": null,
+    "neighborhood": null,
+    "state": "CA",
+    "streetAddress": "1918 11th St APT D",
+    "subdivision": null,
+    "zipcode": "90404"
+  },
+  "apartmentsForRentInZipcodeSearchUrl": {
+    "path": "/santa-monica-ca-90404/apartments/"
+  },
+  "attributionInfo": {
+    "agentEmail": null,
+    "agentLicenseNumber": "DRE #01981773",
+    "agentName": "Elizabeth Kammen",
+    "agentPhoneNumber": "619-248-6434",
+    "attributionTitle": "Listing Provided by:",
+    "brokerName": "Real Brokerage Technologies, Inc.",
+    "brokerPhoneNumber": "619-248-6434",
+    "buyerAgentMemberStateLicense": null,
+    "buyerAgentName": null,
+    "buyerBrokerageName": null,
+    "coAgentLicenseNumber": "DRE #02004641",
+    "coAgentName": "Devon Norjean",
+    "coAgentNumber": "424-343-9008",
+    "infoString10": "The multiple listing data appearing on this website, or contained in reports produced therefrom, is owned and copyrighted by California Regional Multiple Listing Service, Inc. (\"CRMLS\") and is protected by all applicable copyright laws. Information provided is for viewer's personal, non-commercial use and may not be used for any purpose other than to identify prospective properties the viewer may be interested in purchasing. All listing data, including but not limited to square footage and lot size is believed to be accurate, but the listing Agent, listing Broker and CRMLS and its affiliates do not warrant or guarantee such accuracy. The viewer should independently verify the listed data prior to making any decisions based on such information by personal inspection and/or contacting a real estate professional.\n\nBased on information from California Regional Multiple Listing Service, Inc. as of 2025-10-01 02:28:32 PDT and /or other sources. All data, including all measurements and calculations of area, is obtained from various sources and has not been, and will not be, verified by broker or MLS. All information should be independently reviewed and verified for accuracy. Properties may or may not be listed by the office/agent presenting the information",
+    "infoString16": null,
+    "infoString3": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_95_35.jpg",
+    "infoString5": "619-248-6434",
+    "lastChecked": "2025-10-01 02:28:32",
+    "lastUpdated": "2025-09-30 16:14:38",
+    "listingAgentAttributionContact": null,
+    "listingAgents": [
+      {
+        "associatedAgentType": "listAgent",
+        "memberFullName": "Elizabeth Kammen",
+        "memberStateLicense": "DRE #01981773"
+      },
+      {
+        "associatedAgentType": "coListAgent",
+        "memberFullName": "Devon Norjean",
+        "memberStateLicense": "DRE #02004641"
+      }
+    ],
+    "listingAgreement": null,
+    "listingAttributionContact": "805-279-0727",
+    "listingOffices": [
+      {
+        "associatedOfficeType": "listOffice",
+        "officeName": "Real Brokerage Technologies, Inc."
+      },
+      {
+        "associatedOfficeType": "coListOffice",
+        "officeName": "Real Broker"
+      }
+    ],
+    "mlsDisclaimer": "The multiple listing data appearing on this website, or contained in reports produced therefrom, is owned and copyrighted by California Regional Multiple Listing Service, Inc. (\"CRMLS\") and is protected by all applicable copyright laws. Information provided is for viewer's personal, non-commercial use and may not be used for any purpose other than to identify prospective properties the viewer may be interested in purchasing. All listing data, including but not limited to square footage and lot size is believed to be accurate, but the listing Agent, listing Broker and CRMLS and its affiliates do not warrant or guarantee such accuracy. The viewer should independently verify the listed data prior to making any decisions based on such information by personal inspection and/or contacting a real estate professional.\n\nBased on information from California Regional Multiple Listing Service, Inc. as of 2025-10-01 02:28:32 PDT and /or other sources. All data, including all measurements and calculations of area, is obtained from various sources and has not been, and will not be, verified by broker or MLS. All information should be independently reviewed and verified for accuracy. Properties may or may not be listed by the office/agent presenting the information",
+    "mlsId": "SR25187510",
+    "mlsName": "CRMLS",
+    "providerLogo": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_95_35.jpg",
+    "trueStatus": null
+  },
+  "bathrooms": 2,
+  "bedrooms": 2,
+  "boroughId": null,
+  "boroughSearchUrl": null,
+  "brokerId": null,
+  "brokerIdDimension": "For Sale by Agent",
+  "brokerageName": "Real Brokerage Technologies, Inc.",
+  "building": null,
+  "buildingId": "2077759047",
+  "buyAbilityData": {
+    "chipLabel": null,
+    "isEligibleProperty": true
+  },
+  "city": "Santa Monica",
+  "cityId": 26964,
+  "citySearchUrl": {
+    "path": "/santa-monica-ca/",
+    "text": "Homes in Santa Monica"
+  },
+  "collections": {
+    "modules": [
+      {
+        "name": "Similar homes",
+        "placement": "NEIGHBORHOOD",
+        "propertyDetails": [
+          {
+            "address": {
+              "city": "Los Angeles",
+              "state": "CA",
+              "streetAddress": "1665 Federal Ave UNIT 302",
+              "zipcode": "90025"
+            },
+            "attributionInfo": {
+              "agentName": "Espi Bagwell",
+              "agentPhoneNumber": null,
+              "brokerName": "Keller Williams Realty",
+              "brokerPhoneNumber": null,
+              "mlsId": "AR25192823",
+              "mlsName": null,
+              "providerLogo": null,
+              "trueStatus": null
+            },
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "currency": "USD",
+            "formattedChip": {
+              "location": [
+                {
+                  "fullValue": "1665 Federal Ave UNIT 302"
+                },
+                {
+                  "fullValue": "Los Angeles, CA 90025"
+                }
+              ]
+            },
+            "hdpTypeDimension": "ForSale",
+            "hdpUrl": "/homedetails/1665-Federal-Ave-UNIT-302-Los-Angeles-CA-90025/20465780_zpid/",
+            "homeStatus": "FOR_SALE",
+            "homeType": "CONDO",
+            "isPremierBuilder": false,
+            "isShowcaseListing": false,
+            "latitude": 34.042892,
+            "listingMetadata": {
+              "comminglingCategoryIsRulesApplicable": true
+            },
+            "listingTypeDimension": "For Sale by Agent",
+            "listing_sub_type": {
+              "is_FSBA": true,
+              "is_FSBO": false,
+              "is_bankOwned": false,
+              "is_comingSoon": false,
+              "is_forAuction": false,
+              "is_foreclosure": false,
+              "is_newHome": false
+            },
+            "livingArea": 985,
+            "livingAreaUnits": "Square Feet",
+            "livingAreaUnitsShort": "sqft",
+            "livingAreaValue": 985,
+            "longitude": -118.45282,
+            "lotAreaUnits": "Square Feet",
+            "lotAreaValue": 6830,
+            "lotSize": 6830,
+            "miniCardPhotos": [
+              {
+                "url": "https://photos.zillowstatic.com/fp/676f41543c26be0a25a18e71dd7a69ba-p_c.jpg"
+              }
+            ],
+            "newConstructionType": null,
+            "parentRegion": {
+              "name": "Sawtelle"
+            },
+            "price": 805800,
+            "propertyTypeDimension": "Condo",
+            "providerListingID": null,
+            "state": "CA",
+            "zpid": 20465780
+          },
+          {
+            "address": {
+              "city": "Culver City",
+              "state": "CA",
+              "streetAddress": "6150 Buckingham Pkwy UNIT 106",
+              "zipcode": "90230"
+            },
+            "attributionInfo": {
+              "agentName": "Barbara Grandolfo",
+              "agentPhoneNumber": null,
+              "brokerName": "Seven Gables Real Estate",
+              "brokerPhoneNumber": null,
+              "mlsId": "PW25226349",
+              "mlsName": null,
+              "providerLogo": null,
+              "trueStatus": null
+            },
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "currency": "USD",
+            "formattedChip": {
+              "location": [
+                {
+                  "fullValue": "6150 Buckingham Pkwy UNIT 106"
+                },
+                {
+                  "fullValue": "Culver City, CA 90230"
+                }
+              ]
+            },
+            "hdpTypeDimension": "ForSale",
+            "hdpUrl": "/homedetails/6150-Buckingham-Pkwy-UNIT-106-Culver-City-CA-90230/20394189_zpid/",
+            "homeStatus": "FOR_SALE",
+            "homeType": "CONDO",
+            "isPremierBuilder": false,
+            "isShowcaseListing": false,
+            "latitude": 33.98339,
+            "listingMetadata": {
+              "comminglingCategoryIsRulesApplicable": true
+            },
+            "listingTypeDimension": "For Sale by Agent",
+            "listing_sub_type": {
+              "is_FSBA": true,
+              "is_FSBO": false,
+              "is_bankOwned": false,
+              "is_comingSoon": false,
+              "is_forAuction": false,
+              "is_foreclosure": false,
+              "is_newHome": false
+            },
+            "livingArea": 1150,
+            "livingAreaUnits": "Square Feet",
+            "livingAreaUnitsShort": "sqft",
+            "livingAreaValue": 1150,
+            "longitude": -118.38397,
+            "lotAreaUnits": "Acres",
+            "lotAreaValue": 0.6081726354453627,
+            "lotSize": 26492,
+            "miniCardPhotos": [
+              {
+                "url": "https://photos.zillowstatic.com/fp/f83c0b071b8bef9d2d35c0835e42f0eb-p_c.jpg"
+              }
+            ],
+            "newConstructionType": null,
+            "parentRegion": {
+              "name": "Fox Hills"
+            },
+            "price": 688000,
+            "propertyTypeDimension": "Condo",
+            "providerListingID": null,
+            "state": "CA",
+            "zpid": 20394189
+          }
+        ]
+      }
+    ],
+    "trackingTags": [
+      {
+        "value": "cf85cdaead2daa097aa5601b6a9e3caa"
+      }
+    ]
+  },
+  "comingSoonOnMarketDate": null,
+  "communityUrl": null,
+  "contingentListingType": null,
+  "country": "USA",
+  "county": "Los Angeles County",
+  "countyFIPS": "06037",
+  "countyId": 3101,
+  "countySearchUrl": {
+    "path": "/los-angeles-county-ca/",
+    "text": "Homes in Los Angeles County"
+  },
+  "currency": "USD",
+  "datePostedString": "2025-08-21",
+  "daysOnZillow": 41,
+  "description": "Nestled in the beating heart of Santa Monica, on the border of Sunset Park and Pico, 1918 11th Street #D is a beautifully updated 2-bedroom, 2-bath residence just 10 blocks from the beach. Offering 923 sq ft of well-designed living space, the home welcomes you with hardwood floors, an updated kitchen with newer appliances and reverse osmosis system, and a bonus laundry room with newer washer/dryer. Both bedrooms are enhanced with blackout blinds, creating peaceful retreats in the heart of the city. Thoughtful updates include a modern electrical panel, newer water heater, and a roof recently completed by the HOA with no current assessments. Set within an intimate 7-residence community, this home provides two side-by-side parking spaces and a boutique sense of privacy. Positioned in a sought-after Santa Monica enclave, just moments from schools, shopping, dining, and the beach, this residence offers the perfect balance of coastal charm, modern comfort, and everyday convenience - an ideal opportunity to enjoy Santa Monica living at its finest.",
+  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_h.jpg",
+  "downPaymentAssistance": {
+    "eligibility": {
+      "dpa": true
+    }
+  },
+  "editPropertyHistorylink": null,
+  "favoriteCount": 127,
+  "featuredListingTypeDimension": "organic",
+  "foreclosingBank": null,
+  "foreclosureAmount": null,
+  "foreclosureAuctionCity": null,
+  "foreclosureAuctionDescription": null,
+  "foreclosureAuctionFilingDate": null,
+  "foreclosureAuctionLocation": null,
+  "foreclosureAuctionTime": null,
+  "foreclosureBalanceReportingDate": null,
+  "foreclosureDate": null,
+  "foreclosureDefaultDescription": null,
+  "foreclosureDefaultFilingDate": null,
+  "foreclosureJudicialType": "Non-Judicial",
+  "foreclosureLoanAmount": null,
+  "foreclosureLoanDate": null,
+  "foreclosureLoanOriginator": null,
+  "foreclosureMoreInfo": null,
+  "foreclosurePastDueBalance": null,
+  "foreclosurePriorSaleAmount": null,
+  "foreclosurePriorSaleDate": null,
+  "foreclosureTypes": {
+    "isAnyForeclosure": false,
+    "isBankOwned": false,
+    "isForeclosedNFS": false,
+    "isPreforeclosure": false,
+    "wasDefault": null,
+    "wasForeclosed": false,
+    "wasNonRetailAuction": false,
+    "wasREO": null
+  },
+  "foreclosureUnpaidBalance": null,
+  "formattedChip": {
+    "location": [
+      {
+        "fullValue": "1918 11th St APT D"
+      },
+      {
+        "fullValue": "Santa Monica, CA 90404"
+      }
+    ]
+  },
+  "hasApprovedThirdPartyVirtualTourUrl": false,
+  "hasBadGeocode": false,
+  "hasPublicVideo": false,
+  "hdpTypeDimension": "ForSale",
+  "hdpUrl": "/homedetails/1918-11th-St-APT-D-Santa-Monica-CA-90404/51582406_zpid/",
+  "hiResImageLink": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_f.jpg",
+  "homeInsights": [
+    {
+      "insights": [
+        {
+          "modelId": "z-nrt-pdc-llm-tags",
+          "phrases": [
+            "Reverse osmosis system",
+            "Newer appliances",
+            "Blackout blinds",
+            "Hardwood floors",
+            "Updated kitchen",
+            "Bonus laundry room"
+          ],
+          "treatmentId": "model_0"
+        },
+        {
+          "modelId": "z-nrt-pdc-llm-tags",
+          "phrases": [
+            "Reverse osmosis system",
+            "Newer appliances",
+            "Blackout blinds",
+            "Hardwood floors",
+            "Updated kitchen",
+            "Bonus laundry room"
+          ],
+          "treatmentId": "model_1"
+        }
+      ]
+    }
+  ],
+  "homeStatus": "FOR_SALE",
+  "homeType": "CONDO",
+  "homeValues": null,
+  "housesForRentInZipcodeSearchUrl": {
+    "path": "/santa-monica-ca-90404/rent-houses/"
+  },
+  "interactiveFloorPlanUrl": "",
+  "isCurrentSignedInAgentResponsible": false,
+  "isCurrentSignedInUserVerifiedOwner": false,
+  "isFeatured": false,
+  "isHousingConnector": false,
+  "isIncomeRestricted": null,
+  "isListingClaimedByCurrentSignedInUser": false,
+  "isNonOwnerOccupied": false,
+  "isPaidMultiFamilyBrokerId": false,
+  "isPreforeclosureAuction": false,
+  "isPremierBuilder": false,
+  "isRecentStatusChange": false,
+  "isRentalListingOffMarket": false,
+  "isRentalsLeadCapMet": false,
+  "isShowcaseListing": true,
+  "isUndisclosedAddress": false,
+  "isZillowOwned": false,
+  "keystoneHomeStatus": "ForSale",
+  "lastSoldPrice": 727000,
+  "latitude": 34.01438,
+  "listPriceLow": null,
+  "listedBy": [
+    {
+      "elements": [
+        {
+          "action": null,
+          "id": "NAME",
+          "text": "Elizabeth Kammen"
+        },
+        {
+          "action": null,
+          "id": "LICENSE",
+          "text": "DRE #01981773"
+        },
+        {
+          "action": null,
+          "id": "PHONE",
+          "text": "805-279-0727"
+        }
+      ],
+      "id": "LISTING_AGENT",
+      "textStyle": null
+    },
+    {
+      "elements": [
+        {
+          "action": null,
+          "id": "NAME",
+          "text": "Real Brokerage Technologies, Inc."
+        }
+      ],
+      "id": "BROKER",
+      "textStyle": null
+    },
+    {
+      "elements": [
+        {
+          "action": null,
+          "id": "NAME",
+          "text": "Devon Norjean"
+        },
+        {
+          "action": null,
+          "id": "LICENSE",
+          "text": "DRE #02004641"
+        },
+        {
+          "action": null,
+          "id": "PHONE",
+          "text": "424-343-9008"
+        }
+      ],
+      "id": "CO_LISTING_AGENT",
+      "textStyle": null
+    },
+    {
+      "elements": [
+        {
+          "action": null,
+          "id": "NAME",
+          "text": "Real Broker"
+        }
+      ],
+      "id": "CO_LISTING_AGENT_OFFICE",
+      "textStyle": null
+    }
+  ],
+  "listingAccount": null,
+  "listingAccountUserId": "X1-ZUxo9i6r5tit55_9hc6g",
+  "listingDataSource": "Phoenix",
+  "listingFeedID": null,
+  "listingMetadata": {
+    "FlexibleLayoutAA": true,
+    "FlexibleLayoutAB": true,
+    "FlexibleLayoutB": false,
+    "FlexibleLayoutC": true,
+    "FlexibleLayoutD": true,
+    "FlexibleLayoutE": true,
+    "FlexibleLayoutF": false,
+    "FlexibleLayoutG": false,
+    "FlexibleLayoutH": true,
+    "FlexibleLayoutI": true,
+    "FlexibleLayoutJ": false,
+    "FlexibleLayoutK": false,
+    "FlexibleLayoutL": false,
+    "FlexibleLayoutM": true,
+    "FlexibleLayoutN": true,
+    "FlexibleLayoutO": true,
+    "FlexibleLayoutP": true,
+    "FlexibleLayoutQ": false,
+    "FlexibleLayoutR": true,
+    "FlexibleLayoutS": false,
+    "FlexibleLayoutT": false,
+    "FlexibleLayoutU": false,
+    "FlexibleLayoutV": false,
+    "FlexibleLayoutW": false,
+    "FlexibleLayoutX": false,
+    "FlexibleLayoutY": false,
+    "FlexibleLayoutZ": false,
+    "canCommingleComparables": true,
+    "canShowAutomatedValuationDisplay": false,
+    "canShowComparables": true,
+    "canShowCroppedPhotos": true,
+    "canShowNonIDXMedia": true,
+    "canShowOnMap": true,
+    "canShowPrequalifiedLinkInChip": true,
+    "canShowPriceHistory": true,
+    "canShowTaxHistory": true,
+    "canShowUserGeneratedContent": true,
+    "canShowZillowLogoInHeader": true,
+    "comminglingCategory": true,
+    "comminglingCategoryIsRulesApplicable": true,
+    "hidePriceAdjustmentFlexField": false,
+    "isAdsRestricted": false,
+    "isSuperTrafficOptimized": false,
+    "mustAttributeOfficeNameBeforeAgentName": false,
+    "mustDisplayAttributionAboveLocalFacts": true,
+    "mustDisplayAttributionListAgentEmail": false,
+    "mustDisplayAttributionListAgentPhone": true,
+    "mustDisplayAttributionListingOfficePhone": false,
+    "mustDisplayAuctionStatusAsSold": false,
+    "mustDisplayDisclaimerBelowAttribution": false,
+    "mustDisplayFeedLogoInContactBox": false,
+    "mustHighlightAgentName": null,
+    "mustHighlightListOfficeName": false,
+    "mustHighlightMarketingType": false,
+    "mustHighlightMlsId": null,
+    "mustHighlightMlsStatus": false,
+    "mustMakeListingAgentContactable": false,
+    "mustPreferMlsPhotos": false,
+    "passwordRequiredForZestimateMarketAnalysis": false
+  },
+  "listingProvider": null,
+  "listingSubType": {
+    "isBankOwned": false,
+    "isComingSoon": false,
+    "isFSBA": true,
+    "isFSBO": false,
+    "isForAuction": false,
+    "isForeclosure": false,
+    "isNewHome": false,
+    "isOpenHouse": true,
+    "isPending": false
+  },
+  "listingTypeDimension": "For Sale by Agent",
+  "listing_agent": {
+    "agent_reason": 3,
+    "badge_type": "Listing Agent",
+    "business_name": "Real Brokerage Technologies, Inc.",
+    "display_name": "Elizabeth Kammen",
+    "encoded_zuid": "X1-ZUxo9i6r5tit55_9hc6g",
+    "first_name": "Elizabeth",
+    "image_data": {
+      "height": 60,
+      "url": "https://photos.zillowstatic.com/fp/b987da375171ed354658fa3bb4235326-h_n.jpg",
+      "width": 60
+    },
+    "phone": {
+      "areacode": "805",
+      "number": "0727",
+      "prefix": "279"
+    },
+    "profile_url": "/profile/ElizabethKammen/",
+    "rating_average": 5,
+    "recent_sales": 0,
+    "review_count": 34,
+    "reviews_url": "/profile/ElizabethKammen/#reviews",
+    "services_offered": [1, 2, 3, 6, 73],
+    "username": "ElizabethKammen",
+    "write_review_url": "/reviews/write/?s=X1-ZUxo9i6r5tit55_9hc6g",
+    "zpro": false
+  },
+  "listing_sub_type": {
+    "is_FSBA": true,
+    "is_FSBO": false,
+    "is_bankOwned": false,
+    "is_comingSoon": false,
+    "is_forAuction": false,
+    "is_foreclosure": false,
+    "is_newHome": false,
+    "is_pending": false
+  },
+  "livingArea": 923,
+  "livingAreaUnits": "Square Feet",
+  "livingAreaUnitsShort": "sqft",
+  "livingAreaValue": 923,
+  "longitude": -118.48042,
+  "lotAreaUnits": "Square Feet",
+  "lotAreaValue": 7513,
+  "lotPremium": null,
+  "lotSize": 7513,
+  "marketingName": null,
+  "mlsid": "SR25187510",
+  "monthlyHoaFee": 360,
+  "mortgageZHLRates": {
+    "arm5Bucket": {
+      "lastUpdated": 1759309653778,
+      "rate": 6.095,
+      "rateSource": "ZGMI"
+    },
+    "fifteenYearFixedBucket": {
+      "lastUpdated": 1759309653778,
+      "rate": 5.456,
+      "rateSource": "ZGMI"
+    },
+    "thirtyYearFixedBucket": {
+      "lastUpdated": 1759309653778,
+      "rate": 6.121,
+      "rateSource": "ZGMI"
+    }
+  },
+  "moveHomeMapLocationLink": null,
+  "nearbyCities": [
+    {
+      "body": null,
+      "name": "Glendale",
+      "regionUrl": {
+        "path": "/glendale-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Lancaster",
+      "regionUrl": {
+        "path": "/lancaster-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Long Beach",
+      "regionUrl": {
+        "path": "/long-beach-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Los Angeles",
+      "regionUrl": {
+        "path": "/los-angeles-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Palmdale",
+      "regionUrl": {
+        "path": "/palmdale-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Pasadena",
+      "regionUrl": {
+        "path": "/pasadena-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Pomona",
+      "regionUrl": {
+        "path": "/pomona-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Santa Clarita",
+      "regionUrl": {
+        "path": "/santa-clarita-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Torrance",
+      "regionUrl": {
+        "path": "/torrance-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Whittier",
+      "regionUrl": {
+        "path": "/whittier-ca/"
+      }
+    }
+  ],
+  "nearbyHomes": [
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT A",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 2,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT A"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-A-Santa-Monica-CA-90404/20479988_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "CONDO",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 804,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 804,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://maps.googleapis.com/maps/api/streetview?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&size=316x234&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=PLfxinETW8ML8cU6HyZKbk6spCk="
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 771200,
+      "propertyTypeDimension": "Condo",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 20479988
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT E",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT E"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-E-Santa-Monica-CA-90404/49925111_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "CONDO",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 979,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 979,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/347cdba1d15cc1a6412aabdd50b85665-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 786600,
+      "propertyTypeDimension": "Condo",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 49925111
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT C",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT C"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-C-Santa-Monica-CA-90404/49925271_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "MULTI_FAMILY",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 570,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 570,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/5fcd4b18d47be4bc64cb1db804d8dd89-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 607700,
+      "propertyTypeDimension": "Multi Family",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 49925271
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT G",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT G"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-G-Santa-Monica-CA-90404/49925272_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "CONDO",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 573,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 573,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://maps.googleapis.com/maps/api/streetview?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&size=316x234&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=PLfxinETW8ML8cU6HyZKbk6spCk="
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 510300,
+      "propertyTypeDimension": "Condo",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 49925272
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT B",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT B"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-B-Santa-Monica-CA-90404/49925273_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "CONDO",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 573,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 573,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://maps.googleapis.com/maps/api/streetview?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&size=316x234&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=PLfxinETW8ML8cU6HyZKbk6spCk="
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 513400,
+      "propertyTypeDimension": "Condo",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 49925273
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St APT F",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St APT F"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "Zestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-APT-F-Santa-Monica-CA-90404/50894487_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "CONDO",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 570,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 570,
+      "longitude": -118.48042,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 7513,
+      "lotSize": 7513,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/238b320f1eca04cac87426c176241639-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 572400,
+      "propertyTypeDimension": "Condo",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 50894487
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1918 11th St",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1918 11th St"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "NoZestimate",
+      "hdpUrl": "/homedetails/1918-11th-St-Santa-Monica-CA-90404/2077287918_zpid/",
+      "homeStatus": "OTHER",
+      "homeType": "APARTMENT",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.01438,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "Unknown Listed By",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 570,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 570,
+      "longitude": -118.48042,
+      "lotAreaUnits": "sqft",
+      "lotAreaValue": null,
+      "lotSize": null,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/07500dbe00093eaed2305f2d91d8fc4d-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 0,
+      "propertyTypeDimension": "Apartment",
+      "providerListingID": null,
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 2077287918
+    },
+    {
+      "address": {
+        "city": "Santa Monica",
+        "state": "CA",
+        "streetAddress": "1922 11th St #2",
+        "zipcode": "90404"
+      },
+      "attributionInfo": {
+        "agentName": null,
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": null,
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "1922 11th St #2"
+          },
+          {
+            "fullValue": null
+          }
+        ]
+      },
+      "hdpTypeDimension": "ForRent",
+      "hdpUrl": "/homedetails/1922-11th-St-2-Santa-Monica-CA-90404/455787676_zpid/",
+      "homeStatus": "FOR_RENT",
+      "homeType": "APARTMENT",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.014286,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": false
+      },
+      "listingTypeDimension": "For Rent",
+      "listing_sub_type": {
+        "is_FSBA": false,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 800,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 800,
+      "longitude": -118.48032,
+      "lotAreaUnits": "sqft",
+      "lotAreaValue": null,
+      "lotSize": null,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/c6ef586dc7506fe593f14e9b76f84723-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": null,
+      "price": 3900,
+      "propertyTypeDimension": "Apartment",
+      "providerListingID": "3end1g7tnu6vx",
+      "resoFacts": {
+        "bathroomsFull": null,
+        "bathroomsHalf": null,
+        "bathroomsOneQuarter": null,
+        "bathroomsThreeQuarter": null
+      },
+      "state": "CA",
+      "zpid": 455787676
+    }
+  ],
+  "nearbyNeighborhoods": [
+    {
+      "body": null,
+      "name": "Downtown/Third Street Promenade",
+      "regionUrl": {
+        "path": "/downtown-third-street-promenade-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Mid-City",
+      "regionUrl": {
+        "path": "/mid-city-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "North of Montana",
+      "regionUrl": {
+        "path": "/north-of-montana-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Northeast",
+      "regionUrl": {
+        "path": "/northeast-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Ocean Park",
+      "regionUrl": {
+        "path": "/ocean-park-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Pico District",
+      "regionUrl": {
+        "path": "/pico-district-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Santa Monica Pier Area/Ocean Avenue",
+      "regionUrl": {
+        "path": "/santa-monica-pier-area-ocean-avenue-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Sunset Park",
+      "regionUrl": {
+        "path": "/sunset-park-santa-monica-ca/"
+      }
+    },
+    {
+      "body": null,
+      "name": "Wilshire/Montana",
+      "regionUrl": {
+        "path": "/wilshire-montana-santa-monica-ca/"
+      }
+    }
+  ],
+  "nearbyZipcodes": [
+    {
+      "body": null,
+      "name": "90401",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90401/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90402",
+      "regionUrl": {
+        "path": "/los-angeles-ca-90402/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90403",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90403/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90404",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90404/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90405",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90405/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90406",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90406/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90407",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90407/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90408",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90408/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90409",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90409/"
+      }
+    },
+    {
+      "body": null,
+      "name": "90410",
+      "regionUrl": {
+        "path": "/santa-monica-ca-90410/"
+      }
+    }
+  ],
+  "neighborhoodId": 763774,
+  "neighborhoodMapThumb": [
+    {
+      "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_c.jpg"
+    }
+  ],
+  "neighborhoodRegion": {
+    "name": "Pico District"
+  },
+  "neighborhoodSearchUrl": {
+    "path": "/pico-district-santa-monica-ca/"
+  },
+  "newConstructionType": null,
+  "openHouseSchedule": [
+    {
+      "endTime": "2025-10-01 16:00:00",
+      "startTime": "2025-10-01 13:00:00"
+    },
+    {
+      "endTime": "2025-10-03 14:00:00",
+      "startTime": "2025-10-03 11:00:00"
+    },
+    {
+      "endTime": "2025-10-04 16:00:00",
+      "startTime": "2025-10-04 13:00:00"
+    }
+  ],
+  "originalPhotos": [
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-d_d.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-o_a.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1344_1008.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1536_1152.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-d_d.webp",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-o_a.webp",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1344_1008.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-uncropped_scaled_within_1536_1152.webp",
+            "width": 1536
+          }
+        ]
+      }
+    },
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-d_d.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-o_a.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1344_1008.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1536_1152.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-d_d.webp",
+            "width": 800
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-o_a.webp",
+            "width": 1024
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1344_1008.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-uncropped_scaled_within_1536_1152.webp",
+            "width": 1536
+          }
+        ]
+      }
+    }
+  ],
+  "ouid": "M00000093",
+  "pageUrlFragment": "ForSale",
+  "pageViewCount": 3688,
+  "pals": [],
+  "parcelId": "4283024045",
+  "parentRegion": {
+    "name": "Pico District",
+    "regionId": 763774
+  },
+  "photoCount": 26,
+  "postingProductType": "Standard",
+  "postingUrl": null,
+  "price": 799000,
+  "priceChange": -36000,
+  "priceChangeDate": 1757548800000,
+  "priceChangeDateString": "2025-09-11",
+  "priceHistory": [
+    {
+      "attributeSource": {
+        "infoString1": "SR25187510",
+        "infoString2": "CRMLS",
+        "infoString3": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_logo_inf_11.jpg"
+      },
+      "buyerAgent": null,
+      "date": "2025-09-11",
+      "event": "Price change",
+      "postingIsRental": false,
+      "price": 799000,
+      "priceChangeRate": -0.04311377245508982,
+      "pricePerSquareFoot": 866,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "CRMLS",
+      "time": 1757548800000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "SR25187510",
+        "infoString2": "CRMLS",
+        "infoString3": "https://photos.zillowstatic.com/fp/cb8caaa629c0af2058e60add67b2f2ee-zillow_web_logo_inf_11.jpg"
+      },
+      "buyerAgent": null,
+      "date": "2025-08-21",
+      "event": "Listed for sale",
+      "postingIsRental": false,
+      "price": 835000,
+      "priceChangeRate": 0.04375,
+      "pricePerSquareFoot": 905,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "CRMLS",
+      "time": 1755734400000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "20558942",
+        "infoString2": "Douglas Elliman",
+        "infoString3": null
+      },
+      "buyerAgent": null,
+      "date": "2020-03-04",
+      "event": "Listing removed",
+      "postingIsRental": false,
+      "price": 800000,
+      "priceChangeRate": 0,
+      "pricePerSquareFoot": 867,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "Douglas Elliman",
+      "time": 1583280000000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "20558942",
+        "infoString2": "Douglas Elliman",
+        "infoString3": null
+      },
+      "buyerAgent": null,
+      "date": "2020-02-28",
+      "event": "Listed for sale",
+      "postingIsRental": false,
+      "price": 800000,
+      "priceChangeRate": 0.10041265474552957,
+      "pricePerSquareFoot": 867,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "Douglas Elliman",
+      "time": 1582848000000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "18328004",
+        "infoString2": "CLAW",
+        "infoString3": "https://photos.zillowstatic.com/fp/4f3066f1f5cec0da94c227e529c8b89a-zillow_web_logo_inf_11.jpg"
+      },
+      "buyerAgent": {
+        "name": "Tyler Kunkle",
+        "photo": null,
+        "profileUrl": "/profile/tykunkle/"
+      },
+      "date": "2018-06-01",
+      "event": "Sold",
+      "postingIsRental": false,
+      "price": 727000,
+      "priceChangeRate": -0.029372496662216287,
+      "pricePerSquareFoot": 788,
+      "sellerAgent": {
+        "name": "Dafna Milstein",
+        "photo": null,
+        "profileUrl": "/profile/dafna555/"
+      },
+      "showCountyLink": false,
+      "source": "CLAW",
+      "time": 1527811200000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "18328004",
+        "infoString2": "Keller Williams Beverly Hills",
+        "infoString3": null
+      },
+      "buyerAgent": null,
+      "date": "2018-05-10",
+      "event": "Pending sale",
+      "postingIsRental": false,
+      "price": 749000,
+      "priceChangeRate": 0,
+      "pricePerSquareFoot": 811,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "Keller Williams Beverly Hills",
+      "time": 1525910400000
+    },
+    {
+      "attributeSource": {
+        "infoString1": "18328004",
+        "infoString2": "Keller Williams Beverly Hills",
+        "infoString3": null
+      },
+      "buyerAgent": null,
+      "date": "2018-04-10",
+      "event": "Listed for sale",
+      "postingIsRental": false,
+      "price": 749000,
+      "priceChangeRate": 7.322222222222222,
+      "pricePerSquareFoot": 811,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "Keller Williams Beverly Hills",
+      "time": 1523318400000
+    },
+    {
+      "attributeSource": {
+        "infoString1": null,
+        "infoString2": "Public Record",
+        "infoString3": null
+      },
+      "buyerAgent": null,
+      "date": "2007-06-25",
+      "event": "Sold",
+      "postingIsRental": false,
+      "price": 90000,
+      "priceChangeRate": 0,
+      "pricePerSquareFoot": 98,
+      "sellerAgent": null,
+      "showCountyLink": false,
+      "source": "Public Record",
+      "time": 1182729600000
+    }
+  ],
+  "primaryPublicVideo": null,
+  "propertyEventLogLink": null,
+  "propertyTaxRate": 1.16,
+  "propertyTypeDimension": "Condo",
+  "propertyUpdatePageLink": null,
+  "providerListingID": null,
+  "rentZestimate": null,
+  "rentalApplicationsAcceptedType": "REQUEST_TO_APPLY",
+  "resoFacts": {
+    "aboveGradeFinishedArea": null,
+    "accessibilityFeatures": ["Parking"],
+    "additionalFeeInfo": null,
+    "additionalParcelsDescription": null,
+    "appliances": ["Dishwasher", "Gas Range", "Microwave", "Refrigerator"],
+    "architecturalStyle": null,
+    "associationAmenities": ["Management"],
+    "associationFee": "$360 monthly",
+    "associationFee2": null,
+    "associationFeeIncludes": null,
+    "associationName": "CAC Management",
+    "associationName2": null,
+    "associationPhone": "310-645-9921",
+    "associationPhone2": null,
+    "associations": [
+      {
+        "feeFrequency": "$360 monthly",
+        "name": "CAC Management",
+        "phone": "310-645-9921"
+      }
+    ],
+    "atAGlanceFacts": [
+      {
+        "factLabel": "Type",
+        "factValue": "Condominium"
+      },
+      {
+        "factLabel": "Year Built",
+        "factValue": "1960"
+      },
+      {
+        "factLabel": "Heating",
+        "factValue": "Wall Furnace"
+      },
+      {
+        "factLabel": "Cooling",
+        "factValue": "None"
+      },
+      {
+        "factLabel": "Parking",
+        "factValue": "2 Parking spaces"
+      },
+      {
+        "factLabel": "HOA",
+        "factValue": "$360 monthly"
+      },
+      {
+        "factLabel": "Days on Zillow",
+        "factValue": "41 Days"
+      },
+      {
+        "factLabel": "Price/sqft",
+        "factValue": "$866"
+      },
+      {
+        "factLabel": "Offer Review Date",
+        "factValue": null
+      }
+    ],
+    "attic": null,
+    "availabilityDate": null,
+    "basement": null,
+    "basementYN": null,
+    "bathrooms": 2,
+    "bathroomsFloat": 2,
+    "bathroomsFull": 2,
+    "bathroomsHalf": null,
+    "bathroomsOneQuarter": null,
+    "bathroomsPartial": null,
+    "bathroomsThreeQuarter": null,
+    "bedrooms": 2,
+    "belowGradeFinishedArea": null,
+    "bodyType": null,
+    "builderModel": null,
+    "builderName": null,
+    "buildingArea": null,
+    "buildingAreaSource": null,
+    "buildingFeatures": null,
+    "buildingName": null,
+    "canRaiseHorses": false,
+    "carportParkingCapacity": null,
+    "cityRegion": "Santa Monica",
+    "commonWalls": "1 Common Wall",
+    "communityFeatures": ["Storm Drain(s)", "Street Lights", "Suburban"],
+    "compensationBasedOn": null,
+    "constructionMaterials": [],
+    "contingency": null,
+    "cooling": ["None"],
+    "coveredParkingCapacity": null,
+    "cropsIncludedYN": null,
+    "cumulativeDaysOnMarket": "41 days",
+    "developmentStatus": null,
+    "doorFeatures": null,
+    "electric": ["Electricity - On Property"],
+    "elementarySchool": null,
+    "elementarySchoolDistrict": null,
+    "elevation": null,
+    "elevationUnits": "Feet",
+    "entryLevel": null,
+    "entryLocation": "Front",
+    "exclusions": null,
+    "exteriorFeatures": [],
+    "feesAndDues": [
+      {
+        "fee": "$360 monthly",
+        "name": "CAC Management",
+        "phone": "310-645-9921",
+        "type": "HOA"
+      }
+    ],
+    "fencing": null,
+    "fireplaceFeatures": ["None"],
+    "fireplaces": null,
+    "flooring": ["Wood"],
+    "foundationArea": null,
+    "foundationDetails": [],
+    "frontageLength": null,
+    "frontageType": null,
+    "furnished": false,
+    "garageParkingCapacity": 0,
+    "gas": null,
+    "greenBuildingVerificationType": null,
+    "greenEnergyEfficient": null,
+    "greenEnergyGeneration": null,
+    "greenIndoorAirQuality": null,
+    "greenSustainability": null,
+    "greenWaterConservation": null,
+    "hasAdditionalParcels": false,
+    "hasAssociation": true,
+    "hasAttachedGarage": false,
+    "hasAttachedProperty": true,
+    "hasCarport": null,
+    "hasCooling": false,
+    "hasElectricOnProperty": null,
+    "hasFireplace": false,
+    "hasGarage": false,
+    "hasHeating": true,
+    "hasHomeWarranty": false,
+    "hasLandLease": false,
+    "hasOpenParking": null,
+    "hasPetsAllowed": null,
+    "hasPrivatePool": null,
+    "hasRentControl": null,
+    "hasSpa": false,
+    "hasView": true,
+    "hasWaterfrontView": null,
+    "heating": ["Wall Furnace"],
+    "highSchool": null,
+    "highSchoolDistrict": "Los Angeles Unified",
+    "hoaFee": "$360 monthly",
+    "hoaFeeTotal": "$360 monthly",
+    "homeType": "Condo",
+    "horseAmenities": null,
+    "horseYN": null,
+    "inclusions": null,
+    "incomeIncludes": null,
+    "interiorFeatures": [
+      "Breakfast Bar",
+      "Separate/Formal Dining Room",
+      "Open Floorplan",
+      "Recessed Lighting",
+      "Storage",
+      "Bedroom on Main Level",
+      "Main Level Primary"
+    ],
+    "irrigationWaterRightsAcres": null,
+    "irrigationWaterRightsYN": null,
+    "isNewConstruction": false,
+    "isSeniorCommunity": null,
+    "landLeaseAmount": null,
+    "landLeaseExpirationDate": null,
+    "laundryFeatures": ["Inside"],
+    "leaseTerm": null,
+    "levels": "One",
+    "listAOR": "California Regional MLS",
+    "listingId": null,
+    "listingTerms": "Cash,Conventional,FHA,VA Loan",
+    "livingArea": "923 sqft",
+    "livingAreaRange": null,
+    "livingAreaRangeUnits": "Square Feet",
+    "livingQuarters": [],
+    "lotFeatures": null,
+    "lotSize": "7,513 sqft",
+    "lotSizeDimensions": null,
+    "mainLevelBathrooms": 2,
+    "mainLevelBedrooms": 2,
+    "marketingType": null,
+    "media": [
+      {
+        "mediaCategory": "BrandedVirtualTour",
+        "mediaURL": "https://www.zillow.com/view-imx/886b0e5d-61ae-4fdf-a385-2e5ef213952e?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard"
+      },
+      {
+        "mediaCategory": "UnbrandedVirtualTour",
+        "mediaURL": "https://www.zillow.com/view-imx/886b0e5d-61ae-4fdf-a385-2e5ef213952e?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard"
+      }
+    ],
+    "middleOrJuniorSchool": null,
+    "middleOrJuniorSchoolDistrict": null,
+    "municipality": null,
+    "numberOfUnitsInCommunity": 7,
+    "numberOfUnitsVacant": null,
+    "offerReviewDate": null,
+    "onMarketDate": 1755734400000,
+    "openParkingCapacity": 2,
+    "otherEquipment": null,
+    "otherFacts": [],
+    "otherParking": null,
+    "otherStructures": null,
+    "ownership": null,
+    "ownershipType": null,
+    "parcelNumber": "4283024045",
+    "parkName": null,
+    "parkingCapacity": 2,
+    "parkingFeatures": ["Assigned", "Concrete", "Side By Side"],
+    "patioAndPorchFeatures": ["Front Porch", "Patio"],
+    "petsMaxWeight": null,
+    "poolFeatures": ["None"],
+    "pricePerSquareFoot": 866,
+    "propertyCondition": null,
+    "propertySubType": ["Condominium"],
+    "roadSurfaceType": ["Paved"],
+    "roofType": null,
+    "roomTypes": [
+      "Bonus Room",
+      "Bedroom",
+      "Family Room",
+      "Kitchen",
+      "Laundry",
+      "Living Room",
+      "Primary Bathroom",
+      "Primary Bedroom",
+      "Other",
+      "Dining Room"
+    ],
+    "rooms": [
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": ["Main Level Primary"],
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "MasterBedroom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "MasterBedroom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": ["Bedroom on Main Level"],
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Bedroom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "MasterBathroom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": [
+          "Bathtub",
+          "Full Bath on Main Level",
+          "Separate Shower",
+          "Tub Shower",
+          "Vanity",
+          "Walk-In Shower"
+        ],
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Bathroom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "BonusRoom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "DiningRoom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "FamilyRoom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": ["Kitchen/Family Room Combo"],
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Kitchen",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Kitchen",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Laundry",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "LivingRoom",
+        "roomWidth": null
+      },
+      {
+        "area": null,
+        "description": null,
+        "dimensions": null,
+        "features": null,
+        "level": null,
+        "roomArea": null,
+        "roomAreaSource": null,
+        "roomAreaUnits": null,
+        "roomDescription": null,
+        "roomDimensions": null,
+        "roomFeatures": null,
+        "roomLength": null,
+        "roomLengthWidthSource": null,
+        "roomLengthWidthUnits": null,
+        "roomLevel": null,
+        "roomType": "Other",
+        "roomWidth": null
+      }
+    ],
+    "securityFeatures": ["Carbon Monoxide Detector(s)", "Smoke Detector(s)"],
+    "sewer": ["Public Sewer"],
+    "spaFeatures": null,
+    "specialListingConditions": "Standard",
+    "stories": 1,
+    "storiesDecimal": 1,
+    "storiesTotal": 2,
+    "structureType": "Multi Family",
+    "subdivisionName": null,
+    "taxAnnualAmount": 9935,
+    "taxAssessedValue": 810977,
+    "tenantPays": null,
+    "topography": null,
+    "totalActualRent": null,
+    "utilities": [
+      "Electricity Connected",
+      "Natural Gas Connected",
+      "Sewer Connected",
+      "Water Connected"
+    ],
+    "vegetation": null,
+    "view": ["Neighborhood"],
+    "virtualTour": "https://www.zillow.com/view-imx/886b0e5d-61ae-4fdf-a385-2e5ef213952e?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard",
+    "waterBodyName": null,
+    "waterSource": ["Public"],
+    "waterView": null,
+    "waterViewYN": false,
+    "waterfrontFeatures": null,
+    "windowFeatures": ["Blinds"],
+    "woodedArea": null,
+    "yearBuilt": 1960,
+    "yearBuiltEffective": null,
+    "zoning": "SMR2*",
+    "zoningDescription": null
+  },
+  "responsivePhotos": [
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_192.jpg",
+            "width": 192
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_384.jpg",
+            "width": 384
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_576.jpg",
+            "width": 576
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_768.jpg",
+            "width": 768
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_960.jpg",
+            "width": 960
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1152.jpg",
+            "width": 1152
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1344.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1536.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_192.webp",
+            "width": 192
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_384.webp",
+            "width": 384
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_576.webp",
+            "width": 576
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_768.webp",
+            "width": 768
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_960.webp",
+            "width": 960
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1152.webp",
+            "width": 1152
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1344.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-cc_ft_1536.webp",
+            "width": 1536
+          }
+        ]
+      },
+      "subjectType": null,
+      "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_d.jpg"
+    },
+    {
+      "caption": "",
+      "mixedSources": {
+        "jpeg": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_192.jpg",
+            "width": 192
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_384.jpg",
+            "width": 384
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_576.jpg",
+            "width": 576
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_768.jpg",
+            "width": 768
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_960.jpg",
+            "width": 960
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1152.jpg",
+            "width": 1152
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1344.jpg",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1536.jpg",
+            "width": 1536
+          }
+        ],
+        "webp": [
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_192.webp",
+            "width": 192
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_384.webp",
+            "width": 384
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_576.webp",
+            "width": 576
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_768.webp",
+            "width": 768
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_960.webp",
+            "width": 960
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1152.webp",
+            "width": 1152
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1344.webp",
+            "width": 1344
+          },
+          {
+            "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-cc_ft_1536.webp",
+            "width": 1536
+          }
+        ]
+      },
+      "subjectType": null,
+      "url": "https://photos.zillowstatic.com/fp/def976dfbbd07bf2c4e47b1de653239c-p_d.jpg"
+    }
+  ],
+  "restimateHighPercent": null,
+  "restimateLowPercent": null,
+  "richMedia": {
+    "floorPlan": [
+      {
+        "viewerUrl": "https://www.zillow.com/view-floor-plan/3e0a2bdd-99a9-4331-ae41-28689bc38541"
+      }
+    ],
+    "imx": [
+      {
+        "hasLocalizedPhotos": true,
+        "isLmsTour": true,
+        "revisionId": "d98847c29b",
+        "viewerUrl": "https://www.zillow.com/view-imx/886b0e5d-61ae-4fdf-a385-2e5ef213952e"
+      }
+    ],
+    "virtualTour": [
+      {
+        "revisionId": "5fd37dbccb",
+        "viewerUrl": "https://www.zillow.com/view-3d-home/886b0e5d-61ae-4fdf-a385-2e5ef213952e",
+        "vrModelGuid": "886b0e5d-61ae-4fdf-a385-2e5ef213952e"
+      }
+    ]
+  },
+  "richMediaVideos": null,
+  "schools": [
+    {
+      "assigned": null,
+      "distance": 0.6,
+      "grades": "K-5",
+      "isAssigned": null,
+      "level": "Elementary",
+      "link": "https://www.greatschools.org/california/santa-monica/2930-Will-Rogers-Elementary-School/",
+      "name": "Will Rogers Elementary School",
+      "rating": 6,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    },
+    {
+      "assigned": null,
+      "distance": 0.6,
+      "grades": "6-8",
+      "isAssigned": null,
+      "level": "Middle",
+      "link": "https://www.greatschools.org/california/santa-monica/2919-John-Adams-Middle-School/",
+      "name": "John Adams Middle School",
+      "rating": 7,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    },
+    {
+      "assigned": null,
+      "distance": 0.3,
+      "grades": "9-12",
+      "isAssigned": null,
+      "level": "High",
+      "link": "https://www.greatschools.org/california/santa-monica/2932-Santa-Monica-High-School/",
+      "name": "Santa Monica High School",
+      "rating": 9,
+      "size": null,
+      "studentsPerTeacher": null,
+      "totalCount": null,
+      "type": "Public"
+    }
+  ],
+  "ssid": 3,
+  "state": "CA",
+  "stateId": 9,
+  "stateSearchUrl": {
+    "path": "/ca/"
+  },
+  "streetAddress": "1918 11th St APT D",
+  "streetViewMetadataUrlMapLightboxAddress": "https://maps.googleapis.com/maps/api/streetview/metadata?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&key=AIzaSyBV4lXhV-qzQOegyA3m0_AvGy9F21HIyOQ&source=outdoor&signature=rZU_pR_s_auYnhRgi9kvQ3Nmkm8=",
+  "streetViewMetadataUrlMediaWallAddress": "https://maps.googleapis.com/maps/api/streetview/metadata?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&signature=WOUvklGI9qOzk1MNJB9g9JuQuN0=",
+  "streetViewMetadataUrlMediaWallLatLong": "https://maps.googleapis.com/maps/api/streetview/metadata?location=34.014380,-118.480420&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&signature=4T0vEZr5CHIvPo3Dtf0pw4YBvjU=",
+  "streetViewServiceUrl": "https://street-view-url.prod.zgk-partner.zillowapi.com?zpid=51582406&address=1918%2011th%20St%2C%20Santa%20Monica%2C%20CA%2090404&width=512&height=234&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&maxdistance=130&lat=34.01438&lon=-118.48042&signature=i87PK9eDr0a6o2_7TGREUE1FIwo=",
+  "streetViewTileImageUrlMediumAddress": "https://maps.googleapis.com/maps/api/streetview?location=1918+11th+St%2C+Santa+Monica%2C+CA+90404&size=400x250&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&signature=RlPAOMOF1jfjOcECOsA0OHZY6M8=",
+  "streetViewTileImageUrlMediumLatLong": "https://maps.googleapis.com/maps/api/streetview?location=34.014380,-118.480420&size=400x250&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&signature=k507Lsfso7Sb8YYEhTmuvEeDAxg=",
+  "submitFlow": [
+    {
+      "__typename": "PropertyLeadSubmitForm",
+      "buttonText": "Next",
+      "checkboxes": [
+        {
+          "financingType": "ZGMI",
+          "initialClickstreamMetadata": {
+            "onPageView": {
+              "clickstream_trigger": {
+                "trigger_source_nm": "contact_form_with_zgmi",
+                "trigger_type_nm": "impression"
+              },
+              "envelope": {
+                "event_template_id": "374",
+                "event_template_version_id": "1",
+                "event_type_id": "5860",
+                "event_type_version_id": "7"
+              },
+              "semantic": {
+                "semantic_event_nm": "view_content",
+                "topic_tag_txt": []
+              }
+            }
+          },
+          "isCheckedInitialState": true,
+          "label": "I want financing information",
+          "leadFieldName": "wantsFinancing"
+        }
+      ],
+      "clickstreamMetadata": {
+        "onPageView": null
+      },
+      "componentPositionOrder": [
+        "InputFields",
+        "CTA",
+        "Checkboxes",
+        "TCPADisclosure"
+      ],
+      "cta": {
+        "action": null,
+        "clickstreamMetadata": {
+          "onClick": {
+            "clickstream_trigger": {
+              "trigger_source_nm": "button_to_complete_contact_agent_form",
+              "trigger_type_nm": "interaction"
+            },
+            "envelope": {
+              "event_template_id": "68",
+              "event_template_version_id": "1",
+              "event_type_id": "6152",
+              "event_type_version_id": "3"
+            },
+            "semantic": {
+              "semantic_event_nm": "request_contact_start",
+              "topic_tag_txt": ["contact_request"]
+            }
+          },
+          "onError": {
+            "clickstream_trigger": {
+              "trigger_source_nm": "button_to_complete_contact_form",
+              "trigger_type_nm": "interaction"
+            },
+            "envelope": {
+              "event_template_id": "68",
+              "event_template_version_id": "1",
+              "event_type_id": "6466",
+              "event_type_version_id": "3"
+            },
+            "semantic": {
+              "semantic_event_nm": "contact_request_error",
+              "topic_tag_txt": ["contact_request"]
+            }
+          },
+          "onSuccess": {
+            "clickstream_trigger": {
+              "trigger_source_nm": "button_to_complete_contact_form",
+              "trigger_type_nm": "interaction"
+            },
+            "envelope": {
+              "event_template_id": "68",
+              "event_template_version_id": "1",
+              "event_type_id": "397",
+              "event_type_version_id": "6"
+            },
+            "semantic": {
+              "semantic_event_nm": "request_contact_complete",
+              "topic_tag_txt": ["contact_request"]
+            }
+          }
+        },
+        "helpText": null,
+        "isSticky": false,
+        "label": "Next"
+      },
+      "disclosure": "Connect with a local buyer’s agent.",
+      "error": null,
+      "financingCheckbox": {
+        "financingType": "ZGMI",
+        "initialClickstreamMetadata": {
+          "onPageView": {
+            "clickstream_trigger": {
+              "trigger_source_nm": "contact_form_with_zgmi",
+              "trigger_type_nm": "impression"
+            },
+            "envelope": {
+              "event_template_id": "374",
+              "event_template_version_id": "1",
+              "event_type_id": "5860",
+              "event_type_version_id": "7"
+            },
+            "semantic": {
+              "semantic_event_nm": "view_content",
+              "topic_tag_txt": []
+            }
+          }
+        },
+        "isCheckedInitialState": true,
+        "label": "I want financing information",
+        "leadFieldName": "wantsFinancing"
+      },
+      "heading": null,
+      "headingIcon": null,
+      "inputFields": [
+        {
+          "clientSideValidationErrorMessage": "Enter your name",
+          "defaultSubmitValue": null,
+          "error": null,
+          "inputName": "name",
+          "inputType": "NAME",
+          "isRequired": true,
+          "isUserInputDisabled": false,
+          "label": "Name",
+          "maxCharacters": null,
+          "placeholder": null,
+          "validationRegex": null,
+          "value": null
+        },
+        {
+          "clientSideValidationErrorMessage": "Enter a valid US or Canadian phone number",
+          "defaultSubmitValue": null,
+          "error": null,
+          "inputName": "phoneNumber",
+          "inputType": "PHONE_NUMBER",
+          "isRequired": true,
+          "isUserInputDisabled": false,
+          "label": "Phone",
+          "maxCharacters": null,
+          "placeholder": null,
+          "validationRegex": "/^\\(?([2-9][0-8][0-9])\\)?[\\-. ]?([2-9][0-9]{2})[\\-. ]?([0-9]{4})(?: x(\\d{1,4}))?$/",
+          "value": null
+        },
+        {
+          "clientSideValidationErrorMessage": "Enter a valid email address",
+          "defaultSubmitValue": null,
+          "error": null,
+          "inputName": "emailAddress",
+          "inputType": "EMAIL",
+          "isRequired": true,
+          "isUserInputDisabled": false,
+          "label": "Email",
+          "maxCharacters": 320,
+          "placeholder": null,
+          "validationRegex": "/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-zA-Z]{2,63}$/i",
+          "value": null
+        },
+        {
+          "clientSideValidationErrorMessage": null,
+          "defaultSubmitValue": null,
+          "error": null,
+          "inputName": "message",
+          "inputType": "MESSAGE",
+          "isRequired": false,
+          "isUserInputDisabled": false,
+          "label": "Message",
+          "maxCharacters": null,
+          "placeholder": "Add details or questions about what you’re looking for",
+          "validationRegex": null,
+          "value": "I am interested in 1918 11th St APT D, Santa Monica, CA 90404."
+        }
+      ],
+      "subheading": null,
+      "tcpa": {
+        "clickstreamMetadata": {
+          "onPageView": {
+            "clickstream_trigger": {
+              "trigger_source_nm": "scroll_contact_screen_disclaimer",
+              "trigger_type_nm": "impression"
+            },
+            "envelope": {
+              "event_template_id": "68",
+              "event_template_version_id": "1",
+              "event_type_id": "6465",
+              "event_type_version_id": "4"
+            },
+            "semantic": {
+              "semantic_event_nm": "view_content",
+              "topic_tag_txt": ["contact_request"]
+            }
+          }
+        },
+        "telephoneConsumerProtectionActDisclaimer": {
+          "text": "By pressing Next, you are contacting a buyer's agent, you agree that Zillow Group and its affiliates, and real estate professionals may call/text you about your inquiry, which may involve use of automated means and prerecorded/artificial voices. You don’t need to consent as a condition of buying any property, goods or services. Message/data rates may apply. You also agree to our Terms of Use. Zillow does not endorse any real estate professionals. We may share information about your recent and future site activity with your agent to help them understand what you’re looking for in a home.",
+          "textAttributes": [
+            {
+              "__typename": "TourViewModuleTextTooltipAttribute",
+              "tokenEndIndex": 131,
+              "tokenStartIndex": 106,
+              "tooltipText": "“Real estate professionals” includes the real estate agents and brokers, mortgage lenders and loan officers, property managers, and other professionals you interact with through Zillow. Zillow Premier Agent is an advertising program that helps connect customers to local real estate professionals. Zillow Premier Agent partners are paid advertisers and are not affiliated with Zillow, Inc. brokerage or any of its affiliates."
+            },
+            {
+              "__typename": "TourViewModuleTextLinkAttribute",
+              "tokenEndIndex": 394,
+              "tokenStartIndex": 382,
+              "url": "https://www.zillow.com/z/corp/terms/"
+            }
+          ]
+        }
+      },
+      "telephoneConsumerProtectionActDisclaimer": {
+        "text": "By pressing Next, you are contacting a buyer's agent, you agree that Zillow Group and its affiliates, and real estate professionals may call/text you about your inquiry, which may involve use of automated means and prerecorded/artificial voices. You don’t need to consent as a condition of buying any property, goods or services. Message/data rates may apply. You also agree to our Terms of Use. Zillow does not endorse any real estate professionals. We may share information about your recent and future site activity with your agent to help them understand what you’re looking for in a home.",
+        "textAttributes": [
+          {
+            "__typename": "TourViewModuleTextTooltipAttribute",
+            "tokenEndIndex": 131,
+            "tokenStartIndex": 106,
+            "tooltipText": "“Real estate professionals” includes the real estate agents and brokers, mortgage lenders and loan officers, property managers, and other professionals you interact with through Zillow. Zillow Premier Agent is an advertising program that helps connect customers to local real estate professionals. Zillow Premier Agent partners are paid advertisers and are not affiliated with Zillow, Inc. brokerage or any of its affiliates."
+          },
+          {
+            "__typename": "TourViewModuleTextLinkAttribute",
+            "tokenEndIndex": 394,
+            "tokenStartIndex": 382,
+            "url": "https://www.zillow.com/z/corp/terms/"
+          }
+        ]
+      },
+      "title": "Contact a Buyer's Agent"
+    },
+    {
+      "__typename": "AuthOTP",
+      "authStyle": "EMBEDDED",
+      "isInZIBSMarket": true
+    },
+    {
+      "__typename": "FormQuestionnaire"
+    }
+  ],
+  "thumb": [
+    {
+      "url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_a.jpg"
+    }
+  ],
+  "timeOnZillow": "41 days",
+  "timeZone": "America/Los_Angeles",
+  "tourEligibility": {
+    "isPropertyTourEligible": true,
+    "propertyTourOptions": {
+      "isFinal": true,
+      "tourAvailability": [
+        {
+          "date": "2025-10-01",
+          "status": "AVAILABLE",
+          "times": [
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-02",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-03",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-04",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-05",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-06",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-07",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-08",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        },
+        {
+          "date": "2025-10-09",
+          "status": "AVAILABLE",
+          "times": [
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00",
+            "17:30:00",
+            "18:00:00",
+            "18:30:00",
+            "19:00:00"
+          ]
+        }
+      ],
+      "tourType": "STANDARD"
+    }
+  },
+  "tourViewCount": 0,
+  "virtualTourUrl": "https://www.zillow.com/view-imx/886b0e5d-61ae-4fdf-a385-2e5ef213952e?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard",
+  "whatILove": null,
+  "yearBuilt": 1960,
+  "zestimate": null,
+  "zestimateHighPercent": null,
+  "zestimateLowPercent": null,
+  "zipcode": "90404",
+  "zipcodeId": 96151,
+  "zipcodeSearchUrl": {
+    "path": "/santa-monica-ca-90404/"
+  },
+  "zpid": 51582406
+}

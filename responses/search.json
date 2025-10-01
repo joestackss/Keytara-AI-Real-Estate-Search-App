@@ -1,0 +1,107 @@
+{
+  "results": [
+    {
+      "bathrooms": 2,
+      "bedrooms": 2,
+      "city": "Santa Monica",
+      "country": "USA",
+      "currency": "USD",
+      "datePriceChanged": 1757574000000,
+      "daysOnZillow": -1,
+      "homeStatus": "FOR_SALE",
+      "homeStatusForHDP": "FOR_SALE",
+      "homeType": "CONDO",
+      "imgSrc": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-p_e.jpg",
+      "isFeatured": false,
+      "isNonOwnerOccupied": true,
+      "isPreforeclosureAuction": false,
+      "isPremierBuilder": false,
+      "isShowcaseListing": true,
+      "isUnmappable": false,
+      "isZillowOwned": false,
+      "latitude": 34.01438,
+      "listing_sub_type": {
+        "is_FSBA": true,
+        "is_openHouse": true
+      },
+      "livingArea": 923,
+      "longitude": -118.48042,
+      "lotAreaUnit": "sqft",
+      "lotAreaValue": 7513,
+      "openHouse": "Wed. 1-4pm",
+      "open_house_info": {
+        "open_house_showing": [
+          {
+            "open_house_end": 1759359600000,
+            "open_house_start": 1759348800000
+          },
+          {
+            "open_house_end": 1759525200000,
+            "open_house_start": 1759514400000
+          },
+          {
+            "open_house_end": 1759618800000,
+            "open_house_start": 1759608000000
+          },
+          {
+            "open_house_end": 1759708800000,
+            "open_house_start": 1759698000000
+          }
+        ]
+      },
+      "price": 799000,
+      "priceChange": -36000,
+      "priceForHDP": 799000,
+      "priceReduction": "$36,000 (Sep 11)",
+      "shouldHighlight": false,
+      "state": "CA",
+      "streetAddress": "1918 11th St APT D",
+      "taxAssessedValue": 810977,
+      "timeOnZillow": 3575582000,
+      "unit": "Apt D",
+      "zipcode": "90404",
+      "zpid": 51582406
+    },
+    {
+      "bathrooms": 3,
+      "bedrooms": 4,
+      "city": "Santa Monica",
+      "country": "USA",
+      "currency": "USD",
+      "daysOnZillow": -1,
+      "homeStatus": "FOR_SALE",
+      "homeStatusForHDP": "FOR_SALE",
+      "homeType": "SINGLE_FAMILY",
+      "imgSrc": "https://photos.zillowstatic.com/fp/9235bfe2dd26e870a9bb9af5c5cded5d-p_e.jpg",
+      "isFeatured": false,
+      "isNonOwnerOccupied": true,
+      "isPreforeclosureAuction": false,
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "isUnmappable": false,
+      "isZillowOwned": false,
+      "latitude": 34.038795,
+      "listing_sub_type": {
+        "is_FSBA": true
+      },
+      "livingArea": 3268,
+      "longitude": -118.504326,
+      "lotAreaUnit": "sqft",
+      "lotAreaValue": 9530.928,
+      "price": 4995000,
+      "priceForHDP": 4995000,
+      "rentZestimate": 18343,
+      "shouldHighlight": false,
+      "state": "CA",
+      "streetAddress": "1308 San Vicente Blvd",
+      "taxAssessedValue": 1325976,
+      "timeOnZillow": 748286000,
+      "zestimate": 5249400,
+      "zipcode": "90402",
+      "zpid": 20477443
+    }
+  ],
+  "resultsPerPage": 41,
+  "totalPages": 4,
+  "totalResultCount": 157
+}
