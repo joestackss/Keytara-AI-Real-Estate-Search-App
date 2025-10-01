@@ -6,7 +6,6 @@ import { FlashList } from "@shopify/flash-list";
 import React, { useState } from "react";
 import {
   ActivityIndicator,
-  Image,
   Pressable,
   ScrollView,
   Text,
@@ -17,10 +16,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 type StatusFilter = "forSale" | "forRent" | "recentlySold";
 
-const STATUS_FILTERS: { label: string; value: StatusFilter }[] = [
-  { label: "For Sale", value: "forSale" },
-  { label: "For Rent", value: "forRent" },
-  { label: "Recently Sold", value: "recentlySold" },
+const STATUS_FILTERS: {
+  label: string;
+  value: StatusFilter;
+  icon: keyof typeof Ionicons.glyphMap;
+}[] = [
+  { label: "For Sale", value: "forSale", icon: "home" },
+  { label: "For Rent", value: "forRent", icon: "key" },
+  { label: "Recently Sold", value: "recentlySold", icon: "pricetag" },
 ];
 
 export default function HomeScreen() {
@@ -48,8 +51,8 @@ export default function HomeScreen() {
   });
 
   return (
-    <SafeAreaView edges={["top"]} className=" flex-1">
-      <View className=" flex-col justify-start items-center gap-4 p-4">
+    <SafeAreaView edges={["top"]} className=" flex-1 bg-purple-50">
+      <View className=" flex-col justify-start items-center gap-4 px-4">
         {/* Header */}
         <View className="w-full flex-row justify-between items-start ">
           <View className="inline-flex flex-col justify-start items-start gap-2">
@@ -61,22 +64,25 @@ export default function HomeScreen() {
             >
               Morning, Bob Ciaw 👋{" "}
             </Text>
-            <Text
-              className=" text-neutral-900 text-3xl"
-              style={{
-                fontFamily: "UrbanistBold",
-              }}
-            >
-              Find Your
-            </Text>
-            <Text
-              className=" text-neutral-900 text-3xl"
-              style={{
-                fontFamily: "UrbanistBold",
-              }}
-            >
-              Dream Home
-            </Text>
+
+            <View>
+              <Text
+                className=" text-neutral-900 text-3xl"
+                style={{
+                  fontFamily: "UrbanistBold",
+                }}
+              >
+                Find Your
+              </Text>
+              <Text
+                className=" text-neutral-900 text-3xl"
+                style={{
+                  fontFamily: "UrbanistBold",
+                }}
+              >
+                Dream Home
+              </Text>
+            </View>
           </View>
           <View className="p-4 bg-white/60 rounded-[40px] backdrop-blur-lg flex justify-start items-center gap-2.5">
             <View className="w-6 h-6 relative">
@@ -138,10 +144,13 @@ export default function HomeScreen() {
                         : "bg-white border-gray-300"
                     }`}
                   >
-                    <View className="  overflow-hidden">
-                      <Image
-                        source={require("@/assets/images/icon.png")}
-                        className="w-8 h-8 rounded-full"
+                    <View className="w-6 h-6 justify-center items-center">
+                      <Ionicons
+                        name={filter.icon}
+                        size={20}
+                        color={
+                          selectedStatus === filter.value ? "white" : "#9D9D9D"
+                        }
                       />
                     </View>
 
@@ -154,12 +163,6 @@ export default function HomeScreen() {
                     >
                       {filter.label}
                     </Text>
-
-                    {/* <View className="h-11 px-6 py-1 bg-[#4C8F70] rounded-[100px] inline-flex justify-center items-center gap-2">
-                      <Text className="justify-start text-white text-sm font-medium font-['Urbanist'] leading-tight">
-                        All
-                      </Text>
-                    </View> */}
                   </Pressable>
                 ))}
               </ScrollView>
@@ -167,7 +170,7 @@ export default function HomeScreen() {
           </View>
 
           {/* Properties List */}
-          <View style={{ height: 330 }} className=" py-4">
+          <View style={{ height: 300 }} className="">
             {santaMonicaLoading ? (
               <View className="flex-1 justify-center items-center">
                 <ActivityIndicator size="large" color="#3b82f6" />
@@ -307,7 +310,6 @@ export default function HomeScreen() {
                     </View>
                   )}
                   keyExtractor={(item) => item.zpid.toString()}
-                  estimatedItemSize={200}
                   scrollEnabled={false}
                 />
               ) : (
