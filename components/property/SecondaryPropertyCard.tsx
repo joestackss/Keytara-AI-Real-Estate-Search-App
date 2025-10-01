@@ -3,14 +3,33 @@ import type { SearchResult } from "@/lib/types";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
-import { Image, Pressable, Text, View } from "react-native";
+import { Alert, Image, Pressable, Text, View } from "react-native";
+
+// Type that represents the minimum required properties for the card
+type PropertyCardData = Pick<
+  SearchResult,
+  | "zpid"
+  | "streetAddress"
+  | "city"
+  | "state"
+  | "price"
+  | "bedrooms"
+  | "bathrooms"
+  | "imgSrc"
+  | "livingArea"
+  | "zipcode"
+>;
 
 interface SecondaryPropertyCardProps {
-  property: SearchResult;
+  property: PropertyCardData;
+  showRemoveButton?: boolean;
+  onRemove?: (zpid: number) => void;
 }
 
 export function SecondaryPropertyCard({
   property,
+  showRemoveButton = false,
+  onRemove,
 }: SecondaryPropertyCardProps) {
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
@@ -36,6 +55,29 @@ export function SecondaryPropertyCard({
     }
   };
 
+  const handleRemove = (e: any) => {
+    e.preventDefault();
+    Alert.alert(
+      "Remove Property",
+      "Are you sure you want to remove this property from your saved list?",
+      [
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+        {
+          text: "Remove",
+          style: "destructive",
+          onPress: () => {
+            if (onRemove) {
+              onRemove(property.zpid);
+            }
+          },
+        },
+      ]
+    );
+  };
+
   return (
     <Link href={`/property/${property.zpid}`} asChild>
       <Pressable className=" gap-2 rounded-3xl px-2 bg-white  py-3 overflow-hidden flex-row  w-full  border-gray-200 border-2">
@@ -50,7 +92,7 @@ export function SecondaryPropertyCard({
 
         {/* Content */}
         <View className="px-2 py-2 flex-1">
-          {/* Name and Fav Icon */}
+          {/* Name and Fav/Remove Icon */}
           <View className=" gap-2 justify-between flex-row items-center">
             <Text
               className="text-2xl font-semibold text-gray-900 "
@@ -64,14 +106,20 @@ export function SecondaryPropertyCard({
                 : property.streetAddress}
             </Text>
 
-            {/* Save Button */}
-            <Pressable onPress={handleToggleSave}>
-              <Ionicons
-                name={isSaved ? "heart" : "heart-outline"}
-                size={25}
-                color={isSaved ? "red" : "#374151"}
-              />
-            </Pressable>
+            {/* Conditional Button: Remove or Save */}
+            {showRemoveButton ? (
+              <Pressable onPress={handleRemove}>
+                <Ionicons name="close-circle" size={28} color="#ef4444" />
+              </Pressable>
+            ) : (
+              <Pressable onPress={handleToggleSave}>
+                <Ionicons
+                  name={isSaved ? "heart" : "heart-outline"}
+                  size={25}
+                  color={isSaved ? "red" : "#374151"}
+                />
+              </Pressable>
+            )}
           </View>
 
           {/* Location */}

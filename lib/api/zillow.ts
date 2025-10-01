@@ -76,6 +76,8 @@ export const zillowClient = {
       params: { zpid },
     });
 
+    // console.log("getPropertyDetails response", response.data);
+
     return response.data;
   },
 

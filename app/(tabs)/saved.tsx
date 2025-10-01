@@ -1,8 +1,9 @@
+import { SecondaryPropertyCard } from "@/components/property/SecondaryPropertyCard";
 import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
-import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SavedScreen() {
@@ -10,18 +11,32 @@ export default function SavedScreen() {
 
   if (savedProperties.length === 0) {
     return (
-      <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
+      <SafeAreaView className="flex-1 bg-gray-50" edges={["top"]}>
         <View className="flex-1 justify-center items-center px-8">
-          <Text className="text-6xl mb-4">💙</Text>
-          <Text className="text-2xl font-bold text-gray-900 mb-2 text-center">
+          <Text
+            className="text-2xl font-bold text-gray-900 mb-2 text-center"
+            style={{
+              fontFamily: "UrbanistSemiBold",
+            }}
+          >
             No Saved Propertiess
           </Text>
-          <Text className="text-gray-600 text-center mb-6">
+          <Text
+            className="text-gray-600 text-center mb-6"
+            style={{
+              fontFamily: "UrbanistRegular",
+            }}
+          >
             Start saving properties you love{"\n"}to view them here
           </Text>
           <Link href="/" asChild>
             <Pressable className="bg-blue-600 px-6 py-3 rounded-xl">
-              <Text className="text-white font-semibold text-base">
+              <Text
+                className="text-white  text-base"
+                style={{
+                  fontFamily: "UrbanistSemiBold",
+                }}
+              >
                 Explore Properties
               </Text>
             </Pressable>
@@ -32,90 +47,39 @@ export default function SavedScreen() {
   }
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
+    <SafeAreaView className="flex-1 bg-gray-50" edges={["top"]}>
+      <StatusBar style="dark" />
       <ScrollView className="flex-1" contentContainerStyle={{ padding: 16 }}>
         <View className="mb-4">
-          <Text className="text-2xl font-bold text-gray-900">
+          <Text
+            className="text-2xl font-bold text-gray-900"
+            style={{
+              fontFamily: "UrbanistSemiBold",
+            }}
+          >
             {savedProperties.length}{" "}
             {savedProperties.length === 1 ? "Property" : "Properties"} Saved
           </Text>
         </View>
 
         {savedProperties.map((property) => (
-          <View
-            key={property.zpid}
-            className="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden"
-          >
-            <Link href={`/property/${property.zpid}`} asChild>
-              <Pressable>
-                <View className="flex-row">
-                  {/* Image */}
-                  <Image
-                    source={{ uri: property.imgSrc }}
-                    className="w-32 h-32"
-                    resizeMode="cover"
-                  />
-
-                  {/* Content */}
-                  <View className="flex-1 p-4">
-                    <Text
-                      className="text-lg font-semibold text-gray-900 mb-1"
-                      numberOfLines={1}
-                    >
-                      {property.address}
-                    </Text>
-                    <Text className="text-sm text-gray-600 mb-2">
-                      {property.city}, {property.state}
-                    </Text>
-
-                    <Text className="text-xl font-bold text-blue-600 mb-2">
-                      ${(property.price / 1000).toFixed(0)}K
-                    </Text>
-
-                    <View className="flex-row items-center space-x-3">
-                      <View className="flex-row items-center">
-                        <Ionicons
-                          name="bed-outline"
-                          size={16}
-                          color="#6b7280"
-                        />
-                        <Text className="ml-1 text-xs text-gray-700">
-                          {property.bedrooms} Bed
-                        </Text>
-                      </View>
-                      <View className="flex-row items-center">
-                        <Ionicons
-                          name="water-outline"
-                          size={16}
-                          color="#6b7280"
-                        />
-                        <Text className="ml-1 text-xs text-gray-700">
-                          {property.bathrooms} Bath
-                        </Text>
-                      </View>
-                      <View className="flex-row items-center">
-                        <Ionicons
-                          name="resize-outline"
-                          size={16}
-                          color="#6b7280"
-                        />
-                        <Text className="ml-1 text-xs text-gray-700">
-                          {property.livingArea} sqft
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-
-                  {/* Remove Button */}
-                  <Pressable
-                    onPress={() => removeProperty(property.zpid)}
-                    className="absolute top-2 right-2 bg-white/90 rounded-full p-2 shadow-md"
-                  >
-                    <Ionicons name="close" size={20} color="#ef4444" />
-                  </Pressable>
-                </View>
-              </Pressable>
-            </Link>
+          <View key={property.zpid} className="mb-4">
+            <SecondaryPropertyCard
+              property={{
+                zpid: property.zpid,
+                streetAddress: property.address,
+                price: property.price,
+                bedrooms: property.bedrooms,
+                bathrooms: property.bathrooms,
+                livingArea: property.livingArea,
+                imgSrc: property.imgSrc,
+                city: property.city,
+                state: property.state,
+                zipcode: property.zipcode,
+              }}
+              showRemoveButton={true}
+              onRemove={removeProperty}
+            />
           </View>
         ))}
       </ScrollView>

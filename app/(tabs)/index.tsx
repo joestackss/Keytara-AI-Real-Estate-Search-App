@@ -51,7 +51,7 @@ export default function HomeScreen() {
   });
 
   return (
-    <SafeAreaView edges={["top"]} className=" flex-1 bg-purple-50">
+    <SafeAreaView edges={["top"]} className=" flex-1 bg-blue-50">
       <View className=" flex-col justify-start items-center gap-4 px-4">
         {/* Header */}
         <View className="w-full flex-row justify-between items-start ">
@@ -62,7 +62,12 @@ export default function HomeScreen() {
                 fontFamily: "UrbanistRegular",
               }}
             >
-              Morning, Bob Ciaw 👋{" "}
+              {new Date().getHours() < 12
+                ? "Morning"
+                : new Date().getHours() < 18
+                  ? "Afternoon"
+                  : "Evening"}
+              , Joe Stacks 👋{" "}
             </Text>
 
             <View>
@@ -265,7 +270,7 @@ export default function HomeScreen() {
             {/* Properties List */}
             <View>
               {newYorkLoading ? (
-                <View className="flex-1 justify-center items-center">
+                <View className="flex-1 justify-center items-center mt-15">
                   <ActivityIndicator size="large" color="#3b82f6" />
                   <Text
                     className="text-gray-600 mt-2"
