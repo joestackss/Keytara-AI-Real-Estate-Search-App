@@ -27,13 +27,6 @@ export default function PropertyDetailsScreen() {
   const { details, photos, schools, scores, isLoading, isError } =
     usePropertyAllData(propertyId);
 
-  console.log("details", details);
-  console.log("photos", photos);
-  console.log("schools", schools);
-  console.log("scores", scores);
-  console.log("isLoading", isLoading);
-  console.log("isError", isError);
-
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
 
