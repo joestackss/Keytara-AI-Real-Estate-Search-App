@@ -1,23 +1,23 @@
-import React from 'react';
-import { View, ScrollView, Text, Pressable, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Link } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { useSavedPropertiesStore } from '@/lib/store/savedProperties';
+import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
+import { Ionicons } from "@expo/vector-icons";
+import { Link } from "expo-router";
+import React from "react";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SavedScreen() {
   const { savedProperties, removeProperty } = useSavedPropertiesStore();
 
   if (savedProperties.length === 0) {
     return (
-      <SafeAreaView className="flex-1 bg-gray-50" edges={['bottom']}>
+      <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
         <View className="flex-1 justify-center items-center px-8">
           <Text className="text-6xl mb-4">💙</Text>
           <Text className="text-2xl font-bold text-gray-900 mb-2 text-center">
-            No Saved Properties
+            No Saved Propertiess
           </Text>
           <Text className="text-gray-600 text-center mb-6">
-            Start saving properties you love{'\n'}to view them here
+            Start saving properties you love{"\n"}to view them here
           </Text>
           <Link href="/" asChild>
             <Pressable className="bg-blue-600 px-6 py-3 rounded-xl">
@@ -32,16 +32,20 @@ export default function SavedScreen() {
   }
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50" edges={['bottom']}>
+    <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
       <ScrollView className="flex-1" contentContainerStyle={{ padding: 16 }}>
         <View className="mb-4">
           <Text className="text-2xl font-bold text-gray-900">
-            {savedProperties.length} {savedProperties.length === 1 ? 'Property' : 'Properties'} Saved
+            {savedProperties.length}{" "}
+            {savedProperties.length === 1 ? "Property" : "Properties"} Saved
           </Text>
         </View>
 
         {savedProperties.map((property) => (
-          <View key={property.zpid} className="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden">
+          <View
+            key={property.zpid}
+            className="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden"
+          >
             <Link href={`/property/${property.zpid}`} asChild>
               <Pressable>
                 <View className="flex-row">
@@ -54,7 +58,10 @@ export default function SavedScreen() {
 
                   {/* Content */}
                   <View className="flex-1 p-4">
-                    <Text className="text-lg font-semibold text-gray-900 mb-1" numberOfLines={1}>
+                    <Text
+                      className="text-lg font-semibold text-gray-900 mb-1"
+                      numberOfLines={1}
+                    >
                       {property.address}
                     </Text>
                     <Text className="text-sm text-gray-600 mb-2">
@@ -67,19 +74,31 @@ export default function SavedScreen() {
 
                     <View className="flex-row items-center space-x-3">
                       <View className="flex-row items-center">
-                        <Ionicons name="bed-outline" size={16} color="#6b7280" />
+                        <Ionicons
+                          name="bed-outline"
+                          size={16}
+                          color="#6b7280"
+                        />
                         <Text className="ml-1 text-xs text-gray-700">
                           {property.bedrooms} Bed
                         </Text>
                       </View>
                       <View className="flex-row items-center">
-                        <Ionicons name="water-outline" size={16} color="#6b7280" />
+                        <Ionicons
+                          name="water-outline"
+                          size={16}
+                          color="#6b7280"
+                        />
                         <Text className="ml-1 text-xs text-gray-700">
                           {property.bathrooms} Bath
                         </Text>
                       </View>
                       <View className="flex-row items-center">
-                        <Ionicons name="resize-outline" size={16} color="#6b7280" />
+                        <Ionicons
+                          name="resize-outline"
+                          size={16}
+                          color="#6b7280"
+                        />
                         <Text className="ml-1 text-xs text-gray-700">
                           {property.livingArea} sqft
                         </Text>
@@ -103,4 +122,3 @@ export default function SavedScreen() {
     </SafeAreaView>
   );
 }
-

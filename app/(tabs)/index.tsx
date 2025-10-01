@@ -1,13 +1,16 @@
 import { PropertyCard } from "@/components/property/PropertyCard";
+import { SecondaryPropertyCard } from "@/components/property/SecondaryPropertyCard";
 import { usePropertySearch } from "@/lib/hooks";
 import { Ionicons } from "@expo/vector-icons";
 import { FlashList } from "@shopify/flash-list";
 import React, { useState } from "react";
 import {
   ActivityIndicator,
+  Image,
   Pressable,
   ScrollView,
   Text,
+  TextInput,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,6 +25,7 @@ const STATUS_FILTERS: { label: string; value: StatusFilter }[] = [
 
 export default function HomeScreen() {
   const [selectedStatus, setSelectedStatus] = useState<StatusFilter>("forSale");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Santa Monica properties with status filter
   const {
@@ -44,67 +48,135 @@ export default function HomeScreen() {
   });
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50" edges={["bottom"]}>
-      <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
+    <SafeAreaView edges={["top"]} className=" flex-1">
+      <View className=" flex-col justify-start items-center gap-4 p-4">
         {/* Header */}
-        <View className="px-4 pt-4 pb-3">
-          <Text className="text-3xl font-bold text-gray-900 mb-1">
-            Discover Properties
-          </Text>
-          <Text className="text-base text-gray-600">
-            Find your perfect home in top locations
-          </Text>
-        </View>
-
-        {/* Section 1: Santa Monica with Filters */}
-        <View className="mb-8">
-          {/* Section Header */}
-          <View className="px-4 mb-3">
-            <Text className="text-xl font-bold text-gray-900 mb-1">
-              Santa Monica
+        <View className="w-full flex-row justify-between items-start ">
+          <View className="inline-flex flex-col justify-start items-start gap-2">
+            <Text
+              className="justify-start text-neutral-400 text-lg leading-tight"
+              style={{
+                fontFamily: "UrbanistRegular",
+              }}
+            >
+              Morning, Bob Ciaw 👋{" "}
             </Text>
-            <Text className="text-sm text-gray-600">
-              {santaMonicaResults?.totalResultCount || 0} properties available
+            <Text
+              className=" text-neutral-900 text-3xl"
+              style={{
+                fontFamily: "UrbanistBold",
+              }}
+            >
+              Find Your
+            </Text>
+            <Text
+              className=" text-neutral-900 text-3xl"
+              style={{
+                fontFamily: "UrbanistBold",
+              }}
+            >
+              Dream Home
             </Text>
           </View>
+          <View className="p-4 bg-white/60 rounded-[40px] backdrop-blur-lg flex justify-start items-center gap-2.5">
+            <View className="w-6 h-6 relative">
+              <Ionicons name="notifications-outline" size={24} color="black" />
+            </View>
+          </View>
+        </View>
 
-          {/* Horizontal Status Filters */}
-          <View className="mb-4">
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={{ paddingHorizontal: 16, gap: 8 }}
-            >
-              {STATUS_FILTERS.map((filter) => (
-                <Pressable
-                  key={filter.value}
-                  onPress={() => setSelectedStatus(filter.value)}
-                  className={`px-4 py-2.5 rounded-full border ${
-                    selectedStatus === filter.value
-                      ? "bg-blue-600 border-blue-600"
-                      : "bg-white border-gray-300"
-                  }`}
-                >
-                  <Text
-                    className={`font-semibold ${
+        <ScrollView
+          className=""
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{
+            paddingBottom: 300,
+          }}
+        >
+          {/* Section 1: Santa Monica with Filters */}
+          <View className="">
+            {/* Search Input and filter icon */}
+            <View className="flex-row items-center gap-3 mb-4">
+              {/* Search Input */}
+              <View className="flex-1 h-16  rounded-full border border-gray-200 flex-row items-center px-4 gap-2 bg-white">
+                <View className=" h-14 justify-center items-center">
+                  <Ionicons name="search-outline" size={23} color="#9D9D9D" />
+                </View>
+                <View className="flex-1 h-14 justify-center">
+                  <TextInput
+                    placeholder="Search by location"
+                    placeholderTextColor="#9D9D9D"
+                    value={searchQuery}
+                    onChangeText={setSearchQuery}
+                    className="flex-1 text-lg text-neutral-900"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  />
+                </View>
+              </View>
+
+              {/* Filter Button */}
+              <Pressable className="w-14 h-14 bg-[#4C8F70] rounded-full justify-center items-center">
+                <Ionicons name="options-outline" size={24} color="white" />
+              </Pressable>
+            </View>
+
+            {/* Horizontal Status Filters */}
+            <View className="mb-4">
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ gap: 8 }}
+              >
+                {STATUS_FILTERS.map((filter) => (
+                  <Pressable
+                    key={filter.value}
+                    onPress={() => setSelectedStatus(filter.value)}
+                    className={`px-4 py-2.5 rounded-full border flex flex-row items-center gap-2 ${
                       selectedStatus === filter.value
-                        ? "text-white"
-                        : "text-gray-700"
+                        ? "bg-[#4C8F70] border-[#4C8F70]"
+                        : "bg-white border-gray-300"
                     }`}
                   >
-                    {filter.label}
-                  </Text>
-                </Pressable>
-              ))}
-            </ScrollView>
+                    <View className="  overflow-hidden">
+                      <Image
+                        source={require("@/assets/images/icon.png")}
+                        className="w-8 h-8 rounded-full"
+                      />
+                    </View>
+
+                    <Text
+                      className={`font-normal ${
+                        selectedStatus === filter.value
+                          ? "text-white font-medium"
+                          : "text-[#9D9D9D]"
+                      }`}
+                    >
+                      {filter.label}
+                    </Text>
+
+                    {/* <View className="h-11 px-6 py-1 bg-[#4C8F70] rounded-[100px] inline-flex justify-center items-center gap-2">
+                      <Text className="justify-start text-white text-sm font-medium font-['Urbanist'] leading-tight">
+                        All
+                      </Text>
+                    </View> */}
+                  </Pressable>
+                ))}
+              </ScrollView>
+            </View>
           </View>
 
           {/* Properties List */}
-          <View style={{ height: 400 }}>
+          <View style={{ height: 330 }} className=" py-4">
             {santaMonicaLoading ? (
               <View className="flex-1 justify-center items-center">
                 <ActivityIndicator size="large" color="#3b82f6" />
-                <Text className="text-gray-600 mt-2">
+                <Text
+                  className="text-gray-600 mt-2"
+                  style={{
+                    fontFamily: "UrbanistRegular",
+                  }}
+                >
                   Loading properties...
                 </Text>
               </View>
@@ -115,10 +187,20 @@ export default function HomeScreen() {
                   size={48}
                   color="#ef4444"
                 />
-                <Text className="text-gray-900 font-semibold mt-2">
+                <Text
+                  className="text-gray-900 font-semibold mt-2"
+                  style={{
+                    fontFamily: "UrbanistRegular",
+                  }}
+                >
                   Error loading properties
                 </Text>
-                <Text className="text-gray-600 text-center mt-1">
+                <Text
+                  className="text-gray-600 text-center mt-1"
+                  style={{
+                    fontFamily: "UrbanistRegular",
+                  }}
+                >
                   Please check your internet connection
                 </Text>
               </View>
@@ -127,19 +209,23 @@ export default function HomeScreen() {
               <FlashList
                 data={santaMonicaResults.results}
                 renderItem={({ item }) => (
-                  <View style={{ width: 320, marginRight: 16 }}>
+                  <View style={{ width: 320, marginRight: 16 }} className="">
                     <PropertyCard property={item} />
                   </View>
                 )}
                 keyExtractor={(item) => item.zpid.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ paddingHorizontal: 16 }}
               />
             ) : (
-              <View className="flex-1 justify-center items-center px-4">
+              <View className="flex-1 justify-center items-center">
                 <Ionicons name="home-outline" size={48} color="#9ca3af" />
-                <Text className="text-gray-600 mt-2 text-center">
+                <Text
+                  className="text-gray-600 mt-2 text-center"
+                  style={{
+                    fontFamily: "UrbanistRegular",
+                  }}
+                >
                   No properties found for{" "}
                   {
                     STATUS_FILTERS.find((f) => f.value === selectedStatus)
@@ -149,70 +235,98 @@ export default function HomeScreen() {
               </View>
             )}
           </View>
-        </View>
 
-        {/* Section 2: Recommended (New York) */}
-        <View className="mb-6">
-          {/* Section Header */}
-          <View className="px-4 mb-3">
-            <View className="flex-row items-center mb-1">
-              <Ionicons name="star" size={20} color="#f59e0b" />
-              <Text className="text-xl font-bold text-gray-900 ml-2">
-                Recommended
-              </Text>
-            </View>
-            <Text className="text-sm text-gray-600">
-              Curated properties in New York
-            </Text>
-          </View>
-
-          {/* Properties List */}
-          <View style={{ height: 400 }}>
-            {newYorkLoading ? (
-              <View className="flex-1 justify-center items-center">
-                <ActivityIndicator size="large" color="#3b82f6" />
-                <Text className="text-gray-600 mt-2">
-                  Loading properties...
+          {/* Section 2: Recommended (New York) */}
+          <View className="">
+            {/* Section Header */}
+            <View className=" mb-3 flex-row justify-between items-center">
+              <View className="flex-row items-center mb-1">
+                <Text
+                  className="text-xl  text-neutral-900 leading-tight"
+                  style={{
+                    fontFamily: "UrbanistSemiBold",
+                  }}
+                >
+                  Recommended Property
                 </Text>
               </View>
-            ) : newYorkError ? (
-              <View className="flex-1 justify-center items-center px-4">
-                <Ionicons
-                  name="alert-circle-outline"
-                  size={48}
-                  color="#ef4444"
-                />
-                <Text className="text-gray-900 font-semibold mt-2">
-                  Error loading properties
-                </Text>
-                <Text className="text-gray-600 text-center mt-1">
-                  Please check your internet connection
-                </Text>
-              </View>
-            ) : newYorkResults?.results && newYorkResults.results.length > 0 ? (
-              <FlashList
-                data={newYorkResults.results}
-                renderItem={({ item }) => (
-                  <View style={{ width: 320, marginRight: 16 }}>
-                    <PropertyCard property={item} />
-                  </View>
-                )}
-                keyExtractor={(item) => item.zpid.toString()}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ paddingHorizontal: 16 }}
+
+              {/* 3 DOTS */}
+              <Ionicons
+                name="ellipsis-horizontal-outline"
+                size={20}
+                color="#6b7280"
               />
-            ) : (
-              <View className="flex-1 justify-center items-center px-4">
-                <Ionicons name="home-outline" size={48} color="#9ca3af" />
-                <Text className="text-gray-600 mt-2">
-                  No recommended properties available
-                </Text>
-              </View>
-            )}
+            </View>
+
+            {/* Properties List */}
+            <View>
+              {newYorkLoading ? (
+                <View className="flex-1 justify-center items-center">
+                  <ActivityIndicator size="large" color="#3b82f6" />
+                  <Text
+                    className="text-gray-600 mt-2"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    Loading properties...
+                  </Text>
+                </View>
+              ) : newYorkError ? (
+                <View className="flex-1 justify-center items-center px-4">
+                  <Ionicons
+                    name="alert-circle-outline"
+                    size={48}
+                    color="#ef4444"
+                  />
+                  <Text
+                    className="text-gray-900 font-semibold mt-2"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    Error loading properties
+                  </Text>
+                  <Text
+                    className="text-gray-600 text-center mt-1"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    Please check your internet connection
+                  </Text>
+                </View>
+              ) : newYorkResults?.results &&
+                newYorkResults.results.length > 0 ? (
+                <FlashList
+                  data={newYorkResults.results}
+                  renderItem={({ item }) => (
+                    <View className="w-full mb-4">
+                      <SecondaryPropertyCard property={item} />
+                    </View>
+                  )}
+                  keyExtractor={(item) => item.zpid.toString()}
+                  estimatedItemSize={200}
+                  scrollEnabled={false}
+                />
+              ) : (
+                <View className="flex-1 justify-center items-center px-4">
+                  <Ionicons name="home-outline" size={48} color="#9ca3af" />
+                  <Text
+                    className="text-gray-600 mt-2"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    No recommended properties available
+                  </Text>
+                </View>
+              )}
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 }
