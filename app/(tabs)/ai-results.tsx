@@ -27,14 +27,8 @@ export default function AIResultsScreen() {
   const [refinementQuery, setRefinementQuery] = useState("");
   const [isRefining, setIsRefining] = useState(false);
 
-  const {
-    getCurrentSearch,
-    addSearch,
-    goBack,
-    canGoBack,
-    clearHistory,
-    updateCurrentResults,
-  } = useSearchHistoryStore();
+  const { getCurrentSearch, addSearch, goBack, clearHistory } =
+    useSearchHistoryStore();
 
   const currentSearch = getCurrentSearch();
 

@@ -61,7 +61,7 @@ export default function AISearchScreen() {
       });
 
       // Navigate to results screen
-      router.push("/ai-results");
+      router.push("/(tabs)/ai-results");
     } catch (error) {
       console.error("Search error:", error);
       alert("Failed to process your search. Please try again.");
