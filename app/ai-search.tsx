@@ -18,7 +18,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const EXAMPLE_PROMPTS = [
-  "3-bedroom house near good schools under $500k",
+  "3-bedroom house near good schools under $500k in Texas",
   "Condo with pool in downtown Austin",
   "New construction with garage",
   "4 bed home in Miami under $800k",
@@ -189,20 +189,6 @@ export default function AISearchScreen() {
             ))}
           </View>
         </View>
-
-        {/* Back to Home */}
-        <Pressable
-          onPress={() => router.back()}
-          className="mt-8 py-3 items-center"
-          disabled={isProcessing}
-        >
-          <Text
-            className="text-neutral-500 text-base"
-            style={{ fontFamily: "UrbanistMedium" }}
-          >
-            Back to Home
-          </Text>
-        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

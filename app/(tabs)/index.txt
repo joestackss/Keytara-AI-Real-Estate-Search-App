@@ -10,7 +10,6 @@ import {
   Pressable,
   ScrollView,
   Text,
-  TextInput,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -108,7 +107,7 @@ export default function HomeScreen() {
           {/* AI Search Button */}
           <Pressable
             onPress={() => router.push("/ai-search" as any)}
-            className="bg-gradient-to-r from-[#4C8F70] to-[#3d7259] rounded-3xl p-5 mb-4 flex-row items-center justify-between shadow-lg"
+            className="bg-[#4C8F70] rounded-3xl p-5 mb-4 flex-row items-center justify-between shadow-lg"
           >
             <View className="flex-row items-center flex-1">
               <View className="w-12 h-12 bg-white/20 rounded-full items-center justify-center mr-3">
@@ -137,7 +136,7 @@ export default function HomeScreen() {
             {/* Search Input and filter icon */}
             <View className="flex-row items-center gap-3 mb-4">
               {/* Search Input */}
-              <View className="flex-1 h-16  rounded-full border border-gray-200 flex-row items-center px-4 gap-2 bg-white">
+              {/* <View className="flex-1 h-16  rounded-full border border-gray-200 flex-row items-center px-4 gap-2 bg-white">
                 <View className=" h-14 justify-center items-center">
                   <Ionicons name="search-outline" size={23} color="#9D9D9D" />
                 </View>
@@ -153,12 +152,12 @@ export default function HomeScreen() {
                     }}
                   />
                 </View>
-              </View>
+              </View> */}
 
               {/* Filter Button */}
-              <Pressable className="w-14 h-14 bg-[#4C8F70] rounded-full justify-center items-center">
+              {/* <Pressable className="w-14 h-14 bg-[#4C8F70] rounded-full justify-center items-center">
                 <Ionicons name="options-outline" size={24} color="white" />
-              </Pressable>
+              </Pressable> */}
             </View>
 
             {/* Horizontal Status Filters */}

@@ -1,9 +1,8 @@
 import { SecondaryPropertyCard } from "@/components/property/SecondaryPropertyCard";
 import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
 import { Link } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, StatusBar, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SavedScreen() {
@@ -48,11 +47,35 @@ export default function SavedScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-gray-50" edges={["top"]}>
-      <StatusBar style="dark" />
-      <ScrollView className="flex-1" contentContainerStyle={{ padding: 16 }}>
+      <StatusBar barStyle="dark-content" />
+
+      <View className=" px-4 w-full">
         <View className="mb-4">
           <Text
             className="text-2xl font-bold text-gray-900"
+            style={{
+              fontFamily: "UrbanistSemiBold",
+            }}
+          >
+            Saved Properties
+          </Text>
+          <Text
+            className="text-gray-600 "
+            style={{
+              fontFamily: "UrbanistRegular",
+            }}
+          >
+            Start saving properties you love to view them here
+          </Text>
+        </View>
+      </View>
+      <ScrollView
+        className="flex-1"
+        contentContainerStyle={{ paddingHorizontal: 16 }}
+      >
+        <View className="mb-4">
+          <Text
+            className="text-xl font-bold text-gray-900"
             style={{
               fontFamily: "UrbanistSemiBold",
             }}

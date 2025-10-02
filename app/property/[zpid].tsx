@@ -211,7 +211,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.bedrooms} Bedrooms
+                    {property?.bedrooms || 0} Bedrooms
                   </Text>
                 </View>
                 <View className="bg-gray-100 px-4 py-3 rounded-xl flex-1 min-w-[100px]">
@@ -222,7 +222,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.bathrooms} Bathrooms
+                    {property?.bathrooms || 0} Bathrooms
                   </Text>
                 </View>
                 <View className="bg-gray-100 px-4 py-3 rounded-xl flex-1 min-w-[100px]">
@@ -233,7 +233,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.livingArea.toLocaleString()} Sq Ft
+                    {property?.livingArea?.toLocaleString() || 0} Sq Ft
                   </Text>
                 </View>
               </View>
@@ -273,7 +273,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.walkScore.walkscore}
+                          {propertyScores?.walkScore?.walkscore || 0 || "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -281,7 +281,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.walkScore.description}
+                          {propertyScores?.walkScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -308,7 +308,9 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.transitScore.transit_score}
+                          {propertyScores?.transitScore?.transit_score ||
+                            0 ||
+                            "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -316,7 +318,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.transitScore.description}
+                          {propertyScores?.transitScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -343,7 +345,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.bikeScore.bikescore}
+                          {propertyScores?.bikeScore?.bikescore || 0 || "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -351,7 +353,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.bikeScore.description}
+                          {propertyScores?.bikeScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -375,7 +377,7 @@ export default function PropertyDetailsScreen() {
                     fontFamily: "UrbanistRegular",
                   }}
                 >
-                  {property.description}
+                  {property?.description || "N/A"}
                 </Text>
               </View>
 
@@ -454,7 +456,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.resoFacts.yearBuilt}
+                        {property?.resoFacts?.yearBuilt || "N/A"}
                       </Text>
                     </View>
                   )}
@@ -474,7 +476,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.homeType}
+                        {property?.homeType || "N/A"}
                       </Text>
                     </View>
                   )}
@@ -494,7 +496,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        ${property.monthlyHoaFee}/month
+                        ${property?.monthlyHoaFee || 0 || "N/A"}/month
                       </Text>
                     </View>
                   )}
@@ -514,7 +516,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.lotSize.toLocaleString()} sqft
+                        {property?.lotSize?.toLocaleString() || 0 || "N/A"} sqft
                       </Text>
                     </View>
                   )}
@@ -543,7 +545,7 @@ export default function PropertyDetailsScreen() {
                 fontFamily: "UrbanistSemiBold",
               }}
             >
-              ${property.price.toLocaleString()}
+              ${property?.price?.toLocaleString() || 0 || "N/A"}
             </Text>
           </View>
 
