@@ -44,11 +44,49 @@ export const zillowClient = {
       location: params.location,
       status: params.status || "forSale",
       home_type: params.propertyType || "Houses",
+      page: 1,
+
+      // Basic filters
       ...(params.bedrooms && { beds_min: params.bedrooms }),
       ...(params.bathrooms && { baths_min: params.bathrooms }),
       ...(params.minPrice && { price_min: params.minPrice }),
       ...(params.maxPrice && { price_max: params.maxPrice }),
-      page: 1,
+
+      // Extended filters - pass through exactly as named in API
+      ...(params.hasPool !== undefined && { hasPool: params.hasPool }),
+      ...(params.hasGarage !== undefined && { hasGarage: params.hasGarage }),
+      ...(params.isNewConstruction !== undefined && {
+        isNewConstruction: params.isNewConstruction,
+      }),
+      ...(params.built_min && { built_min: params.built_min }),
+      ...(params.built_max && { built_max: params.built_max }),
+      ...(params.sqft_min && { sqft_min: params.sqft_min }),
+      ...(params.sqft_max && { sqft_max: params.sqft_max }),
+      ...(params.lotSize_min && { lotSize_min: params.lotSize_min }),
+      ...(params.lotSize_max && { lotSize_max: params.lotSize_max }),
+      ...(params.parkingSpots_min && {
+        parkingSpots_min: params.parkingSpots_min,
+      }),
+      ...(params.greatSchoolsRating_min && {
+        greatSchoolsRating_min: params.greatSchoolsRating_min,
+      }),
+      ...(params.hasAirConditioning !== undefined && {
+        hasAirConditioning: params.hasAirConditioning,
+      }),
+      ...(params.isWaterfront !== undefined && {
+        isWaterfront: params.isWaterfront,
+      }),
+      ...(params.isCityView !== undefined && { isCityView: params.isCityView }),
+      ...(params.isMountainView !== undefined && {
+        isMountainView: params.isMountainView,
+      }),
+      ...(params.isWaterView !== undefined && {
+        isWaterView: params.isWaterView,
+      }),
+      ...(params.isParkView !== undefined && { isParkView: params.isParkView }),
+      ...(params.singleStory !== undefined && {
+        singleStory: params.singleStory,
+      }),
     };
 
     console.log("🌐 Making REAL API call to Zillow");

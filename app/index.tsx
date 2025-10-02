@@ -17,8 +17,10 @@ import {
 } from "react-native";
 
 const EXAMPLE_PROMPTS = [
-  "3-bedroom house near good schools under $500k in Texas",
+  "3-bedroom house near good schools under $500k in Houston",
   "Condo with pool in downtown Austin",
+  "New construction with garage in Miami",
+  "4 bed home in Los Angeles under $800k",
 ];
 
 export default function AISearchScreen() {
@@ -37,19 +39,21 @@ export default function AISearchScreen() {
       // Parse natural language query using AI
       const filters = await parseNaturalLanguageQuery(searchQuery);
 
+      // Check if location is missing - REQUIRED by Zillow API
+      if (!filters.location || filters.location.trim() === "") {
+        alert(
+          "Please specify a location in your search.\n\nExample:\n• '3 bedroom house in Houston'\n• 'Condo in Miami under $500k'\n• 'New construction with garage in Austin'"
+        );
+        setIsProcessing(false);
+        setLoading(false);
+        return;
+      }
+
       // Generate summary
       const summary = generateSearchSummary(filters);
 
-      // Call Zillow API with parsed filters
-      const response = await zillowClient.searchProperties({
-        location: filters.location || "United States",
-        status: filters.status,
-        bedrooms: filters.bedrooms,
-        bathrooms: filters.bathrooms,
-        minPrice: filters.minPrice,
-        maxPrice: filters.maxPrice,
-        propertyType: filters.propertyType,
-      });
+      // Call Zillow API with ALL parsed filters
+      const response = await zillowClient.searchProperties(filters);
 
       // Save to search history
       addSearch({

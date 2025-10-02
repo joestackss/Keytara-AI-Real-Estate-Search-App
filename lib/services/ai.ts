@@ -4,18 +4,8 @@ import type { SearchParams } from "../types";
 
 const ai = new GoogleGenAI({ apiKey: ENV.GEMINI_API_KEY });
 
-export interface AISearchFilters extends SearchParams {
-  // Extended filters
-  hasPool?: boolean;
-  hasGarage?: boolean;
-  yearBuiltMin?: number;
-  yearBuiltMax?: number;
-  squareFeetMin?: number;
-  squareFeetMax?: number;
-  lotSizeMin?: number;
-  hasView?: boolean;
-  parking?: number;
-}
+// AI Search Filters extends SearchParams (which already has all the fields)
+export type AISearchFilters = SearchParams;
 
 export interface ConversationContext {
   previousQuery?: string;
@@ -33,31 +23,41 @@ export async function parseNaturalLanguageQuery(
   const systemPrompt = `You are a real estate search assistant. Convert natural language queries into structured JSON search parameters.
 
 Available parameters:
-- location: string (city, state, or address)
+- location: string (city, state, or address) - REQUIRED
 - status: "forSale" | "forRent" | "recentlySold"
-- bedrooms: number (minimum bedrooms)
-- bathrooms: number (minimum bathrooms)
+- bedrooms: number (minimum bedrooms - maps to beds_min)
+- bathrooms: number (minimum bathrooms - maps to baths_min)
 - minPrice: number
 - maxPrice: number
 - propertyType: "Houses" | "Townhomes" | "Condos" | "Apartments" | "Multi-family"
 - hasPool: boolean
 - hasGarage: boolean
-- yearBuiltMin: number
-- yearBuiltMax: number
-- squareFeetMin: number
-- squareFeetMax: number
-- lotSizeMin: number (in square feet)
-- hasView: boolean
-- parking: number (parking spaces)
+- isNewConstruction: boolean (use for "new construction" queries)
+- built_min: number (year, use for "built after X")
+- built_max: number (year, use for "built before X")
+- sqft_min: number (minimum square feet)
+- sqft_max: number (maximum square feet)
+- lotSize_min: number (in square feet)
+- lotSize_max: number (in square feet)
+- parkingSpots_min: number (parking spaces)
+- greatSchoolsRating_min: number (1-10, use 7+ for "good schools")
+- hasAirConditioning: boolean
+- isWaterfront: boolean
+- isCityView: boolean
+- isMountainView: boolean
+- isWaterView: boolean
+- isParkView: boolean
+- singleStory: boolean
 
 Rules:
-1. Extract all relevant parameters from the query
+1. **CRITICAL**: Location is REQUIRED. Extract city/state from query. If no location found, set location to null.
 2. Use reasonable defaults when not specified (e.g., status defaults to "forSale")
 3. Handle price formats like "$500k", "$1M", "under 500k", "between 300k and 500k"
 4. Handle bedroom/bathroom formats like "3-bedroom", "3 bed", "3BR", "2.5 bath"
-5. Handle year formats like "built after 1990", "new construction", "built before 2000"
-6. Understand school-related queries by inferring they want family-friendly areas
-7. For conversational refinements, merge with previous filters if context is provided
+5. Handle year formats: "built after 1990" → built_min: 1990, "built before 2000" → built_max: 2000
+6. For "new construction": set isNewConstruction: true AND built_min: (current_year - 3)
+7. For "good schools": set greatSchoolsRating_min: 7
+8. For conversational refinements, merge with previous filters if context is provided
 
 ${
   context?.previousFilters
@@ -108,7 +108,7 @@ Return ONLY valid JSON in this exact format (no markdown, no explanation):
     console.error("AI parsing error:", error);
 
     // Fallback: basic regex parsing for common patterns
-    return fallbackParser(query, context?.previousFilters);
+    return fallbackParser(query, context?.previousFilters) as AISearchFilters;
   }
 }
 
@@ -118,8 +118,10 @@ Return ONLY valid JSON in this exact format (no markdown, no explanation):
 function fallbackParser(
   query: string,
   previousFilters?: AISearchFilters
-): AISearchFilters {
-  const filters: AISearchFilters = { ...previousFilters } || {};
+): Partial<AISearchFilters> {
+  const filters: Partial<AISearchFilters> = previousFilters
+    ? { ...previousFilters }
+    : {};
   const lowerQuery = query.toLowerCase();
 
   // Extract location (look for city, state patterns)
@@ -196,10 +198,33 @@ function fallbackParser(
     delete filters.hasGarage;
   }
 
+  // Extract new construction
+  if (
+    lowerQuery.includes("new construction") ||
+    lowerQuery.includes("newly built")
+  ) {
+    filters.isNewConstruction = true;
+    const currentYear = new Date().getFullYear();
+    filters.built_min = currentYear - 3;
+  }
+
   // Extract year built
-  const yearMatch = lowerQuery.match(/built after (\d{4})/);
-  if (yearMatch) {
-    filters.yearBuiltMin = Number.parseInt(yearMatch[1]);
+  const yearAfterMatch = lowerQuery.match(/built after (\d{4})/);
+  if (yearAfterMatch) {
+    filters.built_min = Number.parseInt(yearAfterMatch[1]);
+  }
+
+  const yearBeforeMatch = lowerQuery.match(/built before (\d{4})/);
+  if (yearBeforeMatch) {
+    filters.built_max = Number.parseInt(yearBeforeMatch[1]);
+  }
+
+  // Extract good schools
+  if (
+    lowerQuery.includes("good school") ||
+    lowerQuery.includes("great school")
+  ) {
+    filters.greatSchoolsRating_min = 7;
   }
 
   return filters;
@@ -241,8 +266,16 @@ export function generateSearchSummary(filters: AISearchFilters): string {
     parts.push("with garage");
   }
 
-  if (filters.yearBuiltMin) {
-    parts.push(`built after ${filters.yearBuiltMin}`);
+  if (filters.isNewConstruction) {
+    parts.push("new construction");
+  }
+
+  if (filters.built_min) {
+    parts.push(`built after ${filters.built_min}`);
+  }
+
+  if (filters.greatSchoolsRating_min) {
+    parts.push("good schools");
   }
 
   if (filters.location) {

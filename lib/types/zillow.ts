@@ -132,10 +132,10 @@ export interface ResoFacts {
   associationFee?: string;
   associationName?: string;
   associationPhone?: string;
-  atAGlanceFacts?: Array<{
+  atAGlanceFacts?: {
     factLabel: string;
     factValue: string | null;
-  }>;
+  }[];
   bathrooms: number;
   bathroomsFull: number | null;
   bathroomsHalf: number | null;
@@ -261,6 +261,26 @@ export interface SearchParams {
   minPrice?: number;
   maxPrice?: number;
   propertyType?: string;
+
+  // Extended filters matching Zillow API
+  hasPool?: boolean;
+  hasGarage?: boolean;
+  built_min?: number;
+  built_max?: number;
+  sqft_min?: number;
+  sqft_max?: number;
+  lotSize_min?: number;
+  lotSize_max?: number;
+  isNewConstruction?: boolean;
+  parkingSpots_min?: number;
+  greatSchoolsRating_min?: number;
+  hasAirConditioning?: boolean;
+  isWaterfront?: boolean;
+  isCityView?: boolean;
+  isMountainView?: boolean;
+  isWaterView?: boolean;
+  isParkView?: boolean;
+  singleStory?: boolean;
 }
 
 // Saved Property Type (simplified for storage)

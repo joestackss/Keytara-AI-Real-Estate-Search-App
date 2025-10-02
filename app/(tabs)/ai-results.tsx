@@ -35,9 +35,9 @@ export default function AIResultsScreen() {
   useEffect(() => {
     // If no current search, redirect to search screen
     if (!currentSearch) {
-      router.replace("/ai-search");
+      router.replace("/" as any);
     }
-  }, [currentSearch]);
+  }, [currentSearch, router]);
 
   if (!currentSearch) {
     return null;
@@ -65,20 +65,25 @@ export default function AIResultsScreen() {
         conversationHistory: [currentSearch.query],
       });
 
+      // Ensure location is inherited from previous search if not specified
+      if (!filters.location && currentSearch.filters.location) {
+        filters.location = currentSearch.filters.location;
+      }
+
+      // Validate location is present
+      if (!filters.location || filters.location.trim() === "") {
+        alert(
+          "Location is required. Please specify a location in your search."
+        );
+        setIsRefining(false);
+        return;
+      }
+
       // Generate summary
       const summary = generateSearchSummary(filters);
 
-      // Call API with refined filters
-      const response = await zillowClient.searchProperties({
-        location:
-          filters.location || currentSearch.filters.location || "United States",
-        status: filters.status,
-        bedrooms: filters.bedrooms,
-        bathrooms: filters.bathrooms,
-        minPrice: filters.minPrice,
-        maxPrice: filters.maxPrice,
-        propertyType: filters.propertyType,
-      });
+      // Call API with ALL refined filters
+      const response = await zillowClient.searchProperties(filters);
 
       // Add to history
       addSearch({
@@ -98,16 +103,9 @@ export default function AIResultsScreen() {
     }
   };
 
-  const handleGoBack = () => {
-    const previousSearch = goBack();
-    if (!previousSearch) {
-      router.back();
-    }
-  };
-
   const handleClearHistory = () => {
     clearHistory();
-    router.replace("/ai-search");
+    router.replace("/" as any);
   };
 
   const renderFilterChip = (label: string, onRemove?: () => void) => (
@@ -152,11 +150,17 @@ export default function AIResultsScreen() {
     if (filters.hasGarage) {
       chips.push({ label: "Garage", key: "hasGarage" });
     }
-    if (filters.yearBuiltMin) {
+    if (filters.isNewConstruction) {
+      chips.push({ label: "New Construction", key: "isNewConstruction" });
+    }
+    if (filters.built_min) {
       chips.push({
-        label: `Built after ${filters.yearBuiltMin}`,
-        key: "yearBuiltMin",
+        label: `Built after ${filters.built_min}`,
+        key: "built_min",
       });
+    }
+    if (filters.greatSchoolsRating_min) {
+      chips.push({ label: "Good Schools", key: "greatSchoolsRating_min" });
     }
 
     return chips;
@@ -283,7 +287,6 @@ export default function AIResultsScreen() {
                   </View>
                 )}
                 keyExtractor={(item) => item.zpid.toString()}
-                estimatedItemSize={320}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{
                   paddingBottom: 100,
@@ -305,7 +308,7 @@ export default function AIResultsScreen() {
                   Try adjusting your filters or search in a different location
                 </Text>
                 <Pressable
-                  onPress={() => router.replace("/ai-search")}
+                  onPress={() => router.replace("/" as any)}
                   className="mt-6 bg-[#4C8F70] rounded-full px-6 py-3"
                 >
                   <Text
