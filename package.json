@@ -1,9 +1,9 @@
 {
-  "name": "nestwise",
+  "name": "keytara",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "description": "AI-Powered Real Estate Discovery App",
-  "author": "Your Name",
+  "author": "Keytara",
   "license": "MIT",
   "scripts": {
     "start": "expo start",

@@ -82,7 +82,7 @@ export default function AISearchScreen() {
   return (
     <View className=" flex-1 w-full ">
       <ImageBackground
-        source={require("../assets/welcome-bg.png")}
+        source={require("../assets/welcome-bg.jpg")}
         className="flex-1 justify-end items-end"
         resizeMode="cover"
       >
@@ -99,7 +99,7 @@ export default function AISearchScreen() {
               className="text-4xl text-white text-center mb-3"
               style={{ fontFamily: "UrbanistBold" }}
             >
-              Dream AI
+              Keytara AI
             </Text>
 
             <Text
@@ -120,7 +120,7 @@ export default function AISearchScreen() {
                 onChangeText={setQuery}
                 multiline
                 numberOfLines={3}
-                className="text-lg text-neutral-900 min-h-[30px]"
+                className="text-lg text-neutral-900 min-h-[20px]"
                 style={{ fontFamily: "UrbanistRegular" }}
                 onSubmitEditing={() => handleSearch(query)}
                 editable={!isProcessing}

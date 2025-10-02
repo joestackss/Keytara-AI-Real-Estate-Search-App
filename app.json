@@ -1,23 +1,24 @@
 {
   "expo": {
-    "name": "Nestwise",
-    "slug": "nestwise",
+    "name": "Keytara",
+    "slug": "keytara",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "nestwise",
+    "scheme": "keytara",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/images/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.nestwise.app"
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.stackstech.keytara"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,12 +26,12 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.nestwise.app"
+      "package": "com.stackstech.keytara"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
       "expo-router",
@@ -47,7 +48,11 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "0c5d6812-8a30-45c5-9533-d6fb0d729e41"
       }
-    }
+    },
+    "owner": "stackstech"
   }
 }
