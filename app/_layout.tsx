@@ -58,6 +58,19 @@ export default function RootLayout() {
             headerBackTitle: "Back",
           }}
         />
+        <Stack.Screen
+          name="ai-search"
+          options={{
+            title: "AI Search",
+            presentation: "modal",
+          }}
+        />
+        <Stack.Screen
+          name="ai-results"
+          options={{
+            title: "Search Results",
+          }}
+        />
       </Stack>
     </QueryClientProvider>
   );

@@ -3,6 +3,7 @@ import { SecondaryPropertyCard } from "@/components/property/SecondaryPropertyCa
 import { usePropertySearch } from "@/lib/hooks";
 import { Ionicons } from "@expo/vector-icons";
 import { FlashList } from "@shopify/flash-list";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
   ActivityIndicator,
@@ -27,6 +28,7 @@ const STATUS_FILTERS: {
 ];
 
 export default function HomeScreen() {
+  const router = useRouter();
   const [selectedStatus, setSelectedStatus] = useState<StatusFilter>("forSale");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -103,6 +105,33 @@ export default function HomeScreen() {
             paddingBottom: 300,
           }}
         >
+          {/* AI Search Button */}
+          <Pressable
+            onPress={() => router.push("/ai-search" as any)}
+            className="bg-gradient-to-r from-[#4C8F70] to-[#3d7259] rounded-3xl p-5 mb-4 flex-row items-center justify-between shadow-lg"
+          >
+            <View className="flex-row items-center flex-1">
+              <View className="w-12 h-12 bg-white/20 rounded-full items-center justify-center mr-3">
+                <Ionicons name="sparkles" size={24} color="white" />
+              </View>
+              <View className="flex-1">
+                <Text
+                  className="text-white text-lg font-bold"
+                  style={{ fontFamily: "UrbanistBold" }}
+                >
+                  AI Property Search
+                </Text>
+                <Text
+                  className="text-white/80 text-sm"
+                  style={{ fontFamily: "UrbanistRegular" }}
+                >
+                  Describe your dream home...
+                </Text>
+              </View>
+            </View>
+            <Ionicons name="arrow-forward-circle" size={32} color="white" />
+          </Pressable>
+
           {/* Section 1: Santa Monica with Filters */}
           <View className="">
             {/* Search Input and filter icon */}
