@@ -9,9 +9,10 @@ import { useSearchHistoryStore } from "@/lib/store/searchHistory";
 import { Ionicons } from "@expo/vector-icons";
 import { FlashList } from "@shopify/flash-list";
 import { useRouter } from "expo-router";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   ActivityIndicator,
+  Alert,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -32,17 +33,6 @@ export default function AIResultsScreen() {
 
   const currentSearch = getCurrentSearch();
 
-  useEffect(() => {
-    // If no current search, redirect to search screen
-    if (!currentSearch) {
-      router.replace("/" as any);
-    }
-  }, [currentSearch, router]);
-
-  if (!currentSearch) {
-    return null;
-  }
-
   const handleRefineSearch = async () => {
     if (!refinementQuery.trim()) return;
 
@@ -50,7 +40,7 @@ export default function AIResultsScreen() {
 
     try {
       // Check if it's an undo query
-      if (isUndoQuery(refinementQuery)) {
+      if (currentSearch && isUndoQuery(refinementQuery)) {
         const previousSearch = goBack();
         if (previousSearch) {
           setRefinementQuery("");
@@ -60,20 +50,20 @@ export default function AIResultsScreen() {
 
       // Parse the refinement query with context
       const filters = await parseNaturalLanguageQuery(refinementQuery, {
-        previousQuery: currentSearch.query,
-        previousFilters: currentSearch.filters,
-        conversationHistory: [currentSearch.query],
+        previousQuery: currentSearch?.query,
+        previousFilters: currentSearch?.filters,
+        conversationHistory: currentSearch ? [currentSearch.query] : [],
       });
 
       // Ensure location is inherited from previous search if not specified
-      if (!filters.location && currentSearch.filters.location) {
+      if (!filters.location && currentSearch?.filters.location) {
         filters.location = currentSearch.filters.location;
       }
 
       // Validate location is present
       if (!filters.location || filters.location.trim() === "") {
         alert(
-          "Location is required. Please specify a location in your search."
+          "Location is required. Please specify a location in your search.\n\nExample: '3 bedroom house in Houston'"
         );
         setIsRefining(false);
         return;
@@ -104,8 +94,25 @@ export default function AIResultsScreen() {
   };
 
   const handleClearHistory = () => {
-    clearHistory();
-    router.replace("/" as any);
+    Alert.alert(
+      "Clear Search History?",
+      "This will remove all your previous searches and results. You can start a new search right after.\n\nThis action cannot be undone.",
+      [
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+        {
+          text: "Clear History",
+          style: "destructive",
+          onPress: () => {
+            clearHistory();
+            setRefinementQuery("");
+            // Don't navigate away - let user stay and start a new search
+          },
+        },
+      ]
+    );
   };
 
   const renderFilterChip = (label: string, onRemove?: () => void) => (
@@ -125,6 +132,8 @@ export default function AIResultsScreen() {
   );
 
   const getActiveFilters = () => {
+    if (!currentSearch) return [];
+
     const filters = currentSearch.filters;
     const chips: { label: string; key: string }[] = [];
 
@@ -215,7 +224,11 @@ export default function AIResultsScreen() {
           <View className="bg-gray-50 my-4 rounded-full border border-gray-200 px-4 py-4 flex-row items-center">
             <Ionicons name="sparkles" size={20} color="#4C8F70" />
             <TextInput
-              placeholder="Refine your search..."
+              placeholder={
+                currentSearch
+                  ? "Refine your search..."
+                  : "Start a new search (e.g., '3 bed house in Miami')..."
+              }
               placeholderTextColor="#9D9D9D"
               value={refinementQuery}
               onChangeText={setRefinementQuery}
@@ -233,42 +246,79 @@ export default function AIResultsScreen() {
             ) : null}
           </View>
 
-          {/* Search Context */}
-          <View className="bg-white px-4 py-3 border-b border-gray-200 rounded-3xl">
-            <View className="flex-row items-center mb-2">
-              <Ionicons name="location" size={18} color="#6b7280" />
-              <Text
-                className="ml-2 text-gray-700 text-base flex-1"
-                style={{ fontFamily: "UrbanistMedium" }}
-              >
-                {currentSearch.summary}
-              </Text>
-            </View>
+          {/* Search Context - Only show if there's a current search */}
+          {currentSearch ? (
+            <View className="bg-white px-4 py-3 border-b border-gray-200 rounded-3xl">
+              <View className="flex-row items-center mb-2">
+                <Ionicons name="location" size={18} color="#6b7280" />
+                <Text
+                  className="ml-2 text-gray-700 text-base flex-1"
+                  style={{ fontFamily: "UrbanistMedium" }}
+                >
+                  {currentSearch.summary}
+                </Text>
+              </View>
 
-            <View className="flex-row items-center justify-between">
-              {/* Filter Chips */}
-              {getActiveFilters().length > 0 && (
-                <View className="flex-row flex-wrap">
-                  {getActiveFilters().map((chip) => (
-                    <View key={chip.key} className="">
-                      {renderFilterChip(chip.label)}
-                    </View>
-                  ))}
-                </View>
-              )}
+              <View className="flex-row items-center justify-between">
+                {/* Filter Chips */}
+                {getActiveFilters().length > 0 && (
+                  <View className="flex-row flex-wrap">
+                    {getActiveFilters().map((chip) => (
+                      <View key={chip.key} className="">
+                        {renderFilterChip(chip.label)}
+                      </View>
+                    ))}
+                  </View>
+                )}
 
-              <Text
-                className="text-gray-500 text-lg"
-                style={{ fontFamily: "UrbanistRegular" }}
-              >
-                {currentSearch.resultCount} results
-              </Text>
+                <Text
+                  className="text-gray-500 text-lg"
+                  style={{ fontFamily: "UrbanistRegular" }}
+                >
+                  {currentSearch.resultCount} results
+                </Text>
+              </View>
             </View>
-          </View>
+          ) : null}
 
           {/* Results List */}
           <View className="flex-1 pt-4">
-            {isRefining ? (
+            {!currentSearch ? (
+              <View className="flex-1 justify-center items-center px-8">
+                <View className="w-20 h-20 bg-[#4C8F70]/10 rounded-full items-center justify-center mb-6">
+                  <Ionicons name="sparkles" size={40} color="#4C8F70" />
+                </View>
+                <Text
+                  className="text-gray-900 text-2xl text-center mb-3"
+                  style={{ fontFamily: "UrbanistBold" }}
+                >
+                  Ready for a New Search?
+                </Text>
+                <Text
+                  className="text-gray-600 text-base text-center mb-6"
+                  style={{ fontFamily: "UrbanistRegular" }}
+                >
+                  Your search history has been cleared.{"\n"}
+                  Start fresh by entering a new search above!
+                </Text>
+                <View className="bg-blue-50 p-4 rounded-2xl border border-blue-100">
+                  <Text
+                    className="text-gray-700 text-lg text-center mb-2"
+                    style={{ fontFamily: "UrbanistMedium" }}
+                  >
+                    💡 Try searching for:
+                  </Text>
+                  <Text
+                    className="text-gray-600 text-base text-center"
+                    style={{ fontFamily: "UrbanistRegular" }}
+                  >
+                    &ldquo;3 bedroom house in Houston&rdquo;{"\n"}
+                    &ldquo;Condo with pool in Miami&rdquo;{"\n"}
+                    &ldquo;New construction in Austin&rdquo;
+                  </Text>
+                </View>
+              </View>
+            ) : isRefining ? (
               <View className="flex-1 justify-center items-center">
                 <ActivityIndicator size="large" color="#4C8F70" />
                 <Text
@@ -323,7 +373,7 @@ export default function AIResultsScreen() {
           </View>
 
           {/* Quick Action Buttons */}
-          {currentSearch.results.length > 0 && (
+          {currentSearch && currentSearch.results.length > 0 && (
             <View className="bg-white border-t border-gray-200 px-4 py-3">
               <View className="flex-row gap-2">
                 <Pressable
