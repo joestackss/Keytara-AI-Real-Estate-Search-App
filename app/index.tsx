@@ -116,7 +116,7 @@ export default function AISearchScreen() {
               className="text-4xl text-white text-center mb-3"
               style={{ fontFamily: "UrbanistBold" }}
             >
-              Keytara
+              Keytara Ai
             </Text>
           </View>
 
