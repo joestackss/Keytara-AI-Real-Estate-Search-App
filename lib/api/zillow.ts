@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API, ENV } from "../config/env";
 import type {
+  AgentDetails,
   PhotosResponse,
   PriceHistoryResponse,
   PropertyDetails,
@@ -8,14 +9,17 @@ import type {
   SchoolsResponse,
   SearchParams,
   SearchResponse,
+  SimilarPropertiesResponse,
 } from "../types";
 
 // Import mock data for development
+import agentMock from "../../responses/agentusername.json";
 import photosMock from "../../responses/photos.json";
 import priceHistoryMock from "../../responses/price-tax-history.json";
 import propertyDetailsMock from "../../responses/propertydetails.json";
 import schoolsMock from "../../responses/schools.json";
 import searchMock from "../../responses/search.json";
+import similarPropertiesMock from "../../responses/similarproperties.json";
 import scoresMock from "../../responses/walk_transit_bike_score.json";
 
 // Axios instance for Zillow API
@@ -170,6 +174,34 @@ export const zillowClient = {
 
     const response = await zillowApi.get("/walkTransitBikeScore", {
       params: { zpid },
+    });
+
+    return response.data;
+  },
+
+  // Get similar properties
+  async getSimilarProperties(zpid: number): Promise<SimilarPropertiesResponse> {
+    if (ENV.USE_MOCK_DATA) {
+      await new Promise((resolve) => setTimeout(resolve, 300));
+      return similarPropertiesMock as SimilarPropertiesResponse;
+    }
+
+    const response = await zillowApi.get("/similar_properties", {
+      params: { zpid },
+    });
+
+    return response.data;
+  },
+
+  // Get agent details by username
+  async getAgentDetails(username: string): Promise<AgentDetails> {
+    if (ENV.USE_MOCK_DATA) {
+      await new Promise((resolve) => setTimeout(resolve, 300));
+      return agentMock as AgentDetails;
+    }
+
+    const response = await zillowApi.get("/agent", {
+      params: { username },
     });
 
     return response.data;

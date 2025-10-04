@@ -1,5 +1,7 @@
+import { AgentCard } from "@/components/property/AgentCard";
+import { SimilarPropertyCard } from "@/components/property/SimilarPropertyCard";
 import { PropertyDetailsSkeleton } from "@/components/ui/LoadingSkeleton";
-import { usePropertyAllData } from "@/lib/hooks";
+import { useAgentDetails, usePropertyAllData } from "@/lib/hooks";
 import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -24,11 +26,15 @@ export default function PropertyDetailsScreen() {
 
   // console.log("zpid", zpid);
 
-  const { details, photos, schools, scores, isLoading, isError } =
+  const { details, photos, schools, scores, similarProperties, isLoading } =
     usePropertyAllData(propertyId);
 
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
+
+  // Get agent username from property details
+  const agentUsername = details.data?.listing_agent?.username;
+  const { data: agentDetails } = useAgentDetails(agentUsername);
 
   if (isLoading) {
     return <PropertyDetailsSkeleton />;
@@ -522,6 +528,37 @@ export default function PropertyDetailsScreen() {
                   )}
                 </View>
               </View>
+
+              {/* Agent Details */}
+              {agentDetails && <AgentCard agent={agentDetails} />}
+
+              {/* Similar Properties */}
+              {similarProperties.data?.results &&
+                similarProperties.data.results.length > 0 && (
+                  <View className="mb-6">
+                    <Text
+                      className="text-lg text-gray-900 mb-4"
+                      style={{
+                        fontFamily: "UrbanistSemiBold",
+                      }}
+                    >
+                      Similar Properties
+                    </Text>
+                    <ScrollView
+                      horizontal
+                      showsHorizontalScrollIndicator={false}
+                      className="flex-row -mx-4"
+                      contentContainerStyle={{ paddingHorizontal: 16 }}
+                    >
+                      {similarProperties.data.results.map((property) => (
+                        <SimilarPropertyCard
+                          key={property.zpid}
+                          property={property}
+                        />
+                      ))}
+                    </ScrollView>
+                  </View>
+                )}
             </View>
           </View>
         </ScrollView>
