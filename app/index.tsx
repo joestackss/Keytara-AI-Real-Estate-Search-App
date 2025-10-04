@@ -5,6 +5,7 @@ import {
 } from "@/lib/services/ai";
 import { useSearchHistoryStore } from "@/lib/store/searchHistory";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
@@ -15,6 +16,9 @@ import {
   TextInput,
   View,
 } from "react-native";
+
+export const blurhash =
+  "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
 const EXAMPLE_PROMPTS = [
   "3-bedroom house near good schools under $500k in Houston",
@@ -86,30 +90,38 @@ export default function AISearchScreen() {
       >
         <View className="absolute inset-0 bg-black/70 " />
 
-        <View className=" p-8 mb-14">
+        <View className=" p-8 mb-14 w-full">
           {/* Header */}
           <View className="items-center mb-12">
             {/* <View className="w-20 h-20 bg-[#4C8F70] rounded-full items-center justify-center mb-6">
               <Ionicons name="search" size={40} color="white" />
             </View> */}
 
+            <View className="w-32 h-32">
+              <Image
+                style={{
+                  flex: 1,
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: 20,
+                }}
+                source={require("../assets/images/icon.png")}
+                placeholder={{ blurhash }}
+                contentFit="contain"
+                transition={1000}
+              />
+            </View>
+
             <Text
               className="text-4xl text-white text-center mb-3"
               style={{ fontFamily: "UrbanistBold" }}
             >
-              Keytara AI
-            </Text>
-
-            <Text
-              className="text-lg text-neutral-200 text-center"
-              style={{ fontFamily: "UrbanistRegular" }}
-            >
-              Just describe what you&apos;re looking for & find Your Dream Home
+              Keytara
             </Text>
           </View>
 
           {/* Search Input */}
-          <View className="mb-8">
+          <View className="mb-2">
             <View className="bg-white rounded-3xl border-2 border-gray-200 p-5 shadow-sm">
               <TextInput
                 placeholder="Describe your dream home..."
@@ -157,7 +169,7 @@ export default function AISearchScreen() {
           {/* Example Prompts */}
           <View className="mt-4">
             <Text
-              className="text-sm text-neutral-500 mb-3"
+              className="text-sm text-neutral-200 mb-3"
               style={{ fontFamily: "UrbanistMedium" }}
             >
               Try these examples:
@@ -188,6 +200,18 @@ export default function AISearchScreen() {
             </View>
           </View>
         </View>
+
+        <Pressable
+          onPress={() => router.push("/(tabs)/ai-results")}
+          className="absolute top-10 right-0 p-8  "
+        >
+          <Text
+            className="text-white text-lg font-semibold text-center"
+            style={{ fontFamily: "UrbanistSemiBold" }}
+          >
+            Skip
+          </Text>
+        </Pressable>
       </ImageBackground>
     </View>
   );
