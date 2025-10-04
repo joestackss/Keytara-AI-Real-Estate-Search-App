@@ -19,8 +19,6 @@ import {
 const EXAMPLE_PROMPTS = [
   "3-bedroom house near good schools under $500k in Houston",
   "Condo with pool in downtown Austin",
-  "New construction with garage in Miami",
-  "4 bed home in Los Angeles under $800k",
 ];
 
 export default function AISearchScreen() {

@@ -4,12 +4,14 @@ import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
+import Animated, { FadeIn } from "react-native-reanimated";
 
 interface PropertyCardProps {
   property: SearchResult;
+  index: number;
 }
 
-export function PropertyCard({ property }: PropertyCardProps) {
+export function PropertyCard({ property, index }: PropertyCardProps) {
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
   const isSaved = isPropertySaved(property.zpid);
@@ -35,105 +37,111 @@ export function PropertyCard({ property }: PropertyCardProps) {
   };
 
   return (
-    <Link href={`/property/${property.zpid}`} asChild>
-      <Pressable className=" rounded-3xl px-2 bg-white pt-3 overflow-hidden   w-full  border-gray-200 border-2">
-        {/* Image */}
-        <View className="relative rounded-2xl overflow-hidden">
-          <Image
-            source={{ uri: property.imgSrc }}
-            className="w-full h-48"
-            resizeMode="cover"
-          />
-        </View>
-
-        {/* Content */}
-        <View className="px-2 py-2">
-          {/* Name and Fav Icon */}
-          <View className=" gap-2 justify-between flex-row items-center">
-            <Text
-              className="text-2xl font-semibold text-gray-900 "
-              numberOfLines={1}
-              style={{
-                fontFamily: "UrbanistBold",
-              }}
-            >
-              {property.streetAddress.length > 20
-                ? property.streetAddress.slice(0, 20) + "..."
-                : property.streetAddress}
-            </Text>
-
-            {/* Save Button */}
-            <Pressable onPress={handleToggleSave}>
-              <Ionicons
-                name={isSaved ? "heart" : "heart-outline"}
-                size={25}
-                color={isSaved ? "red" : "#374151"}
-              />
-            </Pressable>
+    <Animated.View
+      entering={FadeIn.duration(100)
+        .delay(index * 200)
+        .springify()}
+    >
+      <Link href={`/property/${property.zpid}`} asChild>
+        <Pressable className=" rounded-3xl px-2 bg-white pt-3 overflow-hidden   w-full  border-gray-200 border-2">
+          {/* Image */}
+          <View className="relative rounded-2xl overflow-hidden">
+            <Image
+              source={{ uri: property.imgSrc }}
+              className="w-full h-48"
+              resizeMode="cover"
+            />
           </View>
 
-          {/* Location */}
-          <View className=" justify-start flex-row items-center gap-1">
-            <Ionicons name="location-outline" size={20} color="#6b7280" />
-
-            {/* Address */}
-            <Text
-              className="text-lg text-gray-600 "
-              numberOfLines={1}
-              style={{
-                fontFamily: "UrbanistRegular",
-              }}
-            >
-              {property.city.length > 20
-                ? property.city.slice(0, 20) + "..."
-                : property.city}
-              , {property.state}
-            </Text>
-          </View>
-
-          {/* Details */}
-          <View className="flex-row flex-wrap gap-2 justify-between items-center">
-            <View className="flex-row items-center flex-wrap gap-3 mb-3">
-              <View className="flex-row items-center bg-gray-100 rounded-full p-2 px-4">
-                <Ionicons name="bed-outline" size={16} color="#6b7280" />
-                <Text
-                  className="ml-1 text-sm text-gray-700 font-medium"
-                  style={{
-                    fontFamily: "UrbanistRegular",
-                  }}
-                >
-                  {property.bedrooms}
-                </Text>
-              </View>
-              <View className="flex-row items-center bg-gray-100 rounded-full p-2 px-4">
-                <Ionicons name="water-outline" size={16} color="#6b7280" />
-                <Text
-                  className="ml-1 text-sm text-gray-700 font-medium"
-                  style={{
-                    fontFamily: "UrbanistRegular",
-                  }}
-                >
-                  {property.bathrooms}
-                </Text>
-              </View>
-            </View>
-            {/* Price Tag */}
-            <View className=" ">
+          {/* Content */}
+          <View className="px-2 py-2">
+            {/* Name and Fav Icon */}
+            <View className=" gap-2 justify-between flex-row items-center">
               <Text
-                className="text-[#4C8F70] font-bold text-2xl"
+                className="text-2xl font-semibold text-gray-900 "
+                numberOfLines={1}
                 style={{
                   fontFamily: "UrbanistBold",
                 }}
               >
-                $
-                {property.price
-                  .toFixed(0)
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                {property.streetAddress.length > 20
+                  ? property.streetAddress.slice(0, 20) + "..."
+                  : property.streetAddress}
+              </Text>
+
+              {/* Save Button */}
+              <Pressable onPress={handleToggleSave}>
+                <Ionicons
+                  name={isSaved ? "heart" : "heart-outline"}
+                  size={25}
+                  color={isSaved ? "red" : "#374151"}
+                />
+              </Pressable>
+            </View>
+
+            {/* Location */}
+            <View className=" justify-start flex-row items-center gap-1">
+              <Ionicons name="location-outline" size={20} color="#6b7280" />
+
+              {/* Address */}
+              <Text
+                className="text-lg text-gray-600 "
+                numberOfLines={1}
+                style={{
+                  fontFamily: "UrbanistRegular",
+                }}
+              >
+                {property.city.length > 20
+                  ? property.city.slice(0, 20) + "..."
+                  : property.city}
+                , {property.state}
               </Text>
             </View>
+
+            {/* Details */}
+            <View className="flex-row flex-wrap gap-2 justify-between items-center">
+              <View className="flex-row items-center flex-wrap gap-3 mb-3">
+                <View className="flex-row items-center bg-gray-100 rounded-full p-2 px-4">
+                  <Ionicons name="bed-outline" size={16} color="#6b7280" />
+                  <Text
+                    className="ml-1 text-sm text-gray-700 font-medium"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    {property.bedrooms}
+                  </Text>
+                </View>
+                <View className="flex-row items-center bg-gray-100 rounded-full p-2 px-4">
+                  <Ionicons name="water-outline" size={16} color="#6b7280" />
+                  <Text
+                    className="ml-1 text-sm text-gray-700 font-medium"
+                    style={{
+                      fontFamily: "UrbanistRegular",
+                    }}
+                  >
+                    {property.bathrooms}
+                  </Text>
+                </View>
+              </View>
+              {/* Price Tag */}
+              <View className=" ">
+                <Text
+                  className="text-[#4C8F70] font-bold text-2xl"
+                  style={{
+                    fontFamily: "UrbanistBold",
+                  }}
+                >
+                  $
+                  {property.price
+                    .toFixed(0)
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                </Text>
+              </View>
+            </View>
           </View>
-        </View>
-      </Pressable>
-    </Link>
+        </Pressable>
+      </Link>
+    </Animated.View>
   );
 }

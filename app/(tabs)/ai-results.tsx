@@ -331,9 +331,9 @@ export default function AIResultsScreen() {
             ) : currentSearch.results.length > 0 ? (
               <FlashList
                 data={currentSearch.results}
-                renderItem={({ item }) => (
+                renderItem={({ item, index }) => (
                   <View className="mb-4">
-                    <PropertyCard property={item} />
+                    <PropertyCard property={item} index={index} />
                   </View>
                 )}
                 keyExtractor={(item) => item.zpid.toString()}
