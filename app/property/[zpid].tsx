@@ -4,11 +4,12 @@ import { PropertyDetailsSkeleton } from "@/components/ui/LoadingSkeleton";
 import { useAgentDetails, usePropertyAllData } from "@/lib/hooks";
 import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import {
+  Alert,
   Dimensions,
-  Image,
   Linking,
   Pressable,
   ScrollView,
@@ -16,6 +17,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { blurhash } from "../index";
 
 const { width } = Dimensions.get("window");
 
@@ -31,6 +33,8 @@ export default function PropertyDetailsScreen() {
 
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
+
+  console.log("photos", photos.data?.photos);
 
   // Get agent username from property details
   const agentUsername = details.data?.listing_agent?.username;
@@ -96,6 +100,10 @@ export default function PropertyDetailsScreen() {
         zipcode: property.zipcode,
         savedAt: Date.now(),
       });
+      Alert.alert(
+        "Property Saved",
+        "Property has been added to your saved list"
+      );
     }
   };
 
@@ -113,14 +121,16 @@ export default function PropertyDetailsScreen() {
             <Ionicons name="arrow-back" size={24} color="#4b5563" />
           </Pressable>
 
-          <Text
-            className="text-2xl  text-gray-900"
-            style={{
-              fontFamily: "UrbanistSemiBold",
-            }}
-          >
-            Property Details
-          </Text>
+          <View className="bg-white px-4 py-2 rounded-2xl">
+            <Text
+              className="text-2xl  text-gray-900"
+              style={{
+                fontFamily: "UrbanistSemiBold",
+              }}
+            >
+              Property Details
+            </Text>
+          </View>
 
           <Pressable
             onPress={() => router.back()}
@@ -147,7 +157,8 @@ export default function PropertyDetailsScreen() {
               source={{ uri: photo.mixedSources.jpeg[2]?.url }}
               style={{ width }}
               className="h-full"
-              resizeMode="cover"
+              contentFit="cover"
+              placeholder={{ blurhash }}
             />
           ))}
         </ScrollView>

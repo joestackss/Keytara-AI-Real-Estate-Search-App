@@ -93,10 +93,6 @@ export default function AISearchScreen() {
         <View className=" p-8 mb-14 w-full">
           {/* Header */}
           <View className="items-center mb-12">
-            {/* <View className="w-20 h-20 bg-[#4C8F70] rounded-full items-center justify-center mb-6">
-              <Ionicons name="search" size={40} color="white" />
-            </View> */}
-
             <View className="w-32 h-32">
               <Image
                 style={{
