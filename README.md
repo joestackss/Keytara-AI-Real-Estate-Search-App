@@ -71,3 +71,76 @@ const filters = await parseNaturalLanguageQuery(query);
   hasPool: true,
   maxPrice: 500000
 }
+
+
+app/
+├── index.tsx                 # Main search screen
+├── (tabs)/
+│   ├── ai-results.tsx        # AI-generated search results
+│   └── saved.tsx             # Saved properties
+├── property/
+│   └── [zpid].tsx            # Property details screen
+└── _layout.tsx               # Root layout and navigation
+
+components/
+├── property/
+│   ├── PropertyCard.tsx
+│   ├── SimilarPropertyCard.tsx
+│   ├── AgentCard.tsx
+│   └── SecondaryPropertyCard.tsx
+└── ui/
+    └── LoadingSkeleton.tsx   # Loading placeholders
+
+
+🎨 Design System
+
+Typography: Urbanist font family (modern and legible)
+
+Colors:
+
+Primary: #4C8F70 (green)
+
+Background: #E6F4FE (light blue)
+
+Text: #374151 (dark gray)
+
+UI Principles: Rounded corners, subtle shadows, consistent elevation
+
+Animation: Smooth transitions and skeleton loaders for enhanced UX
+
+⚡ Performance Optimization
+
+FlashList for efficient list rendering
+
+Expo Image with blurhash placeholders
+
+Lazy loading of non-critical components
+
+Caching via React Query
+
+Persistent storage with AsyncStorage
+
+🔒 Privacy & Security
+
+Secure API key handling via .env variables
+
+Local-only user data storage (no accounts or cloud sync)
+
+Mock data mode for testing without live APIs
+
+🧑‍💻 My Contribution
+
+This project was designed, developed, and deployed entirely by Joseph Popoola.
+Responsibilities included:
+
+Designing app architecture and data flow
+
+Implementing NLP query interpretation
+
+Integrating APIs and handling data persistence
+
+Creating the UI/UX and performance optimization
+
+📄 License
+
+This project is licensed under the MIT License.
