@@ -132,10 +132,10 @@ export interface ResoFacts {
   associationFee?: string;
   associationName?: string;
   associationPhone?: string;
-  atAGlanceFacts?: Array<{
+  atAGlanceFacts?: {
     factLabel: string;
     factValue: string | null;
-  }>;
+  }[];
   bathrooms: number;
   bathroomsFull: number | null;
   bathroomsHalf: number | null;
@@ -205,6 +205,10 @@ export interface PropertyDetails {
   zipcode: string;
   zpid: number;
   zestimate?: number | null;
+  listing_agent?: {
+    username: string;
+    [key: string]: any;
+  };
 }
 
 // Walk/Transit/Bike Score Types
@@ -261,6 +265,26 @@ export interface SearchParams {
   minPrice?: number;
   maxPrice?: number;
   propertyType?: string;
+
+  // Extended filters matching Zillow API
+  hasPool?: boolean;
+  hasGarage?: boolean;
+  built_min?: number;
+  built_max?: number;
+  sqft_min?: number;
+  sqft_max?: number;
+  lotSize_min?: number;
+  lotSize_max?: number;
+  isNewConstruction?: boolean;
+  parkingSpots_min?: number;
+  greatSchoolsRating_min?: number;
+  hasAirConditioning?: boolean;
+  isWaterfront?: boolean;
+  isCityView?: boolean;
+  isMountainView?: boolean;
+  isWaterView?: boolean;
+  isParkView?: boolean;
+  singleStory?: boolean;
 }
 
 // Saved Property Type (simplified for storage)
@@ -276,4 +300,110 @@ export interface SavedProperty {
   state: string;
   zipcode: string;
   savedAt: number;
+}
+
+// Similar Property Type
+export interface SimilarProperty {
+  address: {
+    city: string;
+    state: string;
+    streetAddress: string;
+    zipcode: string;
+  };
+  attributionInfo: {
+    agentName: string | null;
+    agentPhoneNumber: string | null;
+    brokerName: string | null;
+    mlsId: string | null;
+  };
+  bathrooms: number;
+  bedrooms: number;
+  currency: string;
+  hdpUrl: string;
+  homeStatus: string;
+  homeType: string;
+  latitude: number;
+  longitude: number;
+  livingArea: number;
+  livingAreaUnits: string;
+  livingAreaUnitsShort: string;
+  livingAreaValue: number;
+  lotAreaUnits: string;
+  lotAreaValue: number;
+  lotSize: number;
+  miniCardPhotos: { url: string }[];
+  price: number;
+  state: string;
+  zpid: number;
+}
+
+export interface SimilarPropertiesResponse {
+  results: SimilarProperty[];
+}
+
+// Agent Details Type
+export interface AgentLicense {
+  expiration: string;
+  license_type: string;
+  original_status: string;
+  state: string;
+  status: string;
+  text: string;
+}
+
+export interface AgentSalesStats {
+  averageValueThreeYear: number;
+  countAllTime: number;
+  countLastYear: number;
+  priceRangeThreeYearMax: number;
+  priceRangeThreeYearMin: number;
+  stats_include_team: boolean;
+}
+
+export interface AgentListing {
+  address: {
+    city: string;
+    line1: string;
+    line2: string;
+    postalCode: string;
+    stateOrProvince: string;
+  };
+  bathrooms: number;
+  bedrooms: number;
+  brokerage_name: string;
+  price: number;
+  primary_photo_url: string;
+  zpid: number;
+}
+
+export interface AgentDetails {
+  agentLicenses: AgentLicense[];
+  agentSalesStats: AgentSalesStats;
+  displayUser: {
+    businessAddress: {
+      address1: string;
+      city: string;
+      postalCode: string;
+      state: string;
+    };
+    businessName: string;
+    email: string;
+    encodedZuid: string;
+    isPremierAgent: boolean;
+    isTopAgent: boolean;
+    name: string;
+    phoneNumbers: {
+      cell: string | null;
+    };
+    profilePhotoSrc: string;
+    ratings: {
+      average: number;
+      count: number;
+    };
+    screenName: string;
+  };
+  forSaleListings: {
+    listing_count: number;
+    listings: AgentListing[];
+  };
 }

@@ -1,0 +1,62 @@
+export default {
+  expo: {
+    name: "Keytara",
+    slug: "keytara",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/images/icon.png",
+    scheme: "keytara",
+    userInterfaceStyle: "automatic",
+    splash: {
+      image: "./assets/images/icon.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff",
+    },
+    assetBundlePatterns: ["**/*"],
+    ios: {
+      supportsTablet: false,
+      infoPlist: {
+        ITSAppUsesNonExemptEncryption: false,
+      },
+      bundleIdentifier: "com.stackstech.keytara",
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/images/android-icon-foreground.png",
+        monochromeImage: "./assets/images/android-icon-monochrome.png",
+        backgroundColor: "#ffffff",
+      },
+      package: "com.stackstech.keytara",
+    },
+    web: {
+      bundler: "metro",
+      output: "static",
+      favicon: "./assets/images/icon.png",
+    },
+    plugins: [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          imageWidth: 200,
+        },
+      ],
+    ],
+    experiments: {
+      typedRoutes: true,
+    },
+    extra: {
+      router: {
+        origin: false,
+      },
+      eas: {
+        projectId: "0c5d6812-8a30-45c5-9533-d6fb0d729e41",
+      },
+      GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+      RAPIDAPI_KEY: process.env.RAPIDAPI_KEY,
+      USE_MOCK_DATA: process.env.USE_MOCK_DATA,
+      RAPIDAPI_HOST: process.env.RAPIDAPI_HOST,
+    },
+    owner: "stackstech",
+  },
+};

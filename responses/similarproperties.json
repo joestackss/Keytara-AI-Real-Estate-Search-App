@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "address": {
+        "city": "Blountsville",
+        "state": "AL",
+        "streetAddress": "924 Berry Mountain Loop",
+        "zipcode": "35031"
+      },
+      "attributionInfo": {
+        "agentName": "Shannon Longshore",
+        "agentPhoneNumber": null,
+        "brokerName": "EXP Realty LLC",
+        "brokerPhoneNumber": null,
+        "mlsId": "21433086",
+        "mlsName": null,
+        "providerLogo": "https://photos.zillowstatic.com/fp/4b0ddc61a231f7f462d00fc896ee550f-zillow_web_48_23.jpg",
+        "trueStatus": null
+      },
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "924 Berry Mountain Loop"
+          },
+          {
+            "fullValue": "Blountsville, AL 35031"
+          }
+        ]
+      },
+      "hdpTypeDimension": "ForSale",
+      "hdpUrl": "/homedetails/924-Berry-Mountain-Loop-Blountsville-AL-35031/91593_zpid/",
+      "homeStatus": "FOR_SALE",
+      "homeType": "SINGLE_FAMILY",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.00881,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": true
+      },
+      "listingTypeDimension": "For Sale by Agent",
+      "listing_sub_type": {
+        "is_FSBA": true,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 1366,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 1366,
+      "longitude": -86.49586,
+      "lotAreaUnits": "Acres",
+      "lotAreaValue": 1.4,
+      "lotSize": 60983,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/7342c5b19a5ffb54abeaa2af7655fb57-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": {
+        "name": "35031"
+      },
+      "price": 225000,
+      "propertyTypeDimension": "Single Family",
+      "providerListingID": null,
+      "state": "AL",
+      "zpid": 91593
+    },
+    {
+      "address": {
+        "city": "Hanceville",
+        "state": "AL",
+        "streetAddress": "201 Ohio Ave NE",
+        "zipcode": "35077"
+      },
+      "attributionInfo": {
+        "agentName": "Josh Rumble",
+        "agentPhoneNumber": null,
+        "brokerName": null,
+        "brokerPhoneNumber": null,
+        "mlsId": "525102",
+        "mlsName": null,
+        "providerLogo": null,
+        "trueStatus": null
+      },
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "currency": "USD",
+      "formattedChip": {
+        "location": [
+          {
+            "fullValue": "201 Ohio Ave NE"
+          },
+          {
+            "fullValue": "Hanceville, AL 35077"
+          }
+        ]
+      },
+      "hdpTypeDimension": "ForSale",
+      "hdpUrl": "/homedetails/201-Ohio-Ave-NE-Hanceville-AL-35077/442587649_zpid/",
+      "homeStatus": "FOR_SALE",
+      "homeType": "SINGLE_FAMILY",
+      "isPremierBuilder": false,
+      "isShowcaseListing": false,
+      "latitude": 34.06458,
+      "listingMetadata": {
+        "comminglingCategoryIsRulesApplicable": true
+      },
+      "listingTypeDimension": "For Sale by Agent",
+      "listing_sub_type": {
+        "is_FSBA": true,
+        "is_FSBO": false,
+        "is_bankOwned": false,
+        "is_comingSoon": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_newHome": false
+      },
+      "livingArea": 1080,
+      "livingAreaUnits": "Square Feet",
+      "livingAreaUnitsShort": "sqft",
+      "livingAreaValue": 1080,
+      "longitude": -86.75495,
+      "lotAreaUnits": "Square Feet",
+      "lotAreaValue": 9147.6,
+      "lotSize": 9147,
+      "miniCardPhotos": [
+        {
+          "url": "https://photos.zillowstatic.com/fp/5e763721c841d44742310c2e7f1d41de-p_c.jpg"
+        }
+      ],
+      "newConstructionType": null,
+      "parentRegion": {
+        "name": "35077"
+      },
+      "price": 163900,
+      "propertyTypeDimension": "Single Family",
+      "providerListingID": null,
+      "state": "AL",
+      "zpid": 442587649
+    }
+  ]
+}

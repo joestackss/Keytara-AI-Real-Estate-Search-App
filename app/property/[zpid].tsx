@@ -1,12 +1,15 @@
+import { AgentCard } from "@/components/property/AgentCard";
+import { SimilarPropertyCard } from "@/components/property/SimilarPropertyCard";
 import { PropertyDetailsSkeleton } from "@/components/ui/LoadingSkeleton";
-import { usePropertyAllData } from "@/lib/hooks";
+import { useAgentDetails, usePropertyAllData } from "@/lib/hooks";
 import { useSavedPropertiesStore } from "@/lib/store/savedProperties";
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import {
+  Alert,
   Dimensions,
-  Image,
   Linking,
   Pressable,
   ScrollView,
@@ -14,6 +17,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { blurhash } from "../index";
 
 const { width } = Dimensions.get("window");
 
@@ -24,11 +28,17 @@ export default function PropertyDetailsScreen() {
 
   // console.log("zpid", zpid);
 
-  const { details, photos, schools, scores, isLoading, isError } =
+  const { details, photos, schools, scores, similarProperties, isLoading } =
     usePropertyAllData(propertyId);
 
   const { isPropertySaved, addProperty, removeProperty } =
     useSavedPropertiesStore();
+
+  console.log("photos", photos.data?.photos);
+
+  // Get agent username from property details
+  const agentUsername = details.data?.listing_agent?.username;
+  const { data: agentDetails } = useAgentDetails(agentUsername);
 
   if (isLoading) {
     return <PropertyDetailsSkeleton />;
@@ -90,6 +100,10 @@ export default function PropertyDetailsScreen() {
         zipcode: property.zipcode,
         savedAt: Date.now(),
       });
+      Alert.alert(
+        "Property Saved",
+        "Property has been added to your saved list"
+      );
     }
   };
 
@@ -107,14 +121,16 @@ export default function PropertyDetailsScreen() {
             <Ionicons name="arrow-back" size={24} color="#4b5563" />
           </Pressable>
 
-          <Text
-            className="text-2xl  text-gray-900"
-            style={{
-              fontFamily: "UrbanistSemiBold",
-            }}
-          >
-            Property Details
-          </Text>
+          <View className="bg-white px-4 py-2 rounded-2xl">
+            <Text
+              className="text-2xl  text-gray-900"
+              style={{
+                fontFamily: "UrbanistSemiBold",
+              }}
+            >
+              Property Details
+            </Text>
+          </View>
 
           <Pressable
             onPress={() => router.back()}
@@ -141,7 +157,8 @@ export default function PropertyDetailsScreen() {
               source={{ uri: photo.mixedSources.jpeg[2]?.url }}
               style={{ width }}
               className="h-full"
-              resizeMode="cover"
+              contentFit="cover"
+              placeholder={{ blurhash }}
             />
           ))}
         </ScrollView>
@@ -211,7 +228,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.bedrooms} Bedrooms
+                    {property?.bedrooms || 0} Bedrooms
                   </Text>
                 </View>
                 <View className="bg-gray-100 px-4 py-3 rounded-xl flex-1 min-w-[100px]">
@@ -222,7 +239,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.bathrooms} Bathrooms
+                    {property?.bathrooms || 0} Bathrooms
                   </Text>
                 </View>
                 <View className="bg-gray-100 px-4 py-3 rounded-xl flex-1 min-w-[100px]">
@@ -233,7 +250,7 @@ export default function PropertyDetailsScreen() {
                       fontFamily: "UrbanistSemiBold",
                     }}
                   >
-                    {property.livingArea.toLocaleString()} Sq Ft
+                    {property?.livingArea?.toLocaleString() || 0} Sq Ft
                   </Text>
                 </View>
               </View>
@@ -273,7 +290,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.walkScore.walkscore}
+                          {propertyScores?.walkScore?.walkscore || 0 || "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -281,7 +298,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.walkScore.description}
+                          {propertyScores?.walkScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -308,7 +325,9 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.transitScore.transit_score}
+                          {propertyScores?.transitScore?.transit_score ||
+                            0 ||
+                            "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -316,7 +335,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.transitScore.description}
+                          {propertyScores?.transitScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -343,7 +362,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistSemiBold",
                           }}
                         >
-                          {propertyScores.bikeScore.bikescore}
+                          {propertyScores?.bikeScore?.bikescore || 0 || "N/A"}
                         </Text>
                         <Text
                           className="text-sm text-gray-600"
@@ -351,7 +370,7 @@ export default function PropertyDetailsScreen() {
                             fontFamily: "UrbanistRegular",
                           }}
                         >
-                          {propertyScores.bikeScore.description}
+                          {propertyScores?.bikeScore?.description || "N/A"}
                         </Text>
                       </View>
                     </View>
@@ -375,7 +394,7 @@ export default function PropertyDetailsScreen() {
                     fontFamily: "UrbanistRegular",
                   }}
                 >
-                  {property.description}
+                  {property?.description || "N/A"}
                 </Text>
               </View>
 
@@ -454,7 +473,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.resoFacts.yearBuilt}
+                        {property?.resoFacts?.yearBuilt || "N/A"}
                       </Text>
                     </View>
                   )}
@@ -474,7 +493,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.homeType}
+                        {property?.homeType || "N/A"}
                       </Text>
                     </View>
                   )}
@@ -494,7 +513,7 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        ${property.monthlyHoaFee}/month
+                        ${property?.monthlyHoaFee || 0 || "N/A"}/month
                       </Text>
                     </View>
                   )}
@@ -514,12 +533,43 @@ export default function PropertyDetailsScreen() {
                           fontFamily: "UrbanistSemiBold",
                         }}
                       >
-                        {property.lotSize.toLocaleString()} sqft
+                        {property?.lotSize?.toLocaleString() || 0 || "N/A"} sqft
                       </Text>
                     </View>
                   )}
                 </View>
               </View>
+
+              {/* Agent Details */}
+              {agentDetails && <AgentCard agent={agentDetails} />}
+
+              {/* Similar Properties */}
+              {similarProperties.data?.results &&
+                similarProperties.data.results.length > 0 && (
+                  <View className="mb-6">
+                    <Text
+                      className="text-lg text-gray-900 mb-4"
+                      style={{
+                        fontFamily: "UrbanistSemiBold",
+                      }}
+                    >
+                      Similar Properties
+                    </Text>
+                    <ScrollView
+                      horizontal
+                      showsHorizontalScrollIndicator={false}
+                      className="flex-row -mx-4"
+                      contentContainerStyle={{ paddingHorizontal: 16 }}
+                    >
+                      {similarProperties.data.results.map((property) => (
+                        <SimilarPropertyCard
+                          key={property.zpid}
+                          property={property}
+                        />
+                      ))}
+                    </ScrollView>
+                  </View>
+                )}
             </View>
           </View>
         </ScrollView>
@@ -543,7 +593,7 @@ export default function PropertyDetailsScreen() {
                 fontFamily: "UrbanistSemiBold",
               }}
             >
-              ${property.price.toLocaleString()}
+              ${property?.price?.toLocaleString() || 0 || "N/A"}
             </Text>
           </View>
 

@@ -46,6 +46,24 @@ export function usePropertyScores(zpid: number | null) {
   });
 }
 
+// Similar properties
+export function useSimilarProperties(zpid: number | null) {
+  return useQuery({
+    queryKey: ["similar-properties", zpid],
+    queryFn: () => zillowClient.getSimilarProperties(zpid!),
+    enabled: Boolean(zpid),
+  });
+}
+
+// Agent details
+export function useAgentDetails(username: string | null | undefined) {
+  return useQuery({
+    queryKey: ["agent-details", username],
+    queryFn: () => zillowClient.getAgentDetails(username!),
+    enabled: Boolean(username),
+  });
+}
+
 // Combined hook for parallel queries on property details page
 export function usePropertyAllData(zpid: number | null) {
   const queries = useQueries({
@@ -75,6 +93,11 @@ export function usePropertyAllData(zpid: number | null) {
         queryFn: () => zillowClient.getPropertyScores(zpid!),
         enabled: Boolean(zpid),
       },
+      {
+        queryKey: ["similar-properties", zpid],
+        queryFn: () => zillowClient.getSimilarProperties(zpid!),
+        enabled: Boolean(zpid),
+      },
     ],
   });
 
@@ -84,6 +107,7 @@ export function usePropertyAllData(zpid: number | null) {
     schools: queries[2],
     history: queries[3],
     scores: queries[4],
+    similarProperties: queries[5],
     isLoading: queries.some((q) => q.isLoading),
     isError: queries.some((q) => q.isError),
   };

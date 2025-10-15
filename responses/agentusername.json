@@ -1,0 +1,1264 @@
+{
+  "agentLicenses": [
+    {
+      "expiration": "2027-08-03",
+      "license_type": "agent",
+      "original_status": "active",
+      "state": "CA",
+      "status": "active",
+      "text": "01981773"
+    }
+  ],
+  "agentSalesStats": {
+    "averageValueThreeYear": 833384,
+    "countAllTime": 128,
+    "countLastYear": 23,
+    "priceRangeThreeYearMax": 2375000,
+    "priceRangeThreeYearMin": 223000,
+    "stats_include_team": false
+  },
+  "breadcrumbs": [
+    {
+      "text": "California",
+      "url": "/professionals/real-estate-agent-reviews/ca/"
+    },
+    {
+      "text": "Westlake Village",
+      "url": "/professionals/real-estate-agent-reviews/westlake-village-ca/"
+    },
+    {
+      "text": "Elizabeth Kammen"
+    }
+  ],
+  "currentUrl": "https://www.zillow.com/profile/ElizabethKammen",
+  "displayUser": {
+    "businessAddress": {
+      "address1": "4035 E Thousand Oaks Blvd, Suite 234",
+      "address2": null,
+      "city": "Westlake Village",
+      "postalCode": "91362",
+      "state": "CA"
+    },
+    "businessName": "Real Brokerage",
+    "cpdUserPronouns": null,
+    "email": "ekammen@gmail.com",
+    "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+    "flag": 41783005,
+    "inCanada": false,
+    "isPremierAgent": false,
+    "isTopAgent": true,
+    "name": "Elizabeth Kammen",
+    "phoneNumbers": {
+      "brokerage": null,
+      "business": null,
+      "cell": "(805) 279-0727"
+    },
+    "profileImageId": 15406436479,
+    "profilePhotoSrc": "https://photos.zillowstatic.com/fp/b987da375171ed354658fa3bb4235326-h_l.jpg",
+    "profileTypeIds": [1, 2],
+    "profileTypes": ["consumer", "agent"],
+    "ratings": {
+      "average": 5,
+      "count": 34
+    },
+    "screenName": "ElizabethKammen"
+  },
+  "forRentListings": {
+    "listing_count": 0,
+    "listings": []
+  },
+  "forSaleListings": {
+    "listing_count": 2,
+    "listings": [
+      {
+        "address": {
+          "city": "Canoga Park",
+          "line1": "7767 Independence Ave",
+          "line2": "Canoga Park, CA 91304",
+          "postalCode": "91304",
+          "stateOrProvince": "CA"
+        },
+        "bathrooms": 2,
+        "bedrooms": 3,
+        "brokerage_name": "Real Brokerage Technologies, Inc.",
+        "hasOpenHouse": false,
+        "has_vr_model": false,
+        "home_marketing_status": "contingent",
+        "home_marketing_type": "forSale",
+        "home_type": "singleFamily",
+        "latitude": 34.211678,
+        "listing_url": "/homedetails/7767-Independence-Ave-Canoga-Park-CA-91304/19910030_zpid/",
+        "longitude": -118.59084,
+        "openHouses": "",
+        "price": 874500,
+        "price_currency": "usd",
+        "primary_photo_url": "https://photos.zillowstatic.com/fp/37e4b55f4805fc7f080198a0cbba231e-a_a.jpg",
+        "status": "fsba",
+        "zpid": 19910030
+      },
+      {
+        "address": {
+          "city": "Santa Monica",
+          "line1": "1918 11th St APT D",
+          "line2": "Santa Monica, CA 90404",
+          "postalCode": "90404",
+          "stateOrProvince": "CA"
+        },
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "brokerage_name": "Real Brokerage Technologies, Inc.",
+        "hasOpenHouse": false,
+        "has_vr_model": true,
+        "home_marketing_status": "contingent",
+        "home_marketing_type": "forSale",
+        "home_type": "condo",
+        "latitude": 34.01438,
+        "listing_url": "/homedetails/1918-11th-St-APT-D-Santa-Monica-CA-90404/51582406_zpid/",
+        "longitude": -118.48042,
+        "openHouses": "",
+        "price": 799000,
+        "price_currency": "usd",
+        "primary_photo_url": "https://photos.zillowstatic.com/fp/bf1e16ad952a30221efed2eea9397090-a_a.jpg",
+        "status": "fsba",
+        "zpid": 51582406
+      }
+    ]
+  },
+  "getToKnowMe": {
+    "description": "<p>*Some of Elizabeth's sales do not show on Zillow and/or appear out of order etc -for a complete list of her sales and all information - contact Elizabeth directly*</p>\n<p>Cell: (805) 279-0727 Email: KammenHomes@gmail.com</p>\n<p>Elizabeth services home buyers and sellers throughout Ventura &amp; Los Angeles Counties. Elizabeth prides herself in consistently saving her buyers money on their purchase &amp; selling her listings for top dollar. In addition to her proven sales skills, she has demonstrated highly effective communications ability. Taken together, her sales and communications talents enable her to do the best job possible for her real estate clients, and to provide a level of quality they not only expect but also deserve. Elizabeth will not only thoroughly understand your wants and needs, but also communicate them effectively. If you or someone you know is planning to buy, sell, or invest in real estate in the near future, or if you simply need information on the current real estate market, please don't hesitate to contact Elizabeth.</p>\n",
+    "facebookUrl": "http://www.facebook.com/kammenhomes",
+    "languages": [],
+    "linkedInUrl": "https://www.linkedin.com/in/elizabethkammen",
+    "specialties": ["Buyer's Agent", "Listing Agent", "Relocation", "Rentals"],
+    "title": "Realtor",
+    "videoUrl": null,
+    "websiteUrl": "http://www.KammenHomes.com",
+    "yearsInIndustry": 10
+  },
+  "graphQLData": {
+    "__typename": "ProfessionalProfilePage",
+    "isPremium": false,
+    "premiumAgentHeader": {
+      "__typename": "PremiumAgentProfilePageHeader",
+      "businessCard": {
+        "__typename": "PremiumAgentProfilePageBusinessCard",
+        "brandColor": "#EFF3F9",
+        "companyInfo": {
+          "__typename": "PremiumAgentProfilePageCompanyInfo",
+          "logoUrl": null,
+          "name": "Real Brokerage",
+          "reviewsInfo": {
+            "__typename": "ProfessionalProfileDisplayReviewsInfoWithReviews",
+            "displayText": "34 reviews",
+            "starRating": 5,
+            "starRatingAriaLabel": "5.0 out of 5 stars",
+            "starRatingText": "5.0"
+          },
+          "teamProfileUrl": "/profile/Therisegroup",
+          "teamText": "Member of The Rise Real Estate Group"
+        },
+        "contactButtonText": "Contact Elizabeth",
+        "displayName": "Elizabeth Kammen",
+        "editBrandingButtonText": "Edit logo and branding",
+        "editBrandingButtonUrl": "/user/EditProfile.htm?tab=logo+and+brand+color",
+        "photo": {
+          "__typename": "ProfessionalProfileDisplayProfilePhoto",
+          "badge": {
+            "__typename": "ProfessionalProfileDisplayProfileBadge",
+            "badgeName": "TopAgent",
+            "showTooltip": true
+          },
+          "photoUrl": "https://photos.zillowstatic.com/fp/b987da375171ed354658fa3bb4235326-h_l.jpg"
+        },
+        "pronouns": null
+      },
+      "editMediaSlideshowButtonText": "Edit media slideshow",
+      "editMediaSlideshowButtonUrl": "/user/EditProfile.htm?tab=media+slideshow",
+      "salesSection": {
+        "__typename": "PremiumAgentProfilePageSalesSection",
+        "editSalesButtonText": "Edit featured sales",
+        "editSalesButtonUrl": "/user/EditProfile.htm?tab=featured+sales",
+        "moreSalesButtonText": "See more",
+        "moreSalesButtonUrl": "#listings-and-sales",
+        "moreSalesButtonVisible": true,
+        "sales": {
+          "__typename": "AgentProfileDisplayShownSalesSuccess",
+          "description": null,
+          "shownSalesResult": {
+            "__typename": "AgentProfileDisplayShownSalesResult",
+            "shownSales": [
+              {
+                "__typename": "AgentProfileDisplayShownSale",
+                "attributes": [
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "bd",
+                    "value": "3"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "ba",
+                    "value": "2"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "sqft",
+                    "value": "1,080"
+                  }
+                ],
+                "cityState": "Thousand Oaks, CA",
+                "closingPrice": "$815,000",
+                "fullAddressText": "757 Brossard Dr, Thousand Oaks, CA 91360",
+                "property": {
+                  "__typename": "Property",
+                  "attributionInfo": {
+                    "__typename": "AttributionInfo",
+                    "providerLogo": null
+                  },
+                  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/a89259cd6d8d448ad7b6977bd71c7c28-p_h.jpg"
+                },
+                "propertyUrl": "/homedetails/757-Brossard-Dr-Thousand-Oaks-CA-91360/16476262_zpid/",
+                "saleCardData": {
+                  "__typename": "AgentProfileDisplaySaleCardData",
+                  "representedList": ["Buyer"],
+                  "soldDuration": "1 month ago",
+                  "soldText": "Sold"
+                },
+                "zpid": "16476262"
+              },
+              {
+                "__typename": "AgentProfileDisplayShownSale",
+                "attributes": [
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "bd",
+                    "value": "2"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "ba",
+                    "value": "2"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "sqft",
+                    "value": "1,075"
+                  }
+                ],
+                "cityState": "Oxnard, CA",
+                "closingPrice": "$600,000",
+                "fullAddressText": "3639 Dunkirk Dr, Oxnard, CA 93035",
+                "property": {
+                  "__typename": "Property",
+                  "attributionInfo": {
+                    "__typename": "AttributionInfo",
+                    "providerLogo": null
+                  },
+                  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/2a129b8399e4d52711423900a3064398-p_h.jpg"
+                },
+                "propertyUrl": "/homedetails/3639-Dunkirk-Dr-Oxnard-CA-93035/89219348_zpid/",
+                "saleCardData": {
+                  "__typename": "AgentProfileDisplaySaleCardData",
+                  "representedList": ["Seller"],
+                  "soldDuration": "1 month ago",
+                  "soldText": "Sold"
+                },
+                "zpid": "89219348"
+              },
+              {
+                "__typename": "AgentProfileDisplayShownSale",
+                "attributes": [
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "bd",
+                    "value": "4"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "ba",
+                    "value": "3"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "sqft",
+                    "value": "2,302"
+                  }
+                ],
+                "cityState": "Thousand Oaks, CA",
+                "closingPrice": "$1,150,000",
+                "fullAddressText": "1317 Millcreek Ct, Thousand Oaks, CA 91360",
+                "property": {
+                  "__typename": "Property",
+                  "attributionInfo": {
+                    "__typename": "AttributionInfo",
+                    "providerLogo": null
+                  },
+                  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/9b45bc00583b3d90b2a93ac46f865655-p_h.jpg"
+                },
+                "propertyUrl": "/homedetails/1317-Millcreek-Ct-Thousand-Oaks-CA-91360/16479620_zpid/",
+                "saleCardData": {
+                  "__typename": "AgentProfileDisplaySaleCardData",
+                  "representedList": ["Seller"],
+                  "soldDuration": "2 months ago",
+                  "soldText": "Sold"
+                },
+                "zpid": "16479620"
+              },
+              {
+                "__typename": "AgentProfileDisplayShownSale",
+                "attributes": [
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "bd",
+                    "value": "4"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "ba",
+                    "value": "2"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "sqft",
+                    "value": "1,428"
+                  }
+                ],
+                "cityState": "Northridge, CA",
+                "closingPrice": "$880,000",
+                "fullAddressText": "18633 Gledhill St, Northridge, CA 91324",
+                "property": {
+                  "__typename": "Property",
+                  "attributionInfo": {
+                    "__typename": "AttributionInfo",
+                    "providerLogo": null
+                  },
+                  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/83a37dbfe0b7550148401355cd3b0c51-p_h.jpg"
+                },
+                "propertyUrl": "/homedetails/18633-Gledhill-St-Northridge-CA-91324/20175697_zpid/",
+                "saleCardData": {
+                  "__typename": "AgentProfileDisplaySaleCardData",
+                  "representedList": ["Buyer"],
+                  "soldDuration": "2 months ago",
+                  "soldText": "Sold"
+                },
+                "zpid": "20175697"
+              },
+              {
+                "__typename": "AgentProfileDisplayShownSale",
+                "attributes": [
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "bd",
+                    "value": "3"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "ba",
+                    "value": "3"
+                  },
+                  {
+                    "__typename": "AgentProfileDisplaySaleAttribute",
+                    "label": "sqft",
+                    "value": "1,493"
+                  }
+                ],
+                "cityState": "Camarillo, CA",
+                "closingPrice": "$890,000",
+                "fullAddressText": "5084 Via Calderon, Camarillo, CA 93012",
+                "property": {
+                  "__typename": "Property",
+                  "attributionInfo": {
+                    "__typename": "AttributionInfo",
+                    "providerLogo": null
+                  },
+                  "desktopWebHdpImageLink": "https://photos.zillowstatic.com/fp/907190f6958e810a79d4773d68aa0865-p_h.jpg"
+                },
+                "propertyUrl": "/homedetails/5084-Via-Calderon-Camarillo-CA-93012/16364019_zpid/",
+                "saleCardData": {
+                  "__typename": "AgentProfileDisplaySaleCardData",
+                  "representedList": ["Buyer"],
+                  "soldDuration": "2 months ago",
+                  "soldText": "Sold"
+                },
+                "zpid": "16364019"
+              }
+            ],
+            "totalShownSales": 128
+          },
+          "title": "Recent sales"
+        }
+      },
+      "salesStats": {
+        "__typename": "AgentProfileDisplaySalesStats",
+        "entries": {
+          "__typename": "AgentProfileDisplaySalesStatsEntries",
+          "averagePrice": {
+            "__typename": "AgentProfileDisplaySalesStatsEntry",
+            "longTitle": "Average price",
+            "value": "$833K"
+          },
+          "priceRange": {
+            "__typename": "AgentProfileDisplaySalesStatsEntry",
+            "longTitle": "Price range",
+            "value": "$223K-$2.3M"
+          },
+          "salesLastTwelveMonths": {
+            "__typename": "AgentProfileDisplaySalesStatsEntry",
+            "longTitle": "Sales last 12 months",
+            "value": "23"
+          },
+          "totalSales": {
+            "__typename": "AgentProfileDisplaySalesStatsEntry",
+            "longTitle": "Total sales",
+            "value": "128"
+          }
+        },
+        "failureText": null,
+        "premierAgentSection": null,
+        "teamDisclaimerSection": null
+      },
+      "slideError": null,
+      "slides": [
+        {
+          "__typename": "AgentProfileDisplayMapSlide",
+          "unableToLoadMapErrorMessage": "Unable to load map at this time. Please try again later."
+        }
+      ]
+    },
+    "premiumAgentModalPopup": {
+      "__typename": "PremiumAgentModalPopup",
+      "learnMoreUrl": "/premier-agent/premium-profile/",
+      "shouldShow": true
+    }
+  },
+  "isImpersonating": false,
+  "isMobile": true,
+  "isReviewModerator": false,
+  "map": {
+    "mapApiKey": "AIzaSyD4w61UyrLSs5ozaHmCCrhvnyPrJdNkZQ0",
+    "mapCentroid": {
+      "latitude": "34.143285",
+      "longitude": "-118.879053"
+    }
+  },
+  "mlsIDs": [
+    {
+      "mls_agent_id": "159099331",
+      "mls_ouid": "M00000093"
+    },
+    {
+      "mls_agent_id": "SR159099331",
+      "mls_ouid": "M00000093"
+    }
+  ],
+  "otherLicenseData": [
+    {
+      "licenseCode": "01981773",
+      "licenseDesc": "CalBRE",
+      "licenseTypeID": 1
+    }
+  ],
+  "pastSales": {
+    "past_sales": [
+      {
+        "bathrooms": 2,
+        "bedrooms": 3,
+        "city": "Thousand Oaks",
+        "city_state_zipcode": "Thousand Oaks, CA, 91360",
+        "home_details_url": "/homedetails/757-Brossard-Dr-Thousand-Oaks-CA-91360/16476262_zpid/",
+        "image_alt": "757 Brossard Dr, Thousand Oaks, CA, 91360",
+        "image_url": "https://photos.zillowstatic.com/fp/a89259cd6d8d448ad7b6977bd71c7c28-p_b.jpg",
+        "latitude": 34.184063,
+        "livingAreaUnitsShort": "sqft",
+        "livingAreaValue": 1080,
+        "longitude": -118.864204,
+        "medium_image_url": "https://photos.zillowstatic.com/fp/a89259cd6d8d448ad7b6977bd71c7c28-p_d.jpg",
+        "mlsLogoSrc": null,
+        "price": "$815,000",
+        "represented": "Buyer",
+        "representedList": ["Buyer"],
+        "sold_date": "9/2/2025",
+        "state": "CA",
+        "street_address": "757 Brossard Dr",
+        "zpid": 16476262
+      },
+      {
+        "bathrooms": 2,
+        "bedrooms": 2,
+        "city": "Oxnard",
+        "city_state_zipcode": "Oxnard, CA, 93035",
+        "home_details_url": "/homedetails/3639-Dunkirk-Dr-Oxnard-CA-93035/89219348_zpid/",
+        "image_alt": "3639 Dunkirk Dr, Oxnard, CA, 93035",
+        "image_url": "https://photos.zillowstatic.com/fp/2a129b8399e4d52711423900a3064398-p_b.jpg",
+        "latitude": 34.19599,
+        "livingAreaUnitsShort": "sqft",
+        "livingAreaValue": 1075,
+        "longitude": -119.21819,
+        "medium_image_url": "https://photos.zillowstatic.com/fp/2a129b8399e4d52711423900a3064398-p_d.jpg",
+        "mlsLogoSrc": null,
+        "price": "$600,000",
+        "represented": "Seller",
+        "representedList": ["Seller"],
+        "sold_date": "8/22/2025",
+        "state": "CA",
+        "street_address": "3639 Dunkirk Dr",
+        "zpid": 89219348
+      },
+      {
+        "bathrooms": 3,
+        "bedrooms": 4,
+        "city": "Thousand Oaks",
+        "city_state_zipcode": "Thousand Oaks, CA, 91360",
+        "home_details_url": "/homedetails/1317-Millcreek-Ct-Thousand-Oaks-CA-91360/16479620_zpid/",
+        "image_alt": "1317 Millcreek Ct, Thousand Oaks, CA, 91360",
+        "image_url": "https://photos.zillowstatic.com/fp/9b45bc00583b3d90b2a93ac46f865655-p_b.jpg",
+        "latitude": 34.227657,
+        "livingAreaUnitsShort": "sqft",
+        "livingAreaValue": 2302,
+        "longitude": -118.8569,
+        "medium_image_url": "https://photos.zillowstatic.com/fp/9b45bc00583b3d90b2a93ac46f865655-p_d.jpg",
+        "mlsLogoSrc": null,
+        "price": "$1,150,000",
+        "represented": "Seller",
+        "representedList": ["Seller"],
+        "sold_date": "8/14/2025",
+        "state": "CA",
+        "street_address": "1317 Millcreek Ct",
+        "zpid": 16479620
+      },
+      {
+        "bathrooms": 2,
+        "bedrooms": 4,
+        "city": "Northridge",
+        "city_state_zipcode": "Northridge, CA, 91324",
+        "home_details_url": "/homedetails/18633-Gledhill-St-Northridge-CA-91324/20175697_zpid/",
+        "image_alt": "18633 Gledhill St, Northridge, CA, 91324",
+        "image_url": "https://photos.zillowstatic.com/fp/83a37dbfe0b7550148401355cd3b0c51-p_b.jpg",
+        "latitude": 34.242043,
+        "livingAreaUnitsShort": "sqft",
+        "livingAreaValue": 1428,
+        "longitude": -118.53945,
+        "medium_image_url": "https://photos.zillowstatic.com/fp/83a37dbfe0b7550148401355cd3b0c51-p_d.jpg",
+        "mlsLogoSrc": null,
+        "price": "$880,000",
+        "represented": "Buyer",
+        "representedList": ["Buyer"],
+        "sold_date": "7/30/2025",
+        "state": "CA",
+        "street_address": "18633 Gledhill St",
+        "zpid": 20175697
+      },
+      {
+        "bathrooms": 3,
+        "bedrooms": 3,
+        "city": "Camarillo",
+        "city_state_zipcode": "Camarillo, CA, 93012",
+        "home_details_url": "/homedetails/5084-Via-Calderon-Camarillo-CA-93012/16364019_zpid/",
+        "image_alt": "5084 Via Calderon, Camarillo, CA, 93012",
+        "image_url": "https://photos.zillowstatic.com/fp/907190f6958e810a79d4773d68aa0865-p_b.jpg",
+        "latitude": 34.218613,
+        "livingAreaUnitsShort": "sqft",
+        "livingAreaValue": 1493,
+        "longitude": -119.00252,
+        "medium_image_url": "https://photos.zillowstatic.com/fp/907190f6958e810a79d4773d68aa0865-p_d.jpg",
+        "mlsLogoSrc": null,
+        "price": "$890,000",
+        "represented": "Buyer",
+        "representedList": ["Buyer"],
+        "sold_date": "7/25/2025",
+        "state": "CA",
+        "street_address": "5084 Via Calderon",
+        "zpid": 16364019
+      }
+    ],
+    "total": 128
+  },
+  "preferredLenders": {
+    "lenders": []
+  },
+  "professionalInformation": [
+    {
+      "lines": [
+        "Real Brokerage",
+        "4035 E Thousand Oaks Blvd, Suite 234",
+        "Westlake Village, CA 91362"
+      ],
+      "term": "Broker address"
+    },
+    {
+      "description": "(805) 279-0727",
+      "term": "Cell phone"
+    },
+    {
+      "links": [
+        {
+          "text": "Website",
+          "url": "http://www.KammenHomes.com"
+        },
+        {
+          "text": "Facebook",
+          "url": "http://www.facebook.com/kammenhomes"
+        },
+        {
+          "text": "LinkedIn",
+          "url": "https://www.linkedin.com/in/elizabethkammen"
+        }
+      ],
+      "term": "Websites"
+    },
+    {
+      "description": "ElizabethKammen",
+      "term": "Screenname"
+    },
+    {
+      "description": "08/08/2015",
+      "term": "Member since"
+    },
+    {
+      "lines": ["01981773 (CA)"],
+      "term": "Real Estate Licenses"
+    },
+    {
+      "lines": ["01981773 (CalBRE)"],
+      "term": "Other Licenses"
+    }
+  ],
+  "reviewsData": {
+    "filters": [
+      {
+        "count": 34,
+        "prompt": "All reviews",
+        "serviceTypeIds": null
+      },
+      {
+        "count": 24,
+        "prompt": "Helped me buy",
+        "serviceTypeIds": [1]
+      },
+      {
+        "count": 7,
+        "prompt": "Helped me sell",
+        "serviceTypeIds": [2]
+      },
+      {
+        "count": 2,
+        "prompt": "Helped me buy and sell",
+        "serviceTypeIds": [3]
+      },
+      {
+        "count": 1,
+        "prompt": "We connected, but it did not work out",
+        "serviceTypeIds": [7, 6, 4, 5, 999]
+      }
+    ],
+    "reviews": [
+      {
+        "createDate": "2025-09-04T13:53:00",
+        "rating": 5,
+        "rebuttal": null,
+        "reviewComment": "Elizabeth was absolutely amazing to work with! As first-time homebuyers, my husband and I had so many questions, and she was patient, kind, and always willing to explain every detail in a way that made sense. She never rushed us and was always on top of the market, making sure we had the best options in front of us.\n\nWhat really stood out was how much she went above and beyond. Her strong connections in the real estate industry are the reason our offer was accepted even though there was a higher offer on the table. That alone speaks volumes about her professionalism and reputation!\n\nElizabeth was available whenever we needed her, whether it was a quick call or text, and she made the entire process so smooth and stress-free. She truly cared about making sure we found the right home, and now we not only have a house we love but also feel like we’ve gained a friend.\n\nI couldn’t recommend her enough to anyone looking to buy or sell a home. She is the kind of agent who makes such a big difference in this process, and I’ll be telling all my friends and family to work with her!",
+        "reviewId": 8877427,
+        "reviewee": {
+          "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+          "firstName": "Elizabeth",
+          "lastName": "Kammen",
+          "screenName": "ElizabethKammen",
+          "showName": true,
+          "suffix": null
+        },
+        "reviewer": {
+          "encodedZuid": "X1-ZUxf6sil5ykjd5_8mfo2",
+          "firstName": "Victoria",
+          "lastName": "Dominguez",
+          "screenName": "Victoria JuneDominguez",
+          "showName": true,
+          "suffix": null
+        },
+        "subRatings": [
+          {
+            "description": "Local knowledge",
+            "score": 5
+          },
+          {
+            "description": "Process expertise",
+            "score": 5
+          },
+          {
+            "description": "Responsiveness",
+            "score": 5
+          },
+          {
+            "description": "Negotiation skills",
+            "score": 5
+          }
+        ],
+        "workDescription": "Bought a Single Family home in 2025 in Thousand oaks, CA."
+      },
+      {
+        "createDate": "2025-07-28T21:15:00",
+        "rating": 5,
+        "rebuttal": null,
+        "reviewComment": "I first met Elizabeth when she represented the buyer for the sale of my home—and I was so impressed with her professionalism, communication, and attention to detail that I chose her to represent me as my agent when it was time to buy a new home in Ventura County.\n\nShe helped me find the perfect place in Camarillo and made the entire process seamless. Elizabeth was incredibly responsive—always answering my questions within minutes—and had trusted inspectors and resources at her fingertips. When we toured homes, she knew exactly what to look for and quickly identified any potential red flags that might need further investigation.\n\nShe’s sharp, experienced, and fun to work with. I truly enjoyed the home-hunting process with her and will absolutely work with her again on future purchases. Highly recommended!",
+        "reviewId": 8829086,
+        "reviewee": {
+          "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+          "firstName": "Elizabeth",
+          "lastName": "Kammen",
+          "screenName": "ElizabethKammen",
+          "showName": true,
+          "suffix": null
+        },
+        "reviewer": {
+          "encodedZuid": "X1-ZU16afhurlyuwax_1mzvj",
+          "firstName": "Lisa",
+          "lastName": "Alviani",
+          "screenName": "lmalviani2",
+          "showName": false,
+          "suffix": null
+        },
+        "subRatings": [
+          {
+            "description": "Local knowledge",
+            "score": 5
+          },
+          {
+            "description": "Process expertise",
+            "score": 5
+          },
+          {
+            "description": "Responsiveness",
+            "score": 5
+          },
+          {
+            "description": "Negotiation skills",
+            "score": 5
+          }
+        ],
+        "workDescription": "Bought a Single Family home in 2025 in Camarillo, CA."
+      },
+      {
+        "createDate": "2025-07-12T21:24:00",
+        "rating": 5,
+        "rebuttal": null,
+        "reviewComment": "Elizabeth was amazing from the get-go!  We randomly met at an Open House I stopped at before I had \"officially\" started shopping for a condo and realized that she had lived around the corner from me and my family and had gone to school with my son!  I knew that was a sign that she would be my agent when was I was ready to buy.  Honestly I don't know how she does it because she's ALWAYS available by text or phone call.  She even responded to me when she was out of the country on vacation!!  She is incredibly communicative and knowledgeable on everything real estate in the Conejo Valley and beyond.  I'm thrilled to now be living in a beautiful condo that I wouldn't have if it wasn't for Elizabeth's help, knowledge and support!",
+        "reviewId": 8808813,
+        "reviewee": {
+          "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+          "firstName": "Elizabeth",
+          "lastName": "Kammen",
+          "screenName": "ElizabethKammen",
+          "showName": true,
+          "suffix": null
+        },
+        "reviewer": {
+          "encodedZuid": "X1-ZUy6hto9pqcrnt_93ahq",
+          "firstName": null,
+          "lastName": null,
+          "screenName": "tracid318",
+          "showName": true,
+          "suffix": null
+        },
+        "subRatings": [
+          {
+            "description": "Local knowledge",
+            "score": 5
+          },
+          {
+            "description": "Process expertise",
+            "score": 5
+          },
+          {
+            "description": "Responsiveness",
+            "score": 5
+          },
+          {
+            "description": "Negotiation skills",
+            "score": 5
+          }
+        ],
+        "workDescription": "Bought a home in 2025."
+      },
+      {
+        "createDate": "2025-06-26T09:54:00",
+        "rating": 5,
+        "rebuttal": null,
+        "reviewComment": "If you’re selling in Ventura County or surrounding areas, look no further!\nElizabeth is super responsive, competent and keeps you informed along the way.\nShe is a true professional and tends to make the little problems disappear.",
+        "reviewId": 8788357,
+        "reviewee": {
+          "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+          "firstName": "Elizabeth",
+          "lastName": "Kammen",
+          "screenName": "ElizabethKammen",
+          "showName": true,
+          "suffix": null
+        },
+        "reviewer": {
+          "encodedZuid": "X1-ZUuntjb06j22o9_6zfs8",
+          "firstName": "George",
+          "lastName": "Villalobos",
+          "screenName": "george63810",
+          "showName": true,
+          "suffix": null
+        },
+        "subRatings": [
+          {
+            "description": "Local knowledge",
+            "score": 5
+          },
+          {
+            "description": "Process expertise",
+            "score": 5
+          },
+          {
+            "description": "Responsiveness",
+            "score": 5
+          },
+          {
+            "description": "Negotiation skills",
+            "score": 5
+          }
+        ],
+        "workDescription": "Sold a Condo home in 2025 in Camarillo, CA."
+      },
+      {
+        "createDate": "2025-06-03T11:35:00",
+        "rating": 5,
+        "rebuttal": null,
+        "reviewComment": "Was referred to her by a friend and it had to be divine blessing. Wonderful person, extremely competent, totally dependable. There’s a lot of headache that happens during the home buying process but Elizabeth was a terrific captain to navigate the rough seas. A complete blessing to have her companionship and knowledge and I owe her a lot of love of helping secure my home. Couldn’t recommend her enough! ",
+        "reviewId": 8758657,
+        "reviewee": {
+          "encodedZuid": "X1-ZUxo9i6r5tit55_9hc6g",
+          "firstName": "Elizabeth",
+          "lastName": "Kammen",
+          "screenName": "ElizabethKammen",
+          "showName": true,
+          "suffix": null
+        },
+        "reviewer": {
+          "encodedZuid": "X1-ZU17yooxqrm48ax_aj9j7",
+          "firstName": null,
+          "lastName": null,
+          "screenName": "niki eitelbach2",
+          "showName": true,
+          "suffix": null
+        },
+        "subRatings": [
+          {
+            "description": "Local knowledge",
+            "score": 5
+          },
+          {
+            "description": "Process expertise",
+            "score": 5
+          },
+          {
+            "description": "Responsiveness",
+            "score": 5
+          },
+          {
+            "description": "Negotiation skills",
+            "score": 5
+          }
+        ],
+        "workDescription": "Bought a Townhouse home in 2025 in Oak park, CA."
+      }
+    ]
+  },
+  "seoFooters": [
+    {
+      "heading": "Nearby cities",
+      "items": [
+        {
+          "text": "Agoura Hills Real Estate",
+          "url": "/agoura-hills-ca/"
+        },
+        {
+          "text": "Bell Canyon Real Estate",
+          "url": "/bell-canyon-ca/"
+        },
+        {
+          "text": "Calabasas Real Estate",
+          "url": "/calabasas-ca/"
+        },
+        {
+          "text": "Camarillo Real Estate",
+          "url": "/camarillo-ca/"
+        },
+        {
+          "text": "Fillmore Real Estate",
+          "url": "/fillmore-ca/"
+        },
+        {
+          "text": "Hidden Hills Real Estate",
+          "url": "/hidden-hills-ca/"
+        },
+        {
+          "text": "Malibu Real Estate",
+          "url": "/malibu-ca/"
+        },
+        {
+          "text": "Moorpark Real Estate",
+          "url": "/moorpark-ca/"
+        },
+        {
+          "text": "Oak Park Real Estate",
+          "url": "/oak-park-ca/"
+        },
+        {
+          "text": "Oxnard Real Estate",
+          "url": "/oxnard-ca/"
+        },
+        {
+          "text": "Piru Real Estate",
+          "url": "/piru-ca/"
+        },
+        {
+          "text": "Port Hueneme Real Estate",
+          "url": "/port-hueneme-ca/"
+        },
+        {
+          "text": "Santa Monica Real Estate",
+          "url": "/santa-monica-ca/"
+        },
+        {
+          "text": "Santa Paula Real Estate",
+          "url": "/santa-paula-ca/"
+        },
+        {
+          "text": "Simi Valley Real Estate",
+          "url": "/simi-valley-ca/"
+        },
+        {
+          "text": "Somis Real Estate",
+          "url": "/somis-ca/"
+        },
+        {
+          "text": "Stevenson Ranch Real Estate",
+          "url": "/stevenson-ranch-ca/"
+        },
+        {
+          "text": "Thousand Oaks Real Estate",
+          "url": "/thousand-oaks-ca/"
+        },
+        {
+          "text": "Topanga Real Estate",
+          "url": "/topanga-ca/"
+        },
+        {
+          "text": "Westlake Village Real Estate",
+          "url": "/westlake-village-ca/"
+        }
+      ]
+    },
+    {
+      "heading": "Nearby neighborhoods",
+      "items": [
+        {
+          "text": "Newbury Park Real Estate",
+          "url": "/newbury-park-thousand-oaks-ca/"
+        },
+        {
+          "text": "West Office District Real Estate",
+          "url": "/west-office-district-agoura-hills-ca/"
+        },
+        {
+          "text": "Lake Lindero Real Estate",
+          "url": "/lake-lindero-agoura-hills-ca/"
+        },
+        {
+          "text": "Reyes Adobe Real Estate",
+          "url": "/reyes-adobe-agoura-hills-ca/"
+        },
+        {
+          "text": "Morrison Ranch Real Estate",
+          "url": "/morrison-ranch-agoura-hills-ca/"
+        },
+        {
+          "text": "Forest Cove Real Estate",
+          "url": "/forest-cove-agoura-hills-ca/"
+        },
+        {
+          "text": "Morrison Estates Real Estate",
+          "url": "/morrison-estates-agoura-hills-ca/"
+        },
+        {
+          "text": "Whizin's Row Real Estate",
+          "url": "/whizin-s-row-agoura-hills-ca/"
+        },
+        {
+          "text": "Midtown Real Estate",
+          "url": "/midtown-agoura-hills-ca/"
+        },
+        {
+          "text": "South End Real Estate",
+          "url": "/south-end-agoura-hills-ca/"
+        },
+        {
+          "text": "Downtown Real Estate",
+          "url": "/downtown-agoura-hills-ca/"
+        },
+        {
+          "text": "Upper Downtown Real Estate",
+          "url": "/upper-downtown-agoura-hills-ca/"
+        },
+        {
+          "text": "North Village Real Estate",
+          "url": "/north-village-agoura-hills-ca/"
+        },
+        {
+          "text": "East Agoura Real Estate",
+          "url": "/east-agoura-agoura-hills-ca/"
+        },
+        {
+          "text": "Trancas Canyon Real Estate",
+          "url": "/trancas-canyon-malibu-ca/"
+        },
+        {
+          "text": "Old Agoura Real Estate",
+          "url": "/old-agoura-agoura-hills-ca/"
+        },
+        {
+          "text": "Historic Quarter Real Estate",
+          "url": "/historic-quarter-agoura-hills-ca/"
+        },
+        {
+          "text": "Malibu Park Real Estate",
+          "url": "/malibu-park-malibu-ca/"
+        },
+        {
+          "text": "Ramirez Canyon Real Estate",
+          "url": "/ramirez-canyon-malibu-ca/"
+        },
+        {
+          "text": "Point Dume Real Estate",
+          "url": "/point-dume-malibu-ca/"
+        }
+      ]
+    },
+    {
+      "heading": "Nearby zip codes",
+      "items": [
+        {
+          "text": "91361 Real Estate",
+          "url": "/westlake-village-ca-91361/"
+        },
+        {
+          "text": "91363 Real Estate",
+          "url": "/thousand-oaks-ca-91363/"
+        },
+        {
+          "text": "91320 Real Estate",
+          "url": "/thousand-oaks-ca-91320/"
+        },
+        {
+          "text": "91360 Real Estate",
+          "url": "/thousand-oaks-ca-91360/"
+        },
+        {
+          "text": "91362 Real Estate",
+          "url": "/westlake-village-ca-91362/"
+        },
+        {
+          "text": "90265 Real Estate",
+          "url": "/malibu-ca-90265/"
+        },
+        {
+          "text": "91301 Real Estate",
+          "url": "/agoura-hills-ca-91301/"
+        },
+        {
+          "text": "91377 Real Estate",
+          "url": "/oak-park-ca-91377/"
+        },
+        {
+          "text": "93012 Real Estate",
+          "url": "/camarillo-ca-93012/"
+        },
+        {
+          "text": "93065 Real Estate",
+          "url": "/simi-valley-ca-93065/"
+        },
+        {
+          "text": "93021 Real Estate",
+          "url": "/moorpark-ca-93021/"
+        },
+        {
+          "text": "91302 Real Estate",
+          "url": "/calabasas-ca-91302/"
+        },
+        {
+          "text": "91307 Real Estate",
+          "url": "/los-angeles-ca-91307/"
+        },
+        {
+          "text": "90263 Real Estate",
+          "url": "/malibu-ca-90263/"
+        },
+        {
+          "text": "93064 Real Estate",
+          "url": "/simi-valley-ca-93064/"
+        },
+        {
+          "text": "93010 Real Estate",
+          "url": "/camarillo-ca-93010/"
+        },
+        {
+          "text": "93093 Real Estate",
+          "url": "/ca-93093/"
+        },
+        {
+          "text": "93066 Real Estate",
+          "url": "/somis-ca-93066/"
+        },
+        {
+          "text": "93033 Real Estate",
+          "url": "/oxnard-ca-93033/"
+        },
+        {
+          "text": "91304 Real Estate",
+          "url": "/los-angeles-ca-91304/"
+        }
+      ]
+    },
+    {
+      "heading": "Other Westlake Village topics",
+      "items": [
+        {
+          "text": "Apartments for Rent in Westlake Village",
+          "url": "/westlake-village-ca/rentals/"
+        },
+        {
+          "text": "Houses for Rent in Westlake Village",
+          "url": "/westlake-village-ca/rent-houses/"
+        },
+        {
+          "text": "Westlake Village Condos",
+          "url": "/westlake-village-ca/condos/"
+        },
+        {
+          "text": "Westlake Village Townhomes",
+          "url": "/westlake-village-ca/houses/"
+        },
+        {
+          "text": "Newest Listings in Westlake Village",
+          "url": "/westlake-village-ca/newest/"
+        },
+        {
+          "text": "Westlake Village Home Values",
+          "url": "/westlake-village-ca/home-values/"
+        },
+        {
+          "text": "Refinance your House in Westlake Village",
+          "url": "/refinance/ca/westlake-village/"
+        },
+        {
+          "text": "Westlake Village Real Estate Agents",
+          "url": "/professionals/real-estate-agent-reviews/westlake-village-ca/"
+        },
+        {
+          "text": "Westlake Village Mortgage Rates",
+          "url": "/mortgage-rates/ca/westlake-village/"
+        }
+      ]
+    }
+  ],
+  "serviceAreas": [
+    {
+      "regionId": 9840,
+      "text": "Agoura Hills, CA",
+      "url": "/agoura-hills-ca/"
+    },
+    {
+      "regionId": 12447,
+      "text": "Los Angeles, CA",
+      "url": "/los-angeles-ca/"
+    },
+    {
+      "regionId": 13150,
+      "text": "Oxnard, CA",
+      "url": "/oxnard-ca/"
+    },
+    {
+      "regionId": 25974,
+      "text": "Moorpark, CA",
+      "url": "/moorpark-ca/"
+    },
+    {
+      "regionId": 27080,
+      "text": "Sherman Oaks, Los Angeles, CA",
+      "url": "/sherman-oaks-los-angeles-ca/"
+    },
+    {
+      "regionId": 27110,
+      "text": "Simi Valley, CA",
+      "url": "/simi-valley-ca/"
+    },
+    {
+      "regionId": 34278,
+      "text": "Thousand Oaks, CA",
+      "url": "/thousand-oaks-ca/"
+    },
+    {
+      "regionId": 37688,
+      "text": "Calabasas, CA",
+      "url": "/calabasas-ca/"
+    },
+    {
+      "regionId": 41466,
+      "text": "Van Nuys, Los Angeles, CA",
+      "url": "/van-nuys-los-angeles-ca/"
+    },
+    {
+      "regionId": 41673,
+      "text": "Westlake Village, CA",
+      "url": "/westlake-village-ca/"
+    },
+    {
+      "regionId": 46736,
+      "text": "Newbury Park, Thousand Oaks, CA",
+      "url": "/newbury-park-thousand-oaks-ca/"
+    },
+    {
+      "regionId": 47198,
+      "text": "Port Hueneme, CA",
+      "url": "/port-hueneme-ca/"
+    },
+    {
+      "regionId": 51239,
+      "text": "Camarillo, CA",
+      "url": "/camarillo-ca/"
+    },
+    {
+      "regionId": 53655,
+      "text": "Oak Park, CA",
+      "url": "/oak-park-ca/"
+    },
+    {
+      "regionId": 56597,
+      "text": "Santa Rosa Valley, Camarillo, CA",
+      "url": "/santa-rosa-valley-camarillo-ca/"
+    },
+    {
+      "regionId": 396054,
+      "text": "Burbank, CA",
+      "url": "/burbank-ca/"
+    }
+  ],
+  "teamDisplayInformation": {
+    "teamLeadInfo": null,
+    "teamMemberInfo": {
+      "hasContactRedirectOptInFunction": false,
+      "teamLead": {
+        "encodedZuid": "X1-ZU10i2q4sz40gsp_26nu5",
+        "name": "The Rise Real Estate Group",
+        "ratings": {
+          "average": 5,
+          "count": 826
+        },
+        "screenName": "Therisegroup"
+      },
+      "teamName": "The Rise Real Estate Group"
+    }
+  },
+  "zGuid": "ce1fd761-6438-40c4-a8a9-75a3401ec2e3"
+}
