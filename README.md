@@ -80,26 +80,5 @@ This was a **solo project** — I designed and implemented:
 
 All code, design, and algorithms were developed by me.
 
----
 
-## 🔗 Repository
-
-GitHub: [https://github.com/joestackss/Real-Estate-Ai.git](#)
-
-*(Public repository showcasing AI logic and implementation)*
-
----
-
-## 🧭 Motivation for Representative Work #2
-
-I selected this project because it reflects how I merge **mathematical reasoning and AI technology** to solve practical problems.
-While many see architecture and real estate as purely design-based, I approached it from a **computational and algorithmic lens** — converting qualitative human language into quantitative decision systems.
-
-This project taught me how **mathematical logic underlies intelligence**, from data representation to predictive reasoning. I’m proud of it because it represents the bridge between my architecture background and my growing expertise in **applied artificial intelligence and computational science**.
-
----
-
-## ✨ Keywords
-
-AI • Natural Language Processing • Mathematical Modeling • Data Structures • Algorithmic Reasoning • Applied Computing • Human-AI Interaction
 
