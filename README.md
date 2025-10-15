@@ -84,7 +84,7 @@ All code, design, and algorithms were developed by me.
 
 ## 🔗 Repository
 
-GitHub: [https://github.com/yourusername/keytara-ai](#)
+GitHub: [https://github.com/joestackss/Real-Estate-Ai.git](#)
 
 *(Public repository showcasing AI logic and implementation)*
 
