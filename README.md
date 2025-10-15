@@ -1,84 +1,73 @@
+# 🏠 Keytara AI — Intelligent Real Estate Search App
 
-# **Keytara AI — Intelligent Real Estate Search Using Natural Language and Computational Filtering**
-
-**Applicant:** Joseph Popoola
-**Program:** AI for Science Master’s — African Institute for Mathematical Sciences (AIMS)
-**Project Type:** Independent Research / Software Engineering Project
+Keytara AI is a cutting-edge React Native mobile application that revolutionizes real estate search through **AI-powered natural language processing**.  
+Built with **Expo** and **TypeScript**, it provides an intuitive way to find properties using conversational queries instead of traditional form-based searches.
 
 ---
 
-## 🧠 Project Overview
+## ✨ Overview
 
-**Keytara AI** is a React Native mobile application that applies **mathematical reasoning, AI models, and data-driven computation** to transform how users search for real estate.
+Keytara AI leverages mathematical reasoning, data parsing, and AI modeling to understand natural human queries like:  
+> “Show me 3-bedroom apartments under $500,000 in Lagos with a swimming pool.”
 
-Instead of using fixed filters, the system uses **Natural Language Processing (NLP)** to interpret a user’s query (e.g., *“3-bedroom house with a pool under ₦200M in Lekki”*) and translate it into structured, machine-readable parameters through a **custom AI parser built on Google Gemini**.
-
-This project demonstrates my ability to:
-
-* Design and implement **data translation algorithms** between human language and mathematical data models.
-* Integrate **AI systems with structured datasets** using APIs.
-* Apply **computational logic, set theory, and conditional reasoning** to real-world problems.
+The system converts this unstructured text into structured parameters using **Google Gemini AI**, demonstrating real-world applications of **NLP (Natural Language Processing)**, **data mapping**, and **state management** in software engineering.
 
 ---
 
-## ⚙️ Mathematical & Computational Foundation
+## 🚀 Features
 
-The app’s core logic is built on these **quantitative and algorithmic principles**:
+### 🤖 AI-Powered Search
+- **Natural Language Understanding:** Describe your dream home in plain English.  
+- **Query Parsing:** AI converts conversational input into structured search filters.  
+- **Contextual Refinements:** Adjust searches naturally (“show cheaper options”, “add a pool”).  
+- **Undo Functionality:** Navigate back through search history using natural commands.
 
-| Concept                           | Application                                                                                             |                                                                  |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Set Theory & Filtering**        | Property searches are represented as sets with filters as intersection operations. For example: `S = {P | P ∈ Listings ∧ P.price ≤ 200M ∧ P.bedrooms = 3 ∧ P.pool = True}` |
-| **Natural Language Tokenization** | Queries are tokenized and mapped into structured data using keyword-to-parameter probability mapping.   |                                                                  |
-| **Feature Engineering**           | The NLP model extracts numerical and categorical variables (e.g., price, size, features).               |                                                                  |
-| **Search Optimization**           | Implements caching and ranking to minimize computational time using React Query and normalized weights. |                                                                  |
-| **Linear Mapping Functions**      | Applied to scale user parameters (e.g., converting “cheap” to a percentile price range).                |                                                                  |
+### 🔍 Advanced Property Search
+- **Comprehensive Filters:** Location, price range, bedrooms, bathrooms, property type.  
+- **Smart Criteria:** Pools, garages, waterfront, school ratings, construction year.  
+- **Real-time Data:** Instant property listings via **Zillow API** integration.  
+- **Persistent Search History:** Search data stored and retrievable across sessions.
+
+### 💾 Property Management
+- Save and manage your favorite properties.  
+- Persistent local storage ensures saved properties remain available offline.
+
+### 📱 Modern UI/UX
+- Clean, elegant design with smooth transitions.  
+- Supports **dark/light mode** and responsive layouts.  
+- Built with **NativeWind** and **Expo Router** for fluid navigation.
 
 ---
 
-## 🧩 Code Snippet — Core AI Parsing Logic
+## 🧠 Technology Stack
+
+### **Frontend**
+- React Native + Expo  
+- TypeScript  
+- NativeWind (Tailwind CSS for React Native)  
+- React Query (data fetching + caching)  
+- Zustand (lightweight state management)  
+- Expo Router (file-based navigation)
+
+### **AI & APIs**
+- **Google Gemini AI** — NLP and query parsing  
+- **Zillow API** — Real estate property data  
+- **RapidAPI** — API gateway management
+
+---
+
+## 🧩 Core Logic Example
+
+### AI Query Parsing
 
 ```typescript
-// Example: "3-bedroom house with pool under ₦200M in Lekki"
-const parseNaturalLanguageQuery = async (query: string) => {
-  const response = await fetchGeminiAI(query);
-  const filters = {
-    location: response.location,
-    bedrooms: extractNumber(response.text, 'bedrooms'),
-    hasPool: /pool/i.test(response.text),
-    maxPrice: extractNumber(response.text, 'price') * 1_000_000,
-  };
-  return filters;
-};
+// Example input: "3-bedroom house with pool under $500k in Austin"
+const filters = await parseNaturalLanguageQuery(query);
 
-// Mathematical abstraction:
-// Let Q = user query, and f: Q → F be a function mapping text → structured filters.
-```
-
-This function demonstrates a **mapping between natural language inputs and structured vector outputs**, a fundamental concept in AI for Science.
-
----
-
-## 📊 Result and Testing
-
-When tested with 50+ queries, the system achieved:
-
-* **92% correct feature extraction**,
-* **87% correct price range interpretation**, and
-* **sub-second query conversion latency** on mobile devices.
-
-This validated the efficiency of the **mathematical parsing logic** and its ability to generalize across queries.
-
----
-
-## 👨🏽‍💻 My Contribution
-
-This was a **solo project** — I designed and implemented:
-
-* The **AI parser** (Gemini + custom preprocessing)
-* The **mathematical translation layer** between text and filters
-* The **mobile app architecture**, caching, and user experience
-
-All code, design, and algorithms were developed by me.
-
-
-
+// Returns:
+{
+  location: "Austin",
+  bedrooms: 3,
+  hasPool: true,
+  maxPrice: 500000
+}
